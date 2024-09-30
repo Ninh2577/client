@@ -72,7 +72,7 @@ export default function AvatarDropdown({ className = "" }: Props) {
                         </svg>
                       </div>
                       <div className="ml-4">
-                        <p className="text-sm font-medium ">{"My Account"}</p>
+                        <p className="text-sm font-medium ">{"Tài khoản của tôi"}</p>
                       </div>
                     </Link>
 
@@ -124,7 +124,7 @@ export default function AvatarDropdown({ className = "" }: Props) {
                         </svg>
                       </div>
                       <div className="ml-4">
-                        <p className="text-sm font-medium ">{"My bookings"}</p>
+                        <p className="text-sm font-medium ">{"Đã đặt"}</p>
                       </div>
                     </Link>
 
@@ -151,7 +151,7 @@ export default function AvatarDropdown({ className = "" }: Props) {
                         </svg>
                       </div>
                       <div className="ml-4">
-                        <p className="text-sm font-medium ">{"Wishlist"}</p>
+                        <p className="text-sm font-medium ">{"Danh sách yêu thích"}</p>
                       </div>
                     </Link>
 
@@ -192,7 +192,7 @@ export default function AvatarDropdown({ className = "" }: Props) {
                           </svg>
                         </div>
                         <div className="ml-4">
-                          <p className="text-sm font-medium ">{"Dark theme"}</p>
+                          <p className="text-sm font-medium ">{"Màu tối"}</p>
                         </div>
                       </div>
                       <SwitchDarkMode2 />
@@ -299,7 +299,7 @@ export default function AvatarDropdown({ className = "" }: Props) {
                         </svg>
                       </div>
                       <div className="ml-4">
-                        <p className="text-sm font-medium ">{"Log out"}</p>
+                        <p className="text-sm font-medium ">{"Đăng xuất"}</p>
                       </div>
                     </Link>
                   </div>
