@@ -60,7 +60,7 @@ const LocationInput: FC<LocationInputProps> = ({
     return (
       <>
         <h3 className="block mt-2 sm:mt-0 px-4 sm:px-8 font-semibold text-base text-neutral-800 dark:text-neutral-100">
-          Recent searches
+        Tìm kiếm gần đây
         </h3>
         <div className="mt-2">
           {[
