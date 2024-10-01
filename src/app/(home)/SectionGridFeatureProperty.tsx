@@ -43,7 +43,7 @@ const SectionGridFeatureProperty: FC<SectionGridFeaturePropertyProps> = ({
         {stayListings.map(renderCard)}
       </div>
       <div className="flex mt-16 justify-center items-center">
-        <ButtonPrimary loading>Show me more</ButtonPrimary>
+        <ButtonPrimary loading>Hiển thị thêm</ButtonPrimary>
       </div>
     </div>
   );
