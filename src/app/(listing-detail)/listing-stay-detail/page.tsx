@@ -55,7 +55,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
 
         {/* 2 */}
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-          Beach House in Collingwood
+         Du lịch nhật bản
         </h2>
 
         {/* 3 */}
@@ -64,7 +64,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
           <span>·</span>
           <span>
             <i className="las la-map-marker-alt"></i>
-            <span className="ml-1"> Tokyo, Jappan</span>
+            <span className="ml-1"> Tokyo, Nhật bản</span>
           </span>
         </div>
 
