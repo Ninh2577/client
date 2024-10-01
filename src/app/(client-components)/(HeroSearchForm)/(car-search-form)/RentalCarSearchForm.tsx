@@ -22,7 +22,7 @@ const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({}) => {
           }`}
           onClick={(e) => setDropOffLocationType("different")}
         >
-          Different drop off
+          Trả khách khác nhau
         </div>
         <div
           className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer mr-2 my-1 sm:mr-3 ${
@@ -32,7 +32,7 @@ const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({}) => {
           }`}
           onClick={(e) => setDropOffLocationType("same")}
         >
-          Same drop off
+          Cùng thả xuống
         </div>
       </div>
     );

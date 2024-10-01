@@ -58,7 +58,7 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
           onClick={() => setShowFullMapFixed(true)}
         >
           <i className="text-lg las la-map"></i>
-          <span>Show map</span>
+          <span>Xem bản đồ</span>
         </div>
 
         {/* MAPPPPP */}
