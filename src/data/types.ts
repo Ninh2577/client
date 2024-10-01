@@ -17,8 +17,8 @@ export interface TaxonomyType {
   thumbnail?: string;
   desc?: string;
   color?: TwMainColor | string;
-  taxonomy: "category" | "tag";
-  listingType?: "stay" | "experiences" | "car";
+  taxonomy: "Thể loại" | "Nhãn";
+  listingType?: "Lưu trữ" | "Trải nghiệm" | "Xe hơi";
 }
 
 export interface AuthorType {
@@ -48,18 +48,18 @@ export interface PostDataType {
   commentCount: number;
   viewdCount: number;
   readingTime: number;
-  postType?: "standard" | "video" | "gallery" | "audio";
+  postType?: "tiêu chuẩn" | "video" | "thư viện" | "âm thanh";
 }
 
 export type TwMainColor =
-  | "pink"
-  | "green"
-  | "yellow"
-  | "red"
-  | "indigo"
-  | "blue"
-  | "purple"
-  | "gray";
+  | "hồng"
+  | "xanh lá"
+  | "vàng"
+  | "đỏ"
+  | "chàm"
+  | "xanh dương"
+  | "tím"
+  | "xám";
 
 //
 export interface StayDataType {

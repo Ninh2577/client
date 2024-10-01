@@ -12,20 +12,20 @@ import Slider from "rc-slider";
 
 // DEMO DATA
 const typeOfCar = [
-  { name: "Small", description: "$68" },
-  { name: "Medium", description: "$128" },
-  { name: "Large", description: "$268" },
-  { name: "SUV", description: "$268" },
-  { name: "Van", description: "$268" },
-  { name: "Luxury", description: "$268" },
+  { name: "Nhỏ", description: "$68" },
+  { name: "Trung bình", description: "$128" },
+  { name: "Lớn", description: "$268" },
+  { name: "Xe thể thao đa dụng", description: "$268" },
+  { name: "Xe tải", description: "$268" },
+  { name: "Sang trọng", description: "$268" },
 ];
 
 const carSpecifications = [
-  { name: "With air conditioning" },
-  { name: "Automatic transmission" },
-  { name: "Manual transmission" },
-  { name: "2 doors" },
-  { name: "4+ doors" },
+  { name: "Có máy lạnh" },
+  { name: "Hộp số tự động" },
+  { name: "Hộp số tay" },
+  { name: "2 cửa" },
+  { name: "4 cửa" },
 ];
 
 //
