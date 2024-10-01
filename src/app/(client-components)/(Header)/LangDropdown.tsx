@@ -9,42 +9,21 @@ import { headerCurrency } from "./CurrencyDropdown";
 
 export const headerLanguage = [
   {
-    id: "English",
-    name: "English",
-    description: "United State",
+    id: "Vietnamese",
+    name: "Tiếng Việt",
+    description: "Vietnamese",
     href: "##",
     active: true,
   },
   {
-    id: "Vietnamese",
-    name: "Vietnamese",
-    description: "Vietnamese",
+    id: "English",
+    name: "Tiếng Anh",
+    description: "United State",
     href: "##",
+   
   },
-  {
-    id: "Francais",
-    name: "Francais",
-    description: "Belgique",
-    href: "##",
-  },
-  {
-    id: "Francais",
-    name: "Francais",
-    description: "Canada",
-    href: "##",
-  },
-  {
-    id: "Francais",
-    name: "Francais",
-    description: "Belgique",
-    href: "##",
-  },
-  {
-    id: "Francais",
-    name: "Francais",
-    description: "Canada",
-    href: "##",
-  },
+
+
 ];
 
 interface LangDropdownProps {
@@ -136,7 +115,7 @@ const LangDropdown: FC<LangDropdownProps> = ({
                 <div className="p-3 sm:p-6 rounded-2xl bg-white dark:bg-neutral-800 shadow-lg ring-1 ring-black ring-opacity-5">
                   <Tab.Group>
                     <Tab.List className="flex space-x-1 rounded-full bg-gray-100 dark:bg-slate-700 p-1">
-                      {["Language", "Currency"].map((category) => (
+                      {["Ngôn ngữ", "Tiền tệ"].map((category) => (
                         <Tab
                           key={category}
                           className={({ selected }) =>
