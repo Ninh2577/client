@@ -19,7 +19,7 @@ const HeroSearchForm: FC<HeroSearchFormProps> = ({
   currentTab = "Stays",
   currentPage,
 }) => {
-  const tabs: SearchTab[] = ["Stays", "Experiences", "Cars", "Flights"];
+  const tabs: SearchTab[] = ["Lưu trú", "Trải nghiệm", "Xe", "Chuyến bay"];
   const [tabActive, setTabActive] = useState<SearchTab>(currentTab);
 
   const renderTab = () => {
@@ -50,13 +50,13 @@ const HeroSearchForm: FC<HeroSearchFormProps> = ({
 
   const renderForm = () => {
     switch (tabActive) {
-      case "Stays":
+      case "Lưu trú":
         return <StaySearchForm />;
-      case "Experiences":
+      case "Trải nghiệm":
         return <ExperiencesSearchForm />;
-      case "Cars":
+      case "Xe":
         return <RentalCarSearchForm />;
-      case "Flights":
+      case "Chuyến bay":
         return <FlightSearchForm />;
 
       default:

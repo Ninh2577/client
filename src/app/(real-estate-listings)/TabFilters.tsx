@@ -164,7 +164,7 @@ const TabFilters = () => {
       <Popover className="relative">
         {({ open, close }) => (
           <>
-            <Popover.Button
+            <Popover.Button 
               className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-primary-500 bg-primary-50 text-primary-700 focus:outline-none `}
             >
               <span>
