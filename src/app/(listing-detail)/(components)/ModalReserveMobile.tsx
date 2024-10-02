@@ -25,7 +25,7 @@ const ModalReserveMobile: FC<ModalReserveMobileProps> = ({
     return renderChildren ? (
       renderChildren({ openModal })
     ) : (
-      <button onClick={openModal}>Select Date</button>
+      <button onClick={openModal}>Chọn ngày</button>
     );
   };
 

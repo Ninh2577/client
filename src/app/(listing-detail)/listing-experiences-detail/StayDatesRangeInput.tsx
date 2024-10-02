@@ -16,9 +16,9 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
   className = "flex-1",
 }) => {
   const [startDate, setStartDate] = useState<Date | null>(
-    new Date("2023/02/06")
+    new Date("2024/10/02")
   );
-  const [endDate, setEndDate] = useState<Date | null>(new Date("2023/02/23"));
+  const [endDate, setEndDate] = useState<Date | null>(new Date("2024/10/22"));
   //
 
   const onChangeDate = (dates: [Date | null, Date | null]) => {
@@ -35,20 +35,20 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
         </div>
         <div className="flex-grow text-left">
           <span className="block xl:text-lg font-semibold">
-            {startDate?.toLocaleDateString("en-US", {
+            {startDate?.toLocaleDateString("vi-VN", {
               month: "short",
               day: "2-digit",
             }) || "Add dates"}
             {endDate
               ? " - " +
-                endDate?.toLocaleDateString("en-US", {
+                endDate?.toLocaleDateString("vi-VN", {
                   month: "short",
                   day: "2-digit",
                 })
               : ""}
           </span>
           <span className="block mt-1 text-sm text-neutral-400 leading-none font-light">
-            {"Check in - Check out"}
+            {"Đăng ký - Thủ tục thanh toán"}
           </span>
         </div>
       </>
