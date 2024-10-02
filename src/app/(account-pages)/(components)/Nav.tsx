@@ -9,11 +9,18 @@ export const Nav = () => {
   const pathname = usePathname();
 
   const listNav: Route[] = [
-    "/Tai-Khoan",
+    "/account",
     "/account-savelists",
     "/account-password",
     "/account-billing",
   ];
+
+  const displayNames = {
+    "/account": "Tài khoản",
+    "/account-savelists": "Danh sách đã lưu",
+    "/account-password": "Mật khẩu",
+    "/account-billing": "Thanh toán",
+  };
 
   return (
     <div className="container">
@@ -30,7 +37,7 @@ export const Nav = () => {
                   : "border-transparent"
               }`}
             >
-              {item.replace("-", " ").replace("/", " ")}
+              {displayNames[item] || item.replace("-", " ").replace("/", " ")}
             </Link>
           );
         })}
