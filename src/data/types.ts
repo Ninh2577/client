@@ -52,14 +52,14 @@ export interface PostDataType {
 }
 
 export type TwMainColor =
-  | "hồng"
-  | "xanh lá"
-  | "vàng"
-  | "đỏ"
-  | "chàm"
-  | "xanh dương"
-  | "tím"
-  | "xám";
+  | "pink"
+  | "green"
+  | "red"
+  | "yellow"
+  | "indigo"
+  | "blue"
+  | "purple"
+  | "grey";
 
 //
 export interface StayDataType {

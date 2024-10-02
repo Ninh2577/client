@@ -27,7 +27,7 @@ const SectionGridAuthorBox: FC<SectionGridAuthorBoxProps> = ({
       className={`nc-SectionGridAuthorBox relative ${className}`}
       data-nc-id="SectionGridAuthorBox"
     >
-      <Heading desc="Rating based on customer reviews" isCenter>
+      <Heading desc="Đánh giá dựa trên phản hồi của khách hàng" isCenter>
         Top 10 tác giả của tháng
       </Heading>
       <div className={`grid gap-6 md:gap-8 ${gridClassName}`}>
@@ -44,8 +44,8 @@ const SectionGridAuthorBox: FC<SectionGridAuthorBoxProps> = ({
         )}
       </div>
       <div className="mt-16 flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-5">
-        <ButtonSecondary loading>Cho tôi xem thêm</ButtonSecondary>
-        <ButtonPrimary>Trở thành chủ nhà</ButtonPrimary>
+        <ButtonSecondary loading>xem thêm</ButtonSecondary>
+        <ButtonPrimary>Đăng ký làm chủ nhà</ButtonPrimary>
       </div>
     </div>
   );

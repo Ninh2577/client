@@ -114,7 +114,7 @@ const TabFilters = () => {
                 open ? "!border-primary-500 " : ""
               }`}
             >
-              <span>Loại tài sản</span>
+              <span>Không gian nghỉ dưỡng lý tưởng</span>
               <i className="las la-angle-down ml-2"></i>
             </Popover.Button>
             <Transition
@@ -405,7 +405,7 @@ const TabFilters = () => {
 
                       {/* ---- */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Phạm vi giá</h3>
+                        <h3 className="text-xl font-medium">Chọn mức giá</h3>
                         <div className="mt-6 relative ">
                           <div className="relative flex flex-col space-y-8">
                             <div className="space-y-5">

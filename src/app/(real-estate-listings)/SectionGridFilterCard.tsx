@@ -20,10 +20,10 @@ const SectionGridFilterCard: FC<SectionGridFilterCardProps> = ({
   return (
     <div className={`nc-SectionGridFilterCard ${className}`}>
       <Heading2
-        heading="Bất động sản ở Tokyo"
+        heading="Địa điểm lưu trú tại Tokyo"
         subHeading={
           <span className="block text-neutral-500 dark:text-neutral-400 mt-3">
-            233 Bất động sản
+            233 điểm lưu trú
             <span className="mx-2">·</span>
            12 - 18 tháng 8
           </span>

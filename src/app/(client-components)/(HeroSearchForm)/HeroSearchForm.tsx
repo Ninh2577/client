@@ -6,7 +6,7 @@ import ExperiencesSearchForm from "./(experiences-search-form)/ExperiencesSearch
 import RentalCarSearchForm from "./(car-search-form)/RentalCarSearchForm";
 import FlightSearchForm from "./(flight-search-form)/FlightSearchForm";
 
-export type SearchTab = "Stays" | "Experiences" | "Cars" | "Flights";
+export type SearchTab = "Lưu trú" | "Trải nghiệm" | "Xe" | "Chuyến bay";
 
 export interface HeroSearchFormProps {
   className?: string;
@@ -16,7 +16,7 @@ export interface HeroSearchFormProps {
 
 const HeroSearchForm: FC<HeroSearchFormProps> = ({
   className = "",
-  currentTab = "Stays",
+  currentTab = "Lưu trú",
   currentPage,
 }) => {
   const tabs: SearchTab[] = ["Lưu trú", "Trải nghiệm", "Xe", "Chuyến bay"];

@@ -80,7 +80,7 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
               <Checkbox
                 className="text-xs xl:text-sm text-neutral-800"
                 name="xx"
-                label="Search as I move the map"
+                label="Tìm kiếm khi di chuyển bản đồ"
               />
             </div>
             {/* BELLOW IS MY GOOGLE API KEY -- PLEASE DELETE AND TYPE YOUR API KEY */}

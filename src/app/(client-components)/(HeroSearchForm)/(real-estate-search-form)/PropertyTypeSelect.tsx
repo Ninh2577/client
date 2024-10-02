@@ -66,12 +66,12 @@ const PropertyTypeSelect: FC<PropertyTypeSelectProps> = ({
             <div className="flex-1">
               <span className="block xl:text-lg font-semibold overflow-hidden">
                 <span className="line-clamp-1">
-                  {typeOfPropertyText || `Type`}
+                  {typeOfPropertyText || `Kiểu`}
                 </span>
               </span>
               <span className="block mt-1 text-sm text-neutral-400 leading-none font-light ">
-              Loại tài sản
-              </span>
+              Không gian nghĩ dưỡng lý tưởng
+              </span> 
             </div>
           </Popover.Button>
 
