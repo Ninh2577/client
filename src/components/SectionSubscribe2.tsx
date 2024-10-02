@@ -16,22 +16,21 @@ const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
       data-nc-id="SectionSubscribe2"
     >
       <div className="flex-shrink-0 mb-10 lg:mb-0 lg:mr-10 lg:w-2/5">
-        <h2 className="font-semibold text-4xl">Join our newsletter 🎉</h2>
+        <h2 className="font-semibold text-4xl">Tham gia bản tin của chúng tôi 🎉</h2>
         <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-          Read and share new perspectives on just about any topic. Everyone’s
-          welcome.
+          Chào mừng. Hãy chia sẽ cảm nhận của mình với mọi người
         </span>
         <ul className="space-y-4 mt-10">
           <li className="flex items-center space-x-4">
             <Badge name="01" />
-            <span className="font-medium text-neutral-700 dark:text-neutral-300">
-              Get more discount
+            <span className="font-medium text-neutral-700 dark:text-neutral-300">             
+              Nhận thêm giảm giá
             </span>
           </li>
           <li className="flex items-center space-x-4">
             <Badge color="red" name="02" />
             <span className="font-medium text-neutral-700 dark:text-neutral-300">
-              Get premium magazines
+                Nhận tạp chí cao cấp.
             </span>
           </li>
         </ul>
@@ -39,7 +38,7 @@ const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
           <Input
             required
             aria-required
-            placeholder="Enter your email"
+            placeholder="Nhập email của bạn."
             type="email"
             rounded="rounded-full"
             sizeClass="h-12 px-5 py-3"
