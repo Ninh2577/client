@@ -14,8 +14,8 @@ export interface LocationInputProps {
 
 const LocationInput: FC<LocationInputProps> = ({
   autoFocus = false,
-  placeHolder = "Location",
-  desc = "Where are you going?",
+  placeHolder = "Vị trí",
+  desc = "Bạn đang đi đâu thế?",
   className = "nc-flex-1.5",
   divHideVerticalLineClass = "left-10 -right-0.5",
 }) => {
@@ -69,10 +69,10 @@ const LocationInput: FC<LocationInputProps> = ({
         </h3>
         <div className="mt-2">
           {[
-            "Hamptons, Suffolk County, NY",
-            "Las Vegas, NV, United States",
-            "Ueno, Taito, Tokyo",
-            "Ikebukuro, Toshima, Tokyo",
+            "Đảo Hòn Mun, Cuối đường Trần Phú, thành phố Nha Trang",
+            "Tháp bà Ponagar, Thành phố Nha Trang, Khánh Hòa",
+            "Vinpearl Land, Thành phố Nha Trang, Khánh Hòa",
+            "Đảo Hòn Tằm, Tp Nha Trang, Khánh Hoà",
           ].map((item) => (
             <span
               onClick={() => handleSelectLocation(item)}
