@@ -7,24 +7,24 @@ import { HomeIcon } from "@heroicons/react/24/outline";
 
 const defaultPropertyType: ClassOfProperties[] = [
   {
-    name: "Duplex House",
-    description: "Have a place to yourself",
+    name: "Nhà Duplex",
+    description: "Có một không gian riêng cho bản thân",
     checked: true,
   },
   {
-    name: "Ferme House",
-    description: "Have your own room and share some common spaces",
+    name: "Nhà Ferme",
+    description: "Có phòng riêng của bạn và chia sẻ một số không gian chung",
     checked: false,
   },
   {
-    name: "Chalet House",
+    name: "Nhà Chalet",
     description:
-      "Have a private or shared room in a boutique hotel, hostel, and more",
+      "Có phòng riêng hoặc phòng chung tại khách sạn boutique, nhà nghỉ, và nhiều hơn nữa",
     checked: false,
   },
   {
-    name: "Maison House",
-    description: "Stay in a shared space, like a common room",
+    name: "Nhà Maison",
+    description: "Ở trong một không gian chung, như phòng sinh hoạt chung",
     checked: false,
   },
 ];
@@ -55,9 +55,8 @@ const PropertyTypeSelect: FC<PropertyTypeSelectProps> = ({
       {({ open, close }) => (
         <>
           <Popover.Button
-            className={`flex z-10 text-left w-full flex-shrink-0 items-center ${fieldClassName} space-x-3 focus:outline-none cursor-pointer ${
-              open ? "nc-hero-field-focused" : ""
-            }`}
+            className={`flex z-10 text-left w-full flex-shrink-0 items-center ${fieldClassName} space-x-3 focus:outline-none cursor-pointer ${open ? "nc-hero-field-focused" : ""
+              }`}
             onClickCapture={() => document.querySelector("html")?.click()}
           >
             <div className="text-neutral-300 dark:text-neutral-400">

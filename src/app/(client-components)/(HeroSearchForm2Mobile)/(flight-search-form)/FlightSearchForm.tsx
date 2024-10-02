@@ -34,11 +34,10 @@ const FlightSearchForm = () => {
     const isActive = fieldNameShow === "locationPickup";
     return (
       <div
-        className={`w-full bg-white dark:bg-neutral-800 ${
-          isActive
+        className={`w-full bg-white dark:bg-neutral-800 ${isActive
             ? "rounded-2xl shadow-lg"
             : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
-        }`}
+          }`}
       >
         {!isActive ? (
           <button
@@ -66,11 +65,10 @@ const FlightSearchForm = () => {
     const isActive = fieldNameShow === "locationDropoff";
     return (
       <div
-        className={`w-full bg-white dark:bg-neutral-800 ${
-          isActive
+        className={`w-full bg-white dark:bg-neutral-800 ${isActive
             ? "rounded-2xl shadow-lg"
             : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
-        }`}
+          }`}
       >
         {!isActive ? (
           <button
@@ -99,11 +97,10 @@ const FlightSearchForm = () => {
 
     return (
       <div
-        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${
-          isActive
+        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${isActive
             ? "rounded-2xl shadow-lg"
             : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
-        }`}
+          }`}
       >
         {!isActive ? (
           <button
@@ -128,11 +125,10 @@ const FlightSearchForm = () => {
     const isActive = fieldNameShow === "general";
     return (
       <div
-        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${
-          isActive
+        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${isActive
             ? "rounded-2xl shadow-lg"
             : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
-        }`}
+          }`}
       >
         {!isActive ? (
           <button
@@ -145,42 +141,41 @@ const FlightSearchForm = () => {
         ) : (
           <div className="p-5">
             <span className="block font-semibold text-xl sm:text-2xl">
-              Flight type?
+              Loại chuyến bay?
             </span>
             <div className="relative mt-5">
               <div className="flex space-x-2">
                 <div
-                  className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer select-none ${
-                    dropOffLocationType === "Round-trip"
+                  className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer select-none ${dropOffLocationType === "Round-trip"
                       ? "bg-black shadow-black/10 shadow-lg text-white"
                       : "border border-neutral-300 dark:border-neutral-700"
-                  }`}
+                    }`}
                   onClick={(e) => setDropOffLocationType("Round-trip")}
                 >
-                  Round-trip
+                  Khứ hồi
                 </div>
                 <div
-                  className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer select-none ${
-                    dropOffLocationType === "One-way"
+                  className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer select-none ${dropOffLocationType === "One-way"
                       ? "bg-black text-white shadow-black/10 shadow-lg"
                       : "border border-neutral-300 dark:border-neutral-700"
-                  }`}
+                    }`}
                   onClick={(e) => setDropOffLocationType("One-way")}
                 >
-                  One-way
+                  Một chiều
                 </div>
               </div>
 
               <div className="mt-6">
                 <label className="text-base font-semibold" htmlFor="">
-                  Ticket Class:
+                  Hạng vé:
                 </label>
                 <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  {renderRadio("class", "Economy", "Economy")}
-                  {renderRadio("class", "Business", "Business")}
-                  {renderRadio("class", "Multiple", "Multiple")}
+                  {renderRadio("class", "Phổ thông", "Economy")}
+                  {renderRadio("class", "Thương gia", "Business")}
+                  {renderRadio("class", "Hạng nhất", "First Class")}
                 </div>
               </div>
+
             </div>
           </div>
         )}
@@ -229,11 +224,10 @@ const FlightSearchForm = () => {
 
     return (
       <div
-        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${
-          isActive
+        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${isActive
             ? "rounded-2xl shadow-lg"
             : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
-        }`}
+          }`}
       >
         {!isActive ? (
           <button

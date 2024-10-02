@@ -23,9 +23,8 @@ const PriceRangeInput: FC<PriceRangeInputProps> = ({
       {({ open, close }) => (
         <>
           <div
-            className={`flex-1 z-10 flex items-center focus:outline-none cursor-pointer ${
-              open ? "nc-hero-field-focused" : ""
-            }`}
+            className={`flex-1 z-10 flex items-center focus:outline-none cursor-pointer ${open ? "nc-hero-field-focused" : ""
+              }`}
           >
             <Popover.Button
               className={`flex-1 flex text-left items-center focus:outline-none ${fieldClassName} space-x-3 `}
@@ -41,7 +40,7 @@ const PriceRangeInput: FC<PriceRangeInputProps> = ({
                   )}k ~ $${convertNumbThousand(rangePrices[1] / 1000)}k`}
                 </span>
                 <span className="block mt-1 text-sm text-neutral-400 leading-none font-light ">
-                  Choose price range
+                  Chọn khoảng giá
                 </span>
               </div>
             </Popover.Button>
@@ -68,7 +67,7 @@ const PriceRangeInput: FC<PriceRangeInputProps> = ({
             <Popover.Panel className="absolute left-0 lg:right-0 z-10 w-full sm:min-w-[340px] max-w-sm bg-white dark:bg-neutral-800 top-full mt-3 py-5 sm:py-6 px-4 sm:px-8 rounded-3xl shadow-xl">
               <div className="relative flex flex-col space-y-8">
                 <div className="space-y-5">
-                  <span className="font-medium">Range Price </span>
+                  <span className="font-medium">Giá phạm vi </span>
                   <Slider
                     range
                     className="text-red-400"

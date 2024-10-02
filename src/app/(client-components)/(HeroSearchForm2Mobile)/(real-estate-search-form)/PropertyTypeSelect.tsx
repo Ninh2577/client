@@ -28,7 +28,7 @@ const PropertyTypeSelect: FC<PropertyTypeSelectProps> = ({
   return (
     <div className="p-5">
       <span className="block font-semibold text-xl sm:text-2xl">
-        Property types
+        Loại tài sản
       </span>
       <div className="relative flex flex-col space-y-5 mt-7">
         {typeOfProperty.map((item, index) => (

@@ -6,7 +6,7 @@ import Input from "@/shared/Input";
 import Select from "@/shared/Select";
 import Textarea from "@/shared/Textarea";
 
-export interface AccountPageProps {}
+export interface AccountPageProps { }
 
 const AccountPage = () => {
   return (
