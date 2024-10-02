@@ -163,7 +163,7 @@ const FlightCard: FC<FlightCardProps> = ({ className = "", data }) => {
 
           {/* TYPE */}
           <div className="hidden lg:block flex-[4] whitespace-nowrap">
-            <div className="font-medium text-lg">1 stop</div>
+            <div className="font-medium text-lg">1 điểm dừng</div>
             <div className="text-sm text-neutral-500 font-normal mt-0.5">
             2 giờ 15 phút ở BKK
             </div>
