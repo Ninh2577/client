@@ -113,13 +113,13 @@ const TabFilters = () => {
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -168,13 +168,13 @@ const TabFilters = () => {
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -214,7 +214,7 @@ const TabFilters = () => {
                 <div className="overflow-hidden rounded-2xl shadow-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
                   <div className="relative flex flex-col px-5 py-6 space-y-8">
                     <div className="space-y-5">
-                      <span className="font-medium">Price per day</span>
+                      <span className="font-medium">Giá mỗi ngày</span>
                       <Slider
                         range
                         min={0}
@@ -276,13 +276,13 @@ const TabFilters = () => {
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Đóng 
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -428,7 +428,7 @@ const TabFilters = () => {
                       {/* --------- */}
                       {/* ---- */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Phạm vi giá</h3>
+                        <h3 className="text-xl font-medium">Chọn loại giá</h3>
                         <div className="mt-6 relative ">
                           <div className="relative flex flex-col space-y-8">
                             <div className="space-y-5">
@@ -501,13 +501,13 @@ const TabFilters = () => {
                       onClick={closeModalMoreFilter}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={closeModalMoreFilter}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
