@@ -81,7 +81,7 @@ const CarCard: FC<CarCardProps> = ({
             {` `}
             {size === "default" && (
               <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">
-                /day
+                /ngày
               </span>
             )}
           </span>

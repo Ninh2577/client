@@ -43,9 +43,9 @@ const CardCategory4: FC<CardCategory4Props> = ({
         >
           {convertNumbThousand(count || 0)}
           {` `}
-          {(!listingType || listingType === "stay") && "properties"}
-          {listingType === "car" && "cars"}
-          {listingType === "experiences" && "experiences"}
+          {(!listingType || listingType === "Lưu trữ") && "properties"}
+          {listingType === "Xe hơi" && "cars"}
+          {listingType === "Trải nghiệm" && "experiences"}
         </span>
       </div>
     </Link>

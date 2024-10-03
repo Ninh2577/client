@@ -30,39 +30,38 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
         }`}
       >
         <span className="uppercase text-sm text-gray-400 tracking-widest">
-          BENnefits
+          Lợi ích
         </span>
-        <h2 className="font-semibold text-4xl mt-5">Happening cities </h2>
+        <h2 className="font-semibold text-4xl mt-5">Thành phố sôi động</h2>
 
         <ul className="space-y-10 mt-16">
           <li className="space-y-4">
             <Badge name="Advertising" />
             <span className="block text-xl font-semibold">
-              Cost-effective advertising
+            Quảng cáo hiệu quả
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              With a free listing, you can advertise your rental with no upfront
-              costs
+            Với danh sách miễn phí, bạn có thể quảng cáo cho tài sản cho thuê của mình
+            mà không cần chi phí trước
             </span>
           </li>
           <li className="space-y-4">
             <Badge color="green" name="Exposure " />
             <span className="block text-xl font-semibold">
-              Reach millions with Chisfis
+            Đạt được hàng triệu lượt tiếp cận với Chisfis
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              Millions of people are searching for unique places to stay around
-              the world
+            Hàng triệu người đang tìm kiếm những nơi ở độc đáo trên toàn thế giới
             </span>
           </li>
           <li className="space-y-4">
             <Badge color="red" name="Secure" />
             <span className="block text-xl font-semibold">
-              Secure and simple
+            An toàn và đơn giản
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              A Holiday Lettings listing gives you a secure and easy way to take
-              bookings and payments online
+            Danh sách cho thuê trên Holiday Lettings cung cấp cho bạn một cách an
+            toàn và dễ dàng để nhận đặt phòng và thanh toán trực tuyến
             </span>
           </li>
         </ul>
