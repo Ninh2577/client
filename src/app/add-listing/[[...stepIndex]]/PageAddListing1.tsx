@@ -8,39 +8,39 @@ export interface PageAddListing1Props {}
 const PageAddListing1: FC<PageAddListing1Props> = () => {
   return (
     <>
-      <h2 className="text-2xl font-semibold">Choosing listing categories</h2>
+      <h2 className="text-2xl font-semibold">Chọn loại hình lưu trú</h2>
       <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
       {/* FORM */}
       <div className="space-y-8">
         {/* ITEM */}
         <FormItem
-          label="Choose a property type"
-          desc="Hotel: Professional hospitality businesses that usually have a unique style or theme defining their brand and decor"
+          label="Chọn loại hình lưu trú"
+          desc="Khách sạn: Các doanh nghiệp chuyên nghiệp về dịch vụ lưu trú, thường có phong cách hoặc chủ đề độc đáo định nghĩa thương hiệu và trang trí của họ."
         >
           <Select>
-            <option value="Hotel">Hotel</option>
-            <option value="Cottage">Cottage</option>
-            <option value="Villa">Villa</option>
-            <option value="Cabin">Cabin</option>
-            <option value="Farm stay">Farm stay</option>
-            <option value="Houseboat">Houseboat</option>
-            <option value="Lighthouse">Lighthouse</option>
+            <option value="Hotel">Khách sạn</option>
+            <option value="Cottage">Nhà nghỉ</option>
+            <option value="Villa">Biệt thự</option>
+            <option value="Cabin">Nhà gỗ</option>
+            <option value="Farm stay">Nông trại nghỉ dưỡng</option>
+            <option value="Houseboat">Nhà thuyền</option>
+            <option value="Lighthouse">Ngọn hải đăng</option>
           </Select>
         </FormItem>
         <FormItem
-          label="Place name"
-          desc="A catchy name usually includes: House name + Room name + Featured property + Tourist destination"
+          label="Tên địa điểm"
+          desc="Một tên hấp dẫn thường bao gồm: Tên nhà + Tên phòng + Đặc điểm nổi bật của bất động sản + Điểm đến du lịch"
         >
-          <Input placeholder="Places name" />
+          <Input placeholder="Tên địa điểm" />
         </FormItem>
         <FormItem
-          label="Rental form"
-          desc="Entire place: Guests have the whole place to themselves—there's a private entrance and no shared spaces. A bedroom, bathroom, and kitchen are usually included."
+          label="Loại hình cho thuê"
+          desc="Toàn bộ nơi ở: Khách có toàn bộ nơi ở cho riêng mình—có lối vào riêng và không có không gian chung. Thường bao gồm một phòng ngủ, phòng tắm và nhà bếp."
         >
           <Select>
-            <option value="Hotel">Entire place</option>
-            <option value="Private room">Private room</option>
-            <option value="Share room">Share room</option>
+            <option value="Hotel">Toàn bộ nơi ở</option>
+            <option value="Private room">Phòng riêng</option>
+            <option value="Share room">Phòng chia sẻ</option>
           </Select>
         </FormItem>
       </div>

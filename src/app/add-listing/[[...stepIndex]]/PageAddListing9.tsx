@@ -18,26 +18,26 @@ const PageAddListing9: FC<PageAddListing9Props> = () => {
   return (
     <>
       <div>
-        <h2 className="text-2xl font-semibold">How long can guests stay?</h2>
+        <h2 className="text-2xl font-semibold">Thời gian khách có thể lưu trú</h2>
         <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-          {` Shorter trips can mean more reservations, but you'll turn over your
-          space more often.`}
+          {`     Chuyến đi ngắn hơn có thể có nhiều đặt phòng hơn, nhưng bạn sẽ phải chuyển chỗ ở thường xuyên hơn.
+`}
         </span>
       </div>
       <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
       {/* FORM */}
       <div className="space-y-7">
         {/* ITEM */}
-        <NcInputNumber label="Nights min" defaultValue={1} />
-        <NcInputNumber label="Nights max" defaultValue={99} />
+        <NcInputNumber label="Số đêm tối thiểu" defaultValue={1} />
+        <NcInputNumber label="Số đêm tối đa" defaultValue={99} />
       </div>
 
       {/*  */}
       <div>
-        <h2 className="text-2xl font-semibold">Set your availability</h2>
+        <h2 className="text-2xl font-semibold">Thiết lập tính sẵn có của bạn</h2>
         <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-          Editing your calendar is easy—just select a date to block or unblock
-          it. You can always make changes after you publish.
+        Chỉnh sửa lịch của bạn rất dễ dàng—chỉ cần chọn một ngày để chặn hoặc mở khóa nó. Bạn luôn có thể thay đổi sau khi xuất bản.
+
         </span>
       </div>
 
