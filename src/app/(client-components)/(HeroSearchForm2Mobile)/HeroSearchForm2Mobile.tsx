@@ -34,10 +34,10 @@ const HeroSearchForm2Mobile = () => {
         <MagnifyingGlassIcon className="flex-shrink-0 w-5 h-5" />
 
         <div className="ml-3 flex-1 text-left overflow-hidden">
-          <span className="block font-medium text-sm">Where to?</span>
+          <span className="block font-medium text-sm">Bạn muốn đi đâu?</span>
           <span className="block mt-0.5 text-xs font-light text-neutral-500 dark:text-neutral-400 ">
             <span className="line-clamp-1">
-              Anywhere • Any week • Add guests
+              Bất kỳ đâu • Bất kỳ tuần nào • Thêm khách
             </span>
           </span>
         </div>
@@ -94,11 +94,10 @@ const HeroSearchForm2Mobile = () => {
                               {({ selected }) => (
                                 <div className="relative focus:outline-none focus-visible:ring-0 outline-none select-none">
                                   <div
-                                    className={`${
-                                      selected
-                                        ? "text-black dark:text-white"
-                                        : ""
-                                    }  `}
+                                    className={`${selected
+                                      ? "text-black dark:text-white"
+                                      : ""
+                                      }  `}
                                   >
                                     {item}
                                   </div>
@@ -144,7 +143,7 @@ const HeroSearchForm2Mobile = () => {
                             resetIsShowingDialog();
                           }}
                         >
-                          Clear all
+                          Xóa tất cả
                         </button>
                         <ButtonSubmit
                           onClick={() => {

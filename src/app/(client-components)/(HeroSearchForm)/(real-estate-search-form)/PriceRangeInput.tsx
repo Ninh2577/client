@@ -23,9 +23,8 @@ const PriceRangeInput: FC<PriceRangeInputProps> = ({
       {({ open, close }) => (
         <>
           <div
-            className={`flex-1 z-10 flex items-center focus:outline-none cursor-pointer ${
-              open ? "nc-hero-field-focused" : ""
-            }`}
+            className={`flex-1 z-10 flex items-center focus:outline-none cursor-pointer ${open ? "nc-hero-field-focused" : ""
+              }`}
           >
             <Popover.Button
               className={`flex-1 flex text-left items-center focus:outline-none ${fieldClassName} space-x-3 `}

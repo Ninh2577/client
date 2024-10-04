@@ -9,24 +9,24 @@ import NcInputNumber from "@/components/NcInputNumber";
 import FlightDateRangeInput from "./FlightDateRangeInput";
 import { GuestsObject } from "../../type";
 
-export interface FlightSearchFormProps {}
+export interface FlightSearchFormProps { }
 
 const flightClass = [
   {
-    name: "Economy",
+    name: "Vé phổ thông",
     href: "##",
   },
   {
-    name: "Business",
+    name: "Vé thương gia",
     href: "##",
   },
   {
-    name: "Multiple",
+    name: "Vé thường",
     href: "##",
   },
 ];
 
-const FlightSearchForm: FC<FlightSearchFormProps> = ({}) => {
+const FlightSearchForm: FC<FlightSearchFormProps> = ({ }) => {
   const [dropOffLocationType, setDropOffLocationType] = useState<
     "roundTrip" | "oneWay" | ""
   >("roundTrip");
@@ -69,9 +69,8 @@ const FlightSearchForm: FC<FlightSearchFormProps> = ({}) => {
               >
                 <span>{`${totalGuests || ""} Guests`}</span>
                 <ChevronDownIcon
-                  className={`${
-                    open ? "" : "text-opacity-70"
-                  } ml-2 h-4 w-4 group-hover:text-opacity-80 transition ease-in-out duration-150`}
+                  className={`${open ? "" : "text-opacity-70"
+                    } ml-2 h-4 w-4 group-hover:text-opacity-80 transition ease-in-out duration-150`}
                   aria-hidden="true"
                 />
               </Popover.Button>
@@ -135,9 +134,8 @@ const FlightSearchForm: FC<FlightSearchFormProps> = ({}) => {
               >
                 <span>{`${flightClassState}`}</span>
                 <ChevronDownIcon
-                  className={`${
-                    open ? "" : "text-opacity-70"
-                  } ml-2 h-4 w-4 group-hover:text-opacity-80 transition ease-in-out duration-150`}
+                  className={`${open ? "" : "text-opacity-70"
+                    } ml-2 h-4 w-4 group-hover:text-opacity-80 transition ease-in-out duration-150`}
                   aria-hidden="true"
                 />
               </Popover.Button>
@@ -182,24 +180,22 @@ const FlightSearchForm: FC<FlightSearchFormProps> = ({}) => {
     return (
       <div className="pb-3 flex justify-center space-x-3">
         <div
-          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer select-none ${
-            dropOffLocationType === "roundTrip"
-              ? "bg-black shadow-black/10 shadow-lg text-white"
-              : "border border-neutral-300 dark:border-neutral-700"
-          }`}
+          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer select-none ${dropOffLocationType === "roundTrip"
+            ? "bg-black shadow-black/10 shadow-lg text-white"
+            : "border border-neutral-300 dark:border-neutral-700"
+            }`}
           onClick={(e) => setDropOffLocationType("roundTrip")}
         >
-          Round-trip
+          Khứ hồi
         </div>
         <div
-          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer select-none ${
-            dropOffLocationType === "oneWay"
-              ? "bg-black text-white shadow-black/10 shadow-lg"
-              : "border border-neutral-300 dark:border-neutral-700"
-          }`}
+          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer select-none ${dropOffLocationType === "oneWay"
+            ? "bg-black text-white shadow-black/10 shadow-lg"
+            : "border border-neutral-300 dark:border-neutral-700"
+            }`}
           onClick={(e) => setDropOffLocationType("oneWay")}
         >
-          One-way
+          Một chiều
         </div>
 
         <div className=" border-r border-slate-200 dark:border-slate-700 "></div>

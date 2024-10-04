@@ -18,7 +18,7 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "1",
     href: "/listing-stay-map",
-    name: "New Yourk",
+    name: "New York",
     taxonomy: "category",
     count: 188288,
     thumbnail:
@@ -45,7 +45,7 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "4",
     href: "/listing-stay-map",
-    name: "London",
+    name: "Luân Đôn",
     taxonomy: "category",
     count: 188288,
     thumbnail:
@@ -72,7 +72,7 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "7",
     href: "/listing-stay-map",
-    name: "Italy",
+    name: "Ý",
     taxonomy: "category",
     count: 188288,
     thumbnail:
@@ -84,7 +84,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
   {
     id: "1",
     href: "/listing-stay-map",
-    name: "Enjoy the great cold",
+    name: "Tận hưởng cái lạnh tuyệt vời",
     taxonomy: "category",
     count: 188288,
     thumbnail:
@@ -93,7 +93,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
   {
     id: "2",
     href: "/listing-stay-map",
-    name: "Sleep in a floating way",
+    name: "Ngủ theo cách nổi trên nước",
     taxonomy: "category",
     count: 188288,
     thumbnail:
@@ -102,7 +102,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
   {
     id: "3",
     href: "/listing-stay-map",
-    name: "In the billionaire's house",
+    name: "Trong ngôi nhà của tỷ phú",
     taxonomy: "category",
     count: 188288,
     thumbnail:
@@ -111,7 +111,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
   {
     id: "4",
     href: "/listing-stay-map",
-    name: "Cool in the deep forest",
+    name: "Mát lạnh trong rừng sâu",
     taxonomy: "category",
     count: 188288,
     thumbnail:
@@ -120,7 +120,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
   {
     id: "5",
     href: "/listing-stay-map",
-    name: "In the billionaire's house",
+    name: "Trong ngôi nhà của tỷ phú",
     taxonomy: "category",
     count: 188288,
     thumbnail:
@@ -129,7 +129,7 @@ const DEMO_CATS_2: TaxonomyType[] = [
   {
     id: "6",
     href: "/listing-stay-map",
-    name: "In the billionaire's house",
+    name: "Trong ngôi nhà của tỷ phú",
     taxonomy: "category",
     count: 188288,
     thumbnail:
@@ -138,13 +138,14 @@ const DEMO_CATS_2: TaxonomyType[] = [
   {
     id: "7",
     href: "/listing-stay-map",
-    name: "Cool in the deep forest",
+    name: "Mát lạnh trong rừng sâu",
     taxonomy: "category",
     count: 188288,
     thumbnail:
       "https://images.pexels.com/photos/247532/pexels-photo-247532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
 ];
+
 
 function PageHome() {
   return (
