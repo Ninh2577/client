@@ -4,7 +4,7 @@ import Avatar from "@/shared/Avatar";
 import ButtonPrimary from "@/shared/ButtonPrimary";
 import Input from "@/shared/Input";
 import Select from "@/shared/Select";
-import Textarea from "@/shared/Textarea";
+import RadioGroup from "@/components/radio";
 
 export interface AccountPageProps { }
 
@@ -46,29 +46,21 @@ const AccountPage = () => {
         <div className="flex-grow mt-10 md:mt-0 md:pl-16 max-w-3xl space-y-6">
           <div>
             <Label>Họ tên</Label>
-            <Input className="mt-1.5" value="Nguyen van a" />
+            <Input className="mt-1.5" defaultValue="Nguyen van a" />
           </div>
           {/* ---- */}
           {/* ---- */}
           <div>
             <Label>Email</Label>
-            <Input className="mt-1.5" value="example@email.com" />
+            <Input className="mt-1.5" defaultValue="example@email.com" />
           </div>
           {/* ---- */}
           {/* ---- */}
           <div>
             <Label>Số điện thoại</Label>
-            <Input className="mt-1.5" value="003 888 232" />
+            <Input className="mt-1.5" defaultValue="003 888 232" />
           </div>
           {/* ---- */}
-          <div>
-            <Label>Mật khẩu</Label>
-            <Input className="mt-1.5" value="*******" />
-          </div>
-          <div>
-            <Label>Địa chỉ</Label>
-            <Input className="mt-1.5" value="New york, USA" />
-          </div>
           <div>
             <Label>Giới tính</Label>
             <Select className="mt-1.5">
@@ -77,20 +69,40 @@ const AccountPage = () => {
               <option value="Other">Khác</option>
             </Select>
           </div>
-          {/* ---- */}
           <div className="max-w-lg">
             <Label>Năm sinh</Label>
-            <Input className="mt-1.5" type="date" value="1990-07-22" />
+            <Input className="mt-1.5" type="date" defaultValue="1990-07-22" />
           </div>
+          <div>
+            <Label>Mật khẩu</Label>
+            <Input className="mt-1.5" defaultValue="*******" />
+          </div>
+          <div>
+            <Label>Địa chỉ</Label>
+            <Input className="mt-1.5" defaultValue="New york, USA" />
+          </div>
+
           {/* ---- */}
 
-
+          {/* ---- */}
           {/* ---- */}
           <div>
             <Label>Số cccd</Label>
-            <Input className="mt-1.5" value="2323727362632" />
+            <Input className="mt-1.5" defaultValue="2323727362632" />
           </div>
-          {/* <Radio/> */}
+          <div>
+            <Label>Mặt trước CCCD</Label>
+            <Input type="file" className="mt-1.5" accept="image/*" />
+          </div>
+          <div>
+            <Label>Mặt sau CCCD</Label>
+            <Input type="file" className="mt-1.5" accept="image/*" />
+          </div>
+          <div>
+            <Label>Vai trò</Label>
+            <br />
+            <RadioGroup />
+          </div>
           {/* ---- */}
           <div className="pt-2">
             <ButtonPrimary>Cập nhật thông tin</ButtonPrimary>

@@ -1,23 +1,24 @@
+// radio.tsx
+'use client'
 import React, { useState } from 'react';
 import type { RadioChangeEvent } from 'antd';
 import { Radio } from 'antd';
 
-const radio: React.FC = () => {
-  const [value, setValue] = useState(1);
+const RadioGroup = () => {
+  const [selectedValue, setSelectedValue] = useState(1);
 
-  const onChange = (e: RadioChangeEvent) => {
-    console.log('radio checked', e.target.value);
-    setValue(e.target.value);
+  const handleChange = (e: RadioChangeEvent) => {
+    setSelectedValue(e.target.value);
+    // ...
   };
 
   return (
-    <Radio.Group onChange={onChange} value={value}>
-      <Radio value={1}>A</Radio>
-      <Radio value={2}>B</Radio>
-      <Radio value={3}>C</Radio>
-      <Radio value={4}>D</Radio>
+    <Radio.Group onChange={handleChange} value={selectedValue} className="mt-1.5">
+      <Radio value={1}>Admin</Radio>
+      <Radio value={2}>User</Radio>
+      {/* ... */}
     </Radio.Group>
   );
 };
 
-export default radio;
+export default RadioGroup;
