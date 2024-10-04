@@ -15,6 +15,13 @@ export const Nav = () => {
     "/account-billing",
   ];
 
+  const displayNames = {
+    "/account": "Tài khoản",
+    "/account-savelists": "Danh sách đã lưu",
+    "/account-password": "Mật khẩu",
+    "/account-billing": "Thanh toán",
+  };
+
   return (
     <div className="container">
       <div className="flex space-x-8 md:space-x-14 overflow-x-auto hiddenScrollbar">
@@ -29,7 +36,7 @@ export const Nav = () => {
                 : "border-transparent"
                 }`}
             >
-              {item.replace("-", " ").replace("/", " ")}
+              {displayNames[item] || item.replace("-", " ").replace("/", " ")}
             </Link>
           );
         })}

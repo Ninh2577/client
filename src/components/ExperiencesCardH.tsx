@@ -73,20 +73,20 @@ const ExperiencesCardH: FC<ExperiencesCardHProps> = ({
         </div>
         <div className="hidden sm:block text-sm text-neutral-500 dark:text-neutral-400 mt-4">
           <span className="line-clamp-2">
-          {`Uống cà phê ở Việt Nam là một quá trình trải nghiệm thú vị, bạn sẽ không có nhiều thời gian rảnh giữa việc thưởng thức. Nhưng đây không phải là một nhiệm vụ quá phức tạp để bắt đầu ngày mới với`}
+            {`Uống cà phê ở Việt Nam là một quá trình trải nghiệm thú vị, bạn sẽ không có nhiều thời gian rảnh giữa việc thưởng thức. Nhưng đây không phải là một nhiệm vụ quá phức tạp để bắt đầu ngày mới với`}
           </span>
         </div>
         <div className="flex items-center space-x-8 mt-4  ">
           <div className="flex items-center space-x-2">
             <i className="las la-clock text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-            3 giờ 
+              3 Giờ
             </span>
           </div>
           <div className="flex items-center space-x-2">
             <i className="las la-user text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-            Tối đa 6 người
+              Tối đa 6 người
             </span>
           </div>
         </div>
@@ -95,19 +95,19 @@ const ExperiencesCardH: FC<ExperiencesCardHProps> = ({
           <div className="flex items-center space-x-3 text-sm text-neutral-700  dark:text-neutral-300">
             <Avatar imgUrl={author.avatar} userName={author.displayName} />
             <span className="hidden sm:inline-block">
-              <span className="hidden sm:inline">Chủ nhà</span>{" "}
+              <span className="hidden sm:inline">Chỗ nghỉ:</span>{" "}
               {author.displayName}
-            </span>
-          </div>
+            </span >
+          </div >
           <span className="text-base font-semibold text-secondary-700">
             {price}
             {` `}
             <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">
-              /người
-            </span>
-          </span>
-        </div>
-      </div>
+              /Người
+            </span >
+          </span >
+        </div >
+      </div >
     );
   };
 

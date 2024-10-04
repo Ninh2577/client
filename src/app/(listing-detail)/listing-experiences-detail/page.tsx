@@ -43,7 +43,7 @@ const ListingExperiencesDetailPage: FC<
 
         {/* 2 */}
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-          Trang An Boat Tour & Mua Cave
+          Tour du thuyền Tràng An & Hang Múa
         </h2>
 
         {/* 3 */}
@@ -60,9 +60,9 @@ const ListingExperiencesDetailPage: FC<
         <div className="flex items-center">
           <Avatar hasChecked sizeClass="h-10 w-10" radius="rounded-full" />
           <span className="ml-2.5 text-neutral-500 dark:text-neutral-400">
-            Hosted by{" "}
+            A{" "}
             <span className="text-neutral-900 dark:text-neutral-200 font-medium">
-              Kevin Francis
+              Người dùng 
             </span>
           </span>
         </div>
@@ -74,15 +74,15 @@ const ListingExperiencesDetailPage: FC<
         <div className="flex items-center justify-between xl:justify-start space-x-8 xl:space-x-12 text-sm text-neutral-700 dark:text-neutral-300">
           <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 text-center sm:text-left sm:space-x-3 ">
             <i className="las la-clock text-2xl"></i>
-            <span className="">3.5 hours</span>
+            <span className="">3.5 giờ</span>
           </div>
           <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 text-center sm:text-left sm:space-x-3 ">
             <i className="las la-user-friends text-2xl"></i>
-            <span className="">Up to 10 people</span>
+            <span className="">Tối đa 10 người</span>
           </div>
           <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 text-center sm:text-left sm:space-x-3 ">
             <i className="las la-language text-2xl"></i>
-            <span className="">English, VietNames</span>
+            <span className="">English, Việt Nam</span>
           </div>
         </div>
       </div>
@@ -92,50 +92,50 @@ const ListingExperiencesDetailPage: FC<
   const renderSection2 = () => {
     return (
       <div className="listingSection__wrap">
-        <h2 className="text-2xl font-semibold">Experiences descriptions</h2>
+        <h2 className="text-2xl font-semibold">Mô tả trải nghiệm</h2>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
         <div className="text-neutral-6000 dark:text-neutral-300">
           <p>
-            TRANG AN BOAT TOUR & MUA CAVE CLIMBING TOUR FROM HANOI
+          TOUR THUYỀN TRÀNG AN &TOUR LEO HANG MUA TỪ HÀ NỘI
             <br />
             <br />
-            07:30 – 08:00 – Our guide will meet you at your hotel/stay and start
-            a 120km comfortable Limousine bus journey through the verdant
-            landscape. Stopover for a rest on the way.
+            07:30 - 08:00 - Hướng dẫn viên của chúng tôi sẽ gặp bạn tại khách sạn / lưu trú của bạn và bắt đầu
+            một chuyến xe buýt Limousine thoải mái dài 120km qua màu xanh tươi
+            phong cảnh. Dừng lại để nghỉ ngơi trên đường đi.
             <br />
             <br />
-            BAI DINH PAGODA EXPLORER.
+            NHÀ THÁM HIỂM CHÙA BÁI DÍNH.
             <br />
             <br />
-            10:30 – Arrive Bai Dinh pagoda complex, get on electric cars to
-            visit massive architecture.
+            10:30 – Đến quần thể chùa Bái Đính, lên xe điện đến
+            Tham quan kiến trúc đồ sộ.
             <br />
             <br />
-            12:15 – Enjoy the buffet lunch at our restaurant, a great place to
-            savor the flavours of Vietnamese food.
+            12:15 - Thưởng thức bữa trưa tự chọn tại nhà hàng của chúng tôi, một nơi tuyệt vời để
+            thưởng thức hương vị của món ăn Việt Nam.
             <br />
             <br />
-            TRANG AN TOUR ON BOAT.
+            TOUR TRÀNG AN TRÊN THUYỀN.
             <br />
             <br />
-            13:30 – Visit Trang An Grottoes, get on a rowing boat traveling
-            along the river with scenic mountain and green fields landscape.
+            13:30 – Tham quan hang Tràng An, lên thuyền chèo
+            Dọc theo dòng sông với núi non tuyệt đẹp và cảnh quan cánh đồng xanh.
             <br />
             <br />
-            MUA CAVE HIKING. TAKE PICTURE
+            MUA CAVE HIKING. CHỤP ẢNH
             <br />
             <br />
-            15:45 – Arrive at Mua Cave and start an amazing trek up to the top
-            of Ngoa Long mountain.
+            15:45 - Đến Hang Mua và bắt đầu một chuyến đi tuyệt vời lên đỉnh
+            của núi Ngọa Long.
             <br />
             <br />
-            17:30 – 20:00 – Return to our Limousine bus and then come back to
-            Hanoi. Drop you off at your hotel/stay. Other things to note
+            17:30 - 20:00 - Quay trở lại xe buýt Limousine của chúng tôi và sau đó quay trở lại
+            Hà Nội. Trả bạn tại khách sạn / lưu trú của bạn. Những điều khác cần lưu ý
             <br />
             <br />
-            It is one full day tour. Start from 07.30 AM and finish at 20.00. We
-            just put one hour and default departure time because we have many
-            other tours. IF you need any further details
+            Đó là một tour du lịch cả ngày. Bắt đầu từ 07:30 AM và kết thúc lúc 20:00. Chúng ta
+            Chỉ cần đặt một giờ và thời gian khởi hành mặc định vì chúng tôi có nhiều
+            các tour du lịch khác. NẾU bạn cần thêm bất kỳ chi tiết nào
           </p>
         </div>
       </div>
@@ -146,9 +146,9 @@ const ListingExperiencesDetailPage: FC<
     return (
       <div className="listingSection__wrap">
         <div>
-          <h2 className="text-2xl font-semibold">Include </h2>
+          <h2 className="text-2xl font-semibold">Bao gồm </h2>
           <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-            Included in the price
+          Đã bao gồm trong giá
           </span>
         </div>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
@@ -171,7 +171,7 @@ const ListingExperiencesDetailPage: FC<
     return (
       <div className="listingSection__wrap">
         {/* HEADING */}
-        <h2 className="text-2xl font-semibold">Host Information</h2>
+        <h2 className="text-2xl font-semibold">Thông tin máy chủ</h2>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
 
         {/* host */}
@@ -184,21 +184,21 @@ const ListingExperiencesDetailPage: FC<
           />
           <div>
             <a className="block text-xl font-medium" href="##">
-              Kevin Francis
+              Người dùng
             </a>
             <div className="mt-1.5 flex items-center text-sm text-neutral-500 dark:text-neutral-400">
               <StartRating />
               <span className="mx-2">·</span>
-              <span> 12 places</span>
+              <span> 12 Nơi</span>
             </div>
           </div>
         </div>
 
         {/* desc */}
         <span className="block text-neutral-6000 dark:text-neutral-300">
-          Providing lake views, The Symphony 9 Tam Coc in Ninh Binh provides
-          accommodation, an outdoor swimming pool, a bar, a shared lounge, a
-          garden and barbecue facilities...
+        Với tầm nhìn hướng hồ, The Symphony 9 Tam Cốc tại Ninh Bình cung cấp
+          chỗ ở, hồ bơi ngoài trời, quầy bar, sảnh khách chung, a
+          sân vườn và tiện nghi BBQ...
         </span>
 
         {/* info */}
@@ -218,7 +218,7 @@ const ListingExperiencesDetailPage: FC<
                 d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
               />
             </svg>
-            <span>Joined in March 2016</span>
+            <span>Gia nhập vào tháng Ba năm 2016</span>
           </div>
           <div className="flex items-center space-x-3">
             <svg
@@ -235,7 +235,7 @@ const ListingExperiencesDetailPage: FC<
                 d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
               />
             </svg>
-            <span>Response rate - 100%</span>
+            <span>Tỷ lệ phản hồi - 100%</span>
           </div>
           <div className="flex items-center space-x-3">
             <svg
@@ -253,14 +253,14 @@ const ListingExperiencesDetailPage: FC<
               />
             </svg>
 
-            <span>Fast response - within a few hours</span>
+            <span>Phản hồi nhanh - trong vòng vài giờ</span>
           </div>
         </div>
 
         {/* == */}
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
         <div>
-          <ButtonSecondary href="/author">See host profile</ButtonSecondary>
+          <ButtonSecondary href="/author">Xem hồ sơ máy chủ lưu trữ</ButtonSecondary>
         </div>
       </div>
     );
@@ -270,7 +270,7 @@ const ListingExperiencesDetailPage: FC<
     return (
       <div className="listingSection__wrap">
         {/* HEADING */}
-        <h2 className="text-2xl font-semibold">Reviews (23 reviews)</h2>
+        <h2 className="text-2xl font-semibold">Nhận xét (23 Đánh giá)</h2>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
 
         {/* Content */}
@@ -299,7 +299,7 @@ const ListingExperiencesDetailPage: FC<
           <CommentListing className="py-8" />
           <CommentListing className="py-8" />
           <div className="pt-8">
-            <ButtonSecondary>View more 20 reviews</ButtonSecondary>
+            <ButtonSecondary>Xem thêm 20 bình luận</ButtonSecondary>
           </div>
         </div>
       </div>
@@ -311,9 +311,9 @@ const ListingExperiencesDetailPage: FC<
       <div className="listingSection__wrap">
         {/* HEADING */}
         <div>
-          <h2 className="text-2xl font-semibold">Location</h2>
+          <h2 className="text-2xl font-semibold">Vị trí</h2>
           <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-            San Diego, CA, United States of America (SAN-San Diego Intl.)
+            Cần Thơ, Việt Nam 
           </span>
         </div>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
@@ -339,38 +339,38 @@ const ListingExperiencesDetailPage: FC<
     return (
       <div className="listingSection__wrap">
         {/* HEADING */}
-        <h2 className="text-2xl font-semibold">Things to know</h2>
+        <h2 className="text-2xl font-semibold">Những điều cần biết</h2>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
 
         {/* CONTENT */}
         <div>
-          <h4 className="text-lg font-semibold">Cancellation policy</h4>
+          <h4 className="text-lg font-semibold">Chính sách hủy</h4>
           <span className="block mt-3 text-neutral-500 dark:text-neutral-400">
-            Any experience can be canceled and fully refunded within 24 hours of
-            purchase, or at least 7 days before the experience starts.
+          Mọi trải nghiệm đều có thể bị hủy và hoàn tiền đầy đủ trong vòng 24 giờ kể từ khi
+          mua, hoặc ít nhất 7 ngày trước khi trải nghiệm bắt đầu.
           </span>
         </div>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
 
         {/* CONTENT */}
         <div>
-          <h4 className="text-lg font-semibold">Guest requirements</h4>
+          <h4 className="text-lg font-semibold">Yêu cầu đối với khách</h4>
           <span className="block mt-3 text-neutral-500 dark:text-neutral-400">
-            Up to 10 guests ages 4 and up can attend. Parents may also bring
-            children under 2 years of age.
+          Tối đa 10 khách từ 4 tuổi trở lên có thể tham dự. Cha mẹ cũng có thể mang theo
+          trẻ em dưới 2 tuổi.
           </span>
         </div>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
 
         {/* CONTENT */}
         <div>
-          <h4 className="text-lg font-semibold">What to bring</h4>
+          <h4 className="text-lg font-semibold">Những gì cần mang theo</h4>
           <div className="prose sm:prose">
             <ul className="mt-3 text-neutral-500 dark:text-neutral-400 space-y-2">
               <li>
-                Formal Wear To Visit Bai Dinh Pagoda Be ready before 7.30 Am.
+              Trang phục trang trọng để tham quan chùa Bái Đính Hãy sẵn sàng trước 7:30 sáng.
               </li>
-              <li>We will pick up from 07.30 to 08.00 AM</li>
+              <li>Chúng tôi sẽ đón khách từ 07:30 đến 08:00 AM</li>
             </ul>
           </div>
         </div>
@@ -386,7 +386,7 @@ const ListingExperiencesDetailPage: FC<
           <span className="text-3xl font-semibold">
             $19
             <span className="ml-1 text-base font-normal text-neutral-500 dark:text-neutral-400">
-              /person
+              /Người
             </span>
           </span>
           <StartRating />
@@ -403,22 +403,22 @@ const ListingExperiencesDetailPage: FC<
         {/* SUM */}
         <div className="flex flex-col space-y-4">
           <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
-            <span>$19 x 3 adults</span>
+            <span>$19 x 3 người lớn</span>
             <span>$57</span>
           </div>
           <div className="flex justify-between text-neutral-6000 dark:text-neutral-300">
-            <span>Service charge</span>
+            <span>Phí dịch vụ</span>
             <span>$0</span>
           </div>
           <div className="border-b border-neutral-200 dark:border-neutral-700"></div>
           <div className="flex justify-between font-semibold">
-            <span>Total</span>
+            <span>Tổng</span>
             <span>$199</span>
           </div>
         </div>
 
         {/* SUBMIT */}
-        <ButtonPrimary href={"/checkout"}>Reserve</ButtonPrimary>
+        <ButtonPrimary href={"/checkout"}>Đặt vé</ButtonPrimary>
       </div>
     );
   };
@@ -472,7 +472,7 @@ const ListingExperiencesDetailPage: FC<
           >
             <Squares2X2Icon className="h-5 w-5" />
             <span className="ml-2 text-neutral-800 text-sm font-medium">
-              Show all photos
+            Hiển thị tất cả ảnh
             </span>
           </div>
         </div>

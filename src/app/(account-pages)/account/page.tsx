@@ -5,6 +5,7 @@ import ButtonPrimary from "@/shared/ButtonPrimary";
 import Input from "@/shared/Input";
 import Select from "@/shared/Select";
 import RadioGroup from "@/components/radio";
+import Textarea from "@/shared/Textarea";
 
 export interface AccountPageProps { }
 
@@ -34,8 +35,7 @@ const AccountPage = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-
-              <span className="mt-1 text-xs">Thay đổi hình ảnh</span>
+              <span className="mt-1 text-xs">Thêm ảnh</span>
             </div>
             <input
               type="file"
@@ -46,19 +46,7 @@ const AccountPage = () => {
         <div className="flex-grow mt-10 md:mt-0 md:pl-16 max-w-3xl space-y-6">
           <div>
             <Label>Họ tên</Label>
-            <Input className="mt-1.5" defaultValue="Nguyen van a" />
-          </div>
-          {/* ---- */}
-          {/* ---- */}
-          <div>
-            <Label>Email</Label>
-            <Input className="mt-1.5" defaultValue="example@email.com" />
-          </div>
-          {/* ---- */}
-          {/* ---- */}
-          <div>
-            <Label>Số điện thoại</Label>
-            <Input className="mt-1.5" defaultValue="003 888 232" />
+            <Input className="mt-1.5" defaultValue="Eden Tuan" />
           </div>
           {/* ---- */}
           <div>
@@ -68,6 +56,37 @@ const AccountPage = () => {
               <option value="Female">Nữ</option>
               <option value="Other">Khác</option>
             </Select>
+          </div>
+          {/* ---- */}
+          <div>
+            <Label>Tên tài khoản</Label>
+            <Input className="mt-1.5" defaultValue="@eden_tuan" />
+          </div>
+
+          {/* ---- */}
+          <div>
+            <Label>Email</Label>
+            <Input className="mt-1.5" defaultValue="example@email.com" />
+          </div>
+          {/* ---- */}
+          <div className="max-w-lg">
+            <Label>Ngày sinh</Label>
+            <Input className="mt-1.5" type="date" defaultValue="1990-07-22" />
+          </div>
+          {/* ---- */}
+          <div>
+            <Label>Địa chỉ</Label>
+            <Input className="mt-1.5" defaultValue="New york, USA" />
+          </div>
+          {/* ---- */}
+          <div>
+            <Label>Số điện thoại</Label>
+            <Input className="mt-1.5" defaultValue="003 888 232" />
+          </div>
+          {/* ---- */}
+          <div>
+            <Label>Ghi chú</Label>
+            <Textarea className="mt-1.5" defaultValue="..." />
           </div>
           <div className="max-w-lg">
             <Label>Năm sinh</Label>

@@ -29,12 +29,12 @@ const Page = ({
             className=" text-neutral-900 font-semibold text-3xl md:text-4xl md:!leading-[120%] lg:text-4xl dark:text-neutral-100 max-w-4xl "
             title="Quiet ingenuity: 120,000 lunches and counting"
           >
-            Keep up the spirit of the desire to travel around the world
+            Giữ vững tinh thần mong muốn đi du lịch vòng quanh thế giới
           </h1>
           <span className="block text-base text-neutral-500 md:text-lg dark:text-neutral-400 pb-1">
-            We’re an online magazine dedicated to covering the best in
-            international product design. We started as a little blog back in
-            2002 covering student work and over time
+          Chúng tôi là một tạp chí trực tuyến dành riêng để đưa tin về những điều tốt nhất trong
+            thiết kế sản phẩm quốc tế. Chúng tôi bắt đầu như một blog nhỏ trở lại
+            2002 bao gồm công việc của sinh viên và theo thời gian
           </span>
 
           <div className="w-full border-b border-neutral-100 dark:border-neutral-800"></div>
@@ -52,11 +52,11 @@ const Page = ({
                 </div>
                 <div className="text-xs mt-[6px]">
                   <span className="text-neutral-700 dark:text-neutral-300">
-                    May 20, 2021
+                  20 Tháng Năm, 2024
                   </span>
                   <span className="mx-2 font-semibold">·</span>
                   <span className="text-neutral-700 dark:text-neutral-300">
-                    6 min read
+                  6 phút trước
                   </span>
                 </div>
               </div>
@@ -77,12 +77,9 @@ const Page = ({
         className="prose dark:prose-invert prose-sm !max-w-screen-md sm:prose lg:prose-lg mx-auto dark:prose-dark"
       >
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure vel
-          officiis ipsum placeat itaque neque dolorem modi perspiciatis dolor
-          distinctio veritatis sapiente, minima corrupti dolores necessitatibus
-          suscipit accusantium dignissimos culpa cumque.
+        Như bạn có thể thấy, phần văn bản ban đầu là văn bản mẫu 'Lorem ipsum', thường được sử dụng trong thiết kế và in ấn để tạo ra các đoạn văn bản không có nghĩa rõ ràng. Nếu bạn muốn dịch chính xác hơn cho một nội dung khác, vui lòng cung cấp văn bản cụ thể hơn.
         </p>
-        <p>
+        {/* <p>
           It is a long established fact that a <strong>reader</strong> will be
           distracted by the readable content of a page when looking at its{" "}
           <strong>layout</strong>. The point of using Lorem Ipsum is that it has
@@ -90,70 +87,79 @@ const Page = ({
           <a href="/#" target="_blank" rel="noopener noreferrer">
             distribution of letters.
           </a>{" "}
+        </p> */}
+
+        <p>
+          Một thực tế đã được thiết lập từ lâu là <strong>người đọc</strong> sẽ bị
+          phân tâm bởi nội dung dễ đọc trên trang khi nhìn vào{" "}
+          <strong>bố cục</strong> của nó. 
+          Mục đích của việc sử dụng Lorem Ipsum là nó có sự phân bố các chữ cái gần như bình thường. 
+          <a href="/#" target="_blank" rel="noopener noreferrer">
+              phân bố các chữ cái.
+          </a>{" "}
         </p>
+
         <ol>
-          <li>We want everything to look good out of the box.</li>
+          <li>Chúng tôi muốn mọi thứ trông đẹp ra khỏi hộp.</li>
           <li>
-            {` Really just the first reason, that's the whole point of the plugin.`}
+            {` Thực sự chỉ là lý do đầu tiên, đó là toàn bộ điểm của plugin.`}
           </li>
           <li>
-            {`   Here's a third pretend reason though a list with three items looks
-            more realistic than a list with two items.`}
+            {`   Đây là một lý do giả vờ thứ ba, mặc dù một danh sách với ba mục trông
+            Thực tế hơn một danh sách với hai mục.`}
           </li>
         </ol>
-        <h3>Typography should be easy</h3>
+        <h3>Typography nên dễ dàng</h3>
         <p>
-          {`So that's a header for you — with any luck if we've done our job
-          correctly that will look pretty reasonable.`}
+          {`Vì vậy, đó là một tiêu đề cho bạn - với bất kỳ may mắn nào nếu chúng tôi đã hoàn thành công việc của mình
+          Chính xác sẽ trông khá hợp lý.`}
         </p>
-        <p>Something a wise person once told me about typography is:</p>
+        <p>Một điều mà một người khôn ngoan đã từng nói với tôi về kiểu chữ là:</p>
         <blockquote>
           <p>
-            {` Typography is pretty important if you don't want your stuff to look
-            like trash. Make it good then it won't be bad.`}
+            {` Typography là khá quan trọng nếu bạn không muốn công cụ của bạn để nhìn
+            như rác. Làm cho nó tốt sau đó nó sẽ không xấu.`}
           </p>
         </blockquote>
         <p>
-          {`        It's probably important that images look okay here by default as well:`}
+          {`        Có lẽ điều quan trọng là hình ảnh trông ổn ở đây theo mặc định:`}
         </p>
         <figure>
           <Image src={travelhero2Image} alt="blog" className="rounded-2xl" />
           <figcaption>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure vel
-            officiis ipsum placeat itaque neque dolorem modi perspiciatis dolor
-            distinctio veritatis sapiente
+          Lorem ipsum dolor, ngồi amet consectetur adipisicing elit. Quyền hạn hoặc nhiệm vụ chính thức đặt vào một chỗ không thể phủ nhận với nỗi đau hoặc thay đổi được cảm nhận rõ rệt, sự khác biệt về sự thật khôn ngoan.
           </figcaption>
         </figure>
         <p>
-          {` Now I'm going to show you an example of an unordered list to make sure
-          that looks good, too:`}
+          {` Bây giờ tôi sẽ chỉ cho bạn một ví dụ về một danh sách không có thứ tự để đảm bảo
+          Điều đó cũng có vẻ tốt:`}
         </p>
         <ul>
-          <li>So here is the first item in this list.</li>
-          <li>{`In this example we're keeping the items short.`}</li>
-          <li>{`Later, we'll use longer, more complex list items.`}</li>
+          <li>Vì vậy, đây là mục đầu tiên trong danh sách này.</li>
+          <li>{`Trong ví dụ này, chúng tôi đang giữ các mục ngắn.`}</li>
+          <li>{`Sau đó, chúng ta sẽ sử dụng các mục danh sách dài hơn, phức tạp hơn.`}</li>
         </ul>
-        <p>{`And that's the end of this section.`}</p>
-        <h2>Code should look okay by default.</h2>
+        <p>{`Và đó là phần cuối của phần này.`}</p>
+        <h2>Mã sẽ trông ổn theo mặc định.</h2>
         <p>
-          I think most people are going to use{" "}
+        Tôi nghĩ hầu hết mọi người sẽ sử dụng{" "}
           <a href="https://highlightjs.org/">highlight.js</a> or{" "}
           <a href="https://prismjs.com/">Prism</a>{" "}
-          {`or something if they want to
-          style their code blocks but it wouldn't hurt to make them look`}{" "}
-          <em>okay</em> out of the box, even with no syntax highlighting.
+          {`hoặc một cái gì đó nếu họ muốn
+          tạo kiểu cho các khối mã của họ nhưng sẽ không hại gì khi làm cho chúng trông`}{" "}
+          <em>okay</em> ra khỏi hộp, ngay cả khi không có tô sáng cú pháp.
         </p>
         <p>
-          {`   What I've written here is probably long enough, but adding this final
-          sentence can't hurt.`}
+          {`   Những gì tôi đã viết ở đây có lẽ đủ dài, nhưng thêm phần cuối cùng này
+          Câu không thể làm tổn thương.`}
         </p>
 
-        <p>Hopefully that looks good enough to you.</p>
-        <h3>We still need to think about stacked headings though.</h3>
+        <p>Hy vọng rằng điều đó có vẻ đủ tốt cho bạn.</p>
+        <h3>Tuy nhiên, chúng ta vẫn cần phải suy nghĩ về các tiêu đề xếp chồng lên nhau.</h3>
 
         <p>
-          Phew, with any luck we have styled the headings above this text and
-          they look pretty good.
+        Phew, với bất kỳ may mắn nào, chúng tôi đã tạo kiểu cho các tiêu đề phía trên văn bản này và
+        Họ trông khá tốt.
         </p>
       </div>
     );
@@ -166,19 +172,19 @@ const Page = ({
           className="nc-Tag inline-block bg-white text-sm text-neutral-600 dark:text-neutral-300 py-2 rounded-lg border border-neutral-100  md:px-4 dark:bg-neutral-700 dark:border-neutral-700 hover:border-neutral-200 dark:hover:border-neutral-6000 mr-2 mb-2"
           href="##"
         >
-          Garden
+          Vườn
         </a>
         <a
           className="nc-Tag inline-block bg-white text-sm text-neutral-600 dark:text-neutral-300 py-2 rounded-lg border border-neutral-100  md:px-4 dark:bg-neutral-700 dark:border-neutral-700 hover:border-neutral-200 dark:hover:border-neutral-6000 mr-2 mb-2"
           href="##"
         >
-          Jewelry
+          Trang sức
         </a>
         <a
           className="nc-Tag inline-block bg-white text-sm text-neutral-600 dark:text-neutral-300 py-2 rounded-lg border border-neutral-100  md:px-4 dark:bg-neutral-700 dark:border-neutral-700 hover:border-neutral-200 dark:hover:border-neutral-6000 mr-2 mb-2"
           href="##"
         >
-          Tools
+          Công cụ
         </a>
       </div>
     );
@@ -191,16 +197,16 @@ const Page = ({
           <Avatar sizeClass="w-11 h-11 md:w-24 md:h-24" />
           <div className="flex flex-col ml-3 max-w-lg sm:ml-5 space-y-1">
             <span className="text-xs text-neutral-400 uppercase tracking-wider">
-              WRITEN BY
+            VIẾT BỞI
             </span>
             <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-200">
-              <a href="/">Fones Mimi</a>
+              <a href="/">Thiên Liên Hoa</a>
             </h2>
             <span className="text-sm text-neutral-500 sm:text-base dark:text-neutral-300">
-              There’s no stopping the tech giant. Apple now opens its 100th
-              store in China.There’s no stopping the tech giant.
+            Không có gì ngăn cản gã khổng lồ công nghệ. Apple hiện mở cửa thứ 100
+            Không thể ngăn cản gã khổng lồ công nghệ.
               <a className="text-primary-6000 font-medium ml-1" href="/">
-                Readmore
+              Đọc thêm
               </a>
             </span>
           </div>
@@ -213,13 +219,13 @@ const Page = ({
     return (
       <div className="max-w-screen-md mx-auto pt-5">
         <h3 className="text-xl font-semibold text-neutral-800 dark:text-neutral-200">
-          Responses (14)
+          Bình luận (14)
         </h3>
         <form className="nc-SingleCommentForm mt-5">
           <Textarea />
           <div className="mt-2 space-x-3">
-            <ButtonPrimary>Submit</ButtonPrimary>
-            <ButtonSecondary>Cancel</ButtonSecondary>
+            <ButtonPrimary>Đăng</ButtonPrimary>
+            <ButtonSecondary>Hủy</ButtonSecondary>
           </div>
         </form>
       </div>
@@ -304,7 +310,7 @@ const Page = ({
       </div>
       <div className="relative bg-neutral-100 dark:bg-neutral-800 py-16 lg:py-28 mt-16 lg:mt-24">
         <div className="container ">
-          <h2 className="text-3xl font-semibold">Related posts</h2>
+          <h2 className="text-3xl font-semibold">Bài viết liên quan</h2>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
             {/*  */}
             {DEMO_POSTS.filter((_, i) => i < 4).map(renderPostRelated)}

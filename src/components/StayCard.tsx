@@ -58,14 +58,13 @@ const StayCard: FC<StayCardProps> = ({
       <div className={size === "default" ? "p-4 space-y-4" : "p-3 space-y-1"}>
         <div className={size === "default" ? "space-y-2" : "space-y-1"}>
           <span className="text-sm text-neutral-500 dark:text-neutral-400">
-            {listingCategory.name} · {bedrooms} giường
+            {listingCategory.name} · {bedrooms} Giường
           </span>
           <div className="flex items-center space-x-2">
             {isAds && <Badge name="ADS" color="green" />}
             <h2
-              className={`font-semibold capitalize text-neutral-900 dark:text-white ${
-                size === "default" ? "text-base" : "text-base"
-              }`}
+              className={`font-semibold capitalize text-neutral-900 dark:text-white ${size === "default" ? "text-base" : "text-base"
+                }`}
             >
               <span className="line-clamp-1">{title}</span>
             </h2>
@@ -102,7 +101,7 @@ const StayCard: FC<StayCardProps> = ({
             {` `}
             {size === "default" && (
               <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">
-                /đêm
+                /Đêm
               </span>
             )}
           </span>
@@ -116,11 +115,10 @@ const StayCard: FC<StayCardProps> = ({
 
   return (
     <div
-      className={`nc-StayCard group relative bg-white dark:bg-neutral-900 ${
-        size === "default"
+      className={`nc-StayCard group relative bg-white dark:bg-neutral-900 ${size === "default"
           ? "border border-neutral-100 dark:border-neutral-800 "
           : ""
-      } rounded-2xl overflow-hidden hover:shadow-xl transition-shadow ${className}`}
+        } rounded-2xl overflow-hidden hover:shadow-xl transition-shadow ${className}`}
       data-nc-id="StayCard"
     >
       {renderSliderGallery()}
