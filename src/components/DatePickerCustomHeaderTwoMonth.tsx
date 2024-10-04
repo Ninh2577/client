@@ -11,7 +11,7 @@ const DatePickerCustomHeaderTwoMonth = ({
   return (
     <div>
       <button
-        aria-label="Previous Month"
+        aria-label="Tháng trước"
         className={
           "react-datepicker__navigation react-datepicker__navigation--previous absolute -top-1 left-0 flex items-center justify-center p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
         }
@@ -24,13 +24,13 @@ const DatePickerCustomHeaderTwoMonth = ({
         </span>
       </button>
       <span className="react-datepicker__current-month">
-        {monthDate.toLocaleString("en-US", {
+        {monthDate.toLocaleString("vi-VN", {
           month: "long",
           year: "numeric",
         })}
       </span>
       <button
-        aria-label="Next Month"
+        aria-label="Tháng tới"
         className="react-datepicker__navigation react-datepicker__navigation--next absolute -top-1 -right-0 flex items-center justify-center p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full"
         style={customHeaderCount === 0 ? { visibility: "hidden" } : {}}
         type="button"

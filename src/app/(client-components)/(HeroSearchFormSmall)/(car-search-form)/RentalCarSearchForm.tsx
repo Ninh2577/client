@@ -4,9 +4,9 @@ import React, { FC, useState } from "react";
 import LocationInput from "../LocationInput";
 import RentalCarDatesRangeInput from "./RentalCarDatesRangeInput";
 
-export interface RentalCarSearchFormProps {}
+export interface RentalCarSearchFormProps { }
 
-const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({}) => {
+const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({ }) => {
   const [dropOffLocationType, setDropOffLocationType] = useState<
     "same" | "different"
   >("different");
@@ -15,24 +15,22 @@ const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({}) => {
     return (
       <div className="pb-3 flex justify-center items-center space-x-3">
         <div
-          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer ${
-            dropOffLocationType === "same"
-              ? "bg-black text-white shadow-black/10 shadow-lg"
-              : "border border-neutral-300 dark:border-neutral-700"
-          }`}
+          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer ${dropOffLocationType === "same"
+            ? "bg-black text-white shadow-black/10 shadow-lg"
+            : "border border-neutral-300 dark:border-neutral-700"
+            }`}
           onClick={(e) => setDropOffLocationType("same")}
         >
-          Same drop off
+          Trả khách giống nhau
         </div>
         <div
-          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer ${
-            dropOffLocationType === "different"
-              ? "bg-black text-white shadow-black/10 shadow-lg"
-              : "border border-neutral-300 dark:border-neutral-700"
-          }`}
+          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer ${dropOffLocationType === "different"
+            ? "bg-black text-white shadow-black/10 shadow-lg"
+            : "border border-neutral-300 dark:border-neutral-700"
+            }`}
           onClick={(e) => setDropOffLocationType("different")}
         >
-          Different drop off
+          Cùng điểm xuống
         </div>
       </div>
     );

@@ -4,9 +4,9 @@ import React, { FC, useState } from "react";
 import LocationInput from "../LocationInput";
 import RentalCarDatesRangeInput from "./RentalCarDatesRangeInput";
 
-export interface RentalCarSearchFormProps {}
+export interface RentalCarSearchFormProps { }
 
-const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({}) => {
+const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({ }) => {
   const [dropOffLocationType, setDropOffLocationType] = useState<
     "same" | "different"
   >("different");
@@ -15,21 +15,19 @@ const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({}) => {
     return (
       <div className=" py-5 [ nc-hero-field-padding ] flex items-center flex-wrap flex-row border-b border-neutral-100 dark:border-neutral-700">
         <div
-          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer mr-2 my-1 sm:mr-3 ${
-            dropOffLocationType === "different"
+          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer mr-2 my-1 sm:mr-3 ${dropOffLocationType === "different"
               ? "bg-black text-white shadow-black/10 shadow-lg"
               : "border border-neutral-300 dark:border-neutral-700"
-          }`}
+            }`}
           onClick={(e) => setDropOffLocationType("different")}
         >
           Trả khách khác nhau
         </div>
         <div
-          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer mr-2 my-1 sm:mr-3 ${
-            dropOffLocationType === "same"
+          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer mr-2 my-1 sm:mr-3 ${dropOffLocationType === "same"
               ? "bg-black text-white shadow-black/10 shadow-lg"
               : "border border-neutral-300 dark:border-neutral-700"
-          }`}
+            }`}
           onClick={(e) => setDropOffLocationType("same")}
         >
           Cùng thả xuống
@@ -45,16 +43,16 @@ const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({}) => {
       {renderRadioBtn()}
       <div className={`relative flex flex-row`}>
         <LocationInput
-          placeHolder="City or Airport"
-          desc="Pick up location"
+          placeHolder="Thành phố hoặc Sân bay"
+          desc="Địa điểm đón"
           className="flex-1"
         />
         {isDdropOffdifferent && (
           <>
             <div className="self-center border-r border-slate-200 dark:border-slate-700 h-8"></div>
             <LocationInput
-              placeHolder="City or Airport"
-              desc="Drop off location"
+              placeHolder="Thành phố hoặc Sân bay"
+              desc="Địa điểm trả"
               className="flex-1"
               divHideVerticalLineClass="-inset-x-0.5"
             />

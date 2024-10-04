@@ -42,7 +42,7 @@ const DEMO_DATA = [
     clientName: "Berta Emili",
     clientAddress: "Tokyo",
     content:
-      "Nơi này hoàn toàn giống như trong hình đã đăng trên Chisfis. Dịch vụ tuyệt vời, chúng tôi đã có một kỳ nghỉ thật tuyệt!",
+      "Nơi này chính xác như hình ảnh được đăng trên Chisfis. Dịch vụ tuyệt vời, chúng tôi đã có một kỳ nghỉ tuyệt vời!",
   },
 ];
 
@@ -117,8 +117,8 @@ const SectionClientSay: FC<SectionClientSayProps> = ({
 
   return (
     <div className={`nc-SectionClientSay relative ${className} `}>
-      <Heading desc="Hãy xem nhưng đánh giá gần đây" isCenter>
-        Những đánh giá tiêu biểu
+      <Heading desc="Let's see what people think of Chisfis" isCenter>
+        Những chia sẻ tích cực từ khách hàng khắp nơi
       </Heading>
       <div className="relative md:mb-16 max-w-2xl mx-auto">
         {renderBg()}
@@ -173,9 +173,8 @@ const SectionClientSay: FC<SectionClientSayProps> = ({
               <div className="mt-10 flex items-center justify-center space-x-2">
                 {data.map((item, i) => (
                   <button
-                    className={`w-2 h-2 rounded-full ${
-                      i === index ? "bg-black/70" : "bg-black/10 "
-                    }`}
+                    className={`w-2 h-2 rounded-full ${i === index ? "bg-black/70" : "bg-black/10 "
+                      }`}
                     onClick={() => changeItemId(i)}
                     key={i}
                   />

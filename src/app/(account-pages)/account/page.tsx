@@ -4,9 +4,10 @@ import Avatar from "@/shared/Avatar";
 import ButtonPrimary from "@/shared/ButtonPrimary";
 import Input from "@/shared/Input";
 import Select from "@/shared/Select";
+import RadioGroup from "@/components/radio";
 import Textarea from "@/shared/Textarea";
 
-export interface AccountPageProps {}
+export interface AccountPageProps { }
 
 const AccountPage = () => {
   return (
@@ -34,7 +35,6 @@ const AccountPage = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-
               <span className="mt-1 text-xs">Thêm ảnh</span>
             </div>
             <input
@@ -62,6 +62,7 @@ const AccountPage = () => {
             <Label>Tên tài khoản</Label>
             <Input className="mt-1.5" defaultValue="@eden_tuan" />
           </div>
+
           {/* ---- */}
           <div>
             <Label>Email</Label>
@@ -87,8 +88,43 @@ const AccountPage = () => {
             <Label>Ghi chú</Label>
             <Textarea className="mt-1.5" defaultValue="..." />
           </div>
+          <div className="max-w-lg">
+            <Label>Năm sinh</Label>
+            <Input className="mt-1.5" type="date" defaultValue="1990-07-22" />
+          </div>
+          <div>
+            <Label>Mật khẩu</Label>
+            <Input className="mt-1.5" defaultValue="*******" />
+          </div>
+          <div>
+            <Label>Địa chỉ</Label>
+            <Input className="mt-1.5" defaultValue="New york, USA" />
+          </div>
+
+          {/* ---- */}
+
+          {/* ---- */}
+          {/* ---- */}
+          <div>
+            <Label>Số cccd</Label>
+            <Input className="mt-1.5" defaultValue="2323727362632" />
+          </div>
+          <div>
+            <Label>Mặt trước CCCD</Label>
+            <Input type="file" className="mt-1.5" accept="image/*" />
+          </div>
+          <div>
+            <Label>Mặt sau CCCD</Label>
+            <Input type="file" className="mt-1.5" accept="image/*" />
+          </div>
+          {/* <div>
+            <Label>Vai trò</Label>
+            <br />
+            <RadioGroup />
+          </div> */}
+          {/* ---- */}
           <div className="pt-2">
-            <ButtonPrimary>Cập nhật tài khoản</ButtonPrimary>
+            <ButtonPrimary>Cập nhật thông tin</ButtonPrimary>
           </div>
         </div>
       </div>

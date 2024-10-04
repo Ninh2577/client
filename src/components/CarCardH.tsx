@@ -72,11 +72,11 @@ const CarCardH: FC<CarCardHProps> = ({ className = "", data = DEMO_DATA }) => {
         <div className="hidden sm:block w-14 border-b border-neutral-200/80 dark:border-neutral-700 my-4"></div>
         {/* SHOW MOBILE */}
         <div className="flex sm:hidden items-center text-sm text-neutral-500 dark:text-neutral-400 space-x-2 mt-4 sm:mt-0">
-          <span>4 Ghế</span>
+          <span>4 chỗ ngồi</span>
           <span>· </span>
           <span>Hộp số tự động</span>
           <span>· </span>
-          <span>4 Ghế</span>
+          <span>4  chỗ ngồi</span>
         </div>
         {/* SHOW DESK */}
         <div className="hidden sm:flex items-center space-x-8">
@@ -84,14 +84,14 @@ const CarCardH: FC<CarCardHProps> = ({ className = "", data = DEMO_DATA }) => {
           <div className="flex items-center space-x-2">
             <i className="las la-user-friends text-xl"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-              4 Ghế
+              4  chỗ ngồi
             </span>
           </div>
           {/* --- */}
           <div className="flex items-center space-x-2">
             <i className="las la-dharmachakra text-xl"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-            Hộp số tự động
+              Hộp số tự động
             </span>
           </div>
           {/* --- */}
@@ -116,7 +116,7 @@ const CarCardH: FC<CarCardHProps> = ({ className = "", data = DEMO_DATA }) => {
             {price}
             {` `}
             <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">
-              /day
+              /ngày
             </span>
           </span>
         </div>

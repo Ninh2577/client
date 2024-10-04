@@ -73,9 +73,7 @@ const ExperiencesCardH: FC<ExperiencesCardHProps> = ({
         </div>
         <div className="hidden sm:block text-sm text-neutral-500 dark:text-neutral-400 mt-4">
           <span className="line-clamp-2">
-            {`Pha một tách cà phê ở Việt Nam là cả một quá trình mà bạn hầu như không
-            có thời gian rảnh ở giữa. Nhưng nó cũng không phải là một thực sự phức tạp
-            Nhiệm vụ để bắt đầu ngày mới với`}
+            {`Uống cà phê ở Việt Nam là một quá trình trải nghiệm thú vị, bạn sẽ không có nhiều thời gian rảnh giữa việc thưởng thức. Nhưng đây không phải là một nhiệm vụ quá phức tạp để bắt đầu ngày mới với`}
           </span>
         </div>
         <div className="flex items-center space-x-8 mt-4  ">
@@ -88,7 +86,7 @@ const ExperiencesCardH: FC<ExperiencesCardHProps> = ({
           <div className="flex items-center space-x-2">
             <i className="las la-user text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-            Tối đa 6 người
+              Tối đa 6 người
             </span>
           </div>
         </div>
@@ -99,17 +97,17 @@ const ExperiencesCardH: FC<ExperiencesCardHProps> = ({
             <span className="hidden sm:inline-block">
               <span className="hidden sm:inline">Chỗ nghỉ:</span>{" "}
               {author.displayName}
-            </span>
-          </div>
+            </span >
+          </div >
           <span className="text-base font-semibold text-secondary-700">
             {price}
             {` `}
             <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">
               /Người
-            </span>
-          </span>
-        </div>
-      </div>
+            </span >
+          </span >
+        </div >
+      </div >
     );
   };
 

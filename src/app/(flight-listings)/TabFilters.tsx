@@ -13,36 +13,36 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 // DEMO DATA
 const typeOfAirlines = [
   {
-    name: "Star Alliance",
+    name: "Vietnam Airlines",
   },
   {
-    name: "Air China",
+    name: "Vietjet Air",
   },
   {
-    name: "Air India",
+    name: "Bamboo Airways",
   },
   {
-    name: "Air New Zealand",
+    name: "Jetstar Pacific Airlines",
   },
   {
-    name: "Asiana",
+    name: "Vietravel Airlines",
   },
   {
-    name: "Bangkok Airways",
+    name: "VASCO",
   },
 ];
 const stopPoints = [
   {
-    name: "Nonstop",
+    name: "Bay thẳng",
   },
   {
-    name: "Up to 1 stops",
+    name: "Tối đa 1 điểm dừng",
   },
   {
-    name: "Up to 2 stops",
+    name: "Tối đa 2 điểm dừng",
   },
   {
-    name: "Any number of stops",
+    name: "Bất kỳ số điểm dừng",
   },
 ];
 
@@ -58,11 +58,11 @@ const TabFilters = () => {
 
   //
   let [catTimes, setCatTimes] = useState({
-    "Take Off": {
+    "Cách cánh": {
       Departure: [0, 24],
       Arrival: [0, 24],
     },
-    Landing: {
+    "Hạ cánh": {
       Departure: [0, 24],
       Arrival: [0, 24],
     },
@@ -104,10 +104,9 @@ const TabFilters = () => {
               <Tab
                 key={category}
                 className={({ selected }) =>
-                  `w-full py-2.5 text-sm leading-5 font-medium text-primary-700 dark:text-primary-400 rounded-lg focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60 ${
-                    selected
-                      ? "bg-white dark:bg-neutral-800 shadow"
-                      : " hover:bg-white/[0.15] dark:hover:bg-neutral-800"
+                  `w-full py-2.5 text-sm leading-5 font-medium text-primary-700 dark:text-primary-400 rounded-lg focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60 ${selected
+                    ? "bg-white dark:bg-neutral-800 shadow"
+                    : " hover:bg-white/[0.15] dark:hover:bg-neutral-800"
                   }`
                 }
               >
@@ -131,7 +130,7 @@ const TabFilters = () => {
                   <div className="space-y-3">
                     <div className="flex space-x-2">
                       <i className="text-lg las la-plane-departure"></i>
-                      <span className="text-xs">Departure time:</span>
+                      <span className="text-xs">Thời gian khởi hành:</span>
                       <span className="text-xs text-primary-500 dark:text-primary-400">
                         {posts.Departure[0]}:00 - {posts.Departure[1]}
                         :00
@@ -146,19 +145,19 @@ const TabFilters = () => {
                         setCatTimes((catTimes) =>
                           !idx
                             ? {
-                                ...catTimes,
-                                "Take Off": {
-                                  ...posts,
-                                  Departure: val as [number, number],
-                                },
-                              }
+                              ...catTimes,
+                              "Cách cánh": {
+                                ...posts,
+                                Departure: val as [number, number],
+                              },
+                            }
                             : {
-                                ...catTimes,
-                                Landing: {
-                                  ...posts,
-                                  Departure: val as [number, number],
-                                },
-                              }
+                              ...catTimes,
+                              "Hạ cánh": {
+                                ...posts,
+                                Departure: val as [number, number],
+                              },
+                            }
                         )
                       }
                       allowCross={false}
@@ -167,7 +166,7 @@ const TabFilters = () => {
                   <div className="space-y-3">
                     <div className="flex space-x-2">
                       <i className="text-lg las la-plane-arrival"></i>
-                      <span className="text-xs">Arrival time:</span>
+                      <span className="text-xs">Thời gian đến:</span>
                       <span className="text-xs text-primary-500 dark:text-primary-400">
                         {posts.Arrival[0]}:00 - {posts.Arrival[1]}:00
                       </span>
@@ -181,19 +180,19 @@ const TabFilters = () => {
                         setCatTimes((catTimes) =>
                           !idx
                             ? {
-                                ...catTimes,
-                                "Take Off": {
-                                  ...posts,
-                                  Arrival: val as [number, number],
-                                },
-                              }
+                              ...catTimes,
+                              "Take Off": {
+                                ...posts,
+                                Arrival: val as [number, number],
+                              },
+                            }
                             : {
-                                ...catTimes,
-                                Landing: {
-                                  ...posts,
-                                  Arrival: val as [number, number],
-                                },
-                              }
+                              ...catTimes,
+                              Landing: {
+                                ...posts,
+                                Arrival: val as [number, number],
+                              },
+                            }
                         )
                       }
                       allowCross={false}
@@ -216,14 +215,13 @@ const TabFilters = () => {
             <Popover.Button
               className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 focus:outline-none
                ${open ? "!border-primary-500 " : ""}
-                ${
-                  !!airlinesStates.length
-                    ? "!border-primary-500 bg-primary-50"
-                    : ""
+                ${!!airlinesStates.length
+                  ? "!border-primary-500 bg-primary-50"
+                  : ""
                 }
                 `}
             >
-              <span>Airlines</span>
+              <span>Hãng hàng không</span>
               {!airlinesStates.length ? (
                 <i className="las la-angle-down ml-2"></i>
               ) : (
@@ -246,7 +244,7 @@ const TabFilters = () => {
                   <div className="relative flex flex-col px-5 py-6 space-y-5">
                     <Checkbox
                       name="All Airlines"
-                      label="All Airlines"
+                      label=" Tất cả hãng hàng không"
                       defaultChecked={airlinesStates.includes("All Airlines")}
                       onChange={(checked) =>
                         handleChangeAirlines(checked, "All Airlines")
@@ -274,13 +272,13 @@ const TabFilters = () => {
                       }}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -300,14 +298,13 @@ const TabFilters = () => {
             <Popover.Button
               className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 focus:outline-none 
               ${open ? "!border-primary-500 " : ""}
-                ${
-                  !!stopPontsStates.length
-                    ? "!border-primary-500 bg-primary-50"
-                    : ""
+                ${!!stopPontsStates.length
+                  ? "!border-primary-500 bg-primary-50"
+                  : ""
                 }
                 `}
             >
-              <span>Stop points</span>
+              <span>Điểm dừng</span>
               {!stopPontsStates.length ? (
                 <i className="las la-angle-down ml-2"></i>
               ) : (
@@ -349,13 +346,13 @@ const TabFilters = () => {
                       }}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -373,11 +370,10 @@ const TabFilters = () => {
         {({ open, close }) => (
           <>
             <Popover.Button
-              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 focus:outline-none ${
-                open ? "!border-primary-500 " : ""
-              }`}
+              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 focus:outline-none ${open ? "!border-primary-500 " : ""
+                }`}
             >
-              <span>Flight time</span>
+              <span>Thời gian bay</span>
               <i className="las la-angle-down ml-2"></i>
             </Popover.Button>
             <Transition
@@ -396,13 +392,13 @@ const TabFilters = () => {
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -422,7 +418,7 @@ const TabFilters = () => {
             <Popover.Button
               className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-primary-500 bg-primary-50 text-primary-700 focus:outline-none `}
             >
-              <span>less than {tripTimes} hours</span>
+              <span>ít hơn {tripTimes} giờ</span>
               {renderXClear()}
             </Popover.Button>
             <Transition
@@ -439,8 +435,8 @@ const TabFilters = () => {
                   <div className="relative flex flex-col px-5 py-6 space-y-8">
                     <div className="space-y-5">
                       <div className="font-medium">
-                        Trip time:
-                        <span className="text-sm font-normal ml-1 text-primary-500">{` <${tripTimes} hours`}</span>
+                        Thời gian chuyến bay:
+                        <span className="text-sm font-normal ml-1 text-primary-500">{` ${tripTimes} giờ`}</span>
                       </div>
 
                       <Slider
@@ -453,13 +449,13 @@ const TabFilters = () => {
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -499,7 +495,7 @@ const TabFilters = () => {
                 <div className="overflow-hidden rounded-2xl shadow-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
                   <div className="relative flex flex-col px-5 py-6 space-y-8">
                     <div className="space-y-5">
-                      <span className="font-medium">Price per person</span>
+                      <span className="font-medium">Giá cho mỗi người</span>
                       <Slider
                         range
                         min={100}
@@ -516,7 +512,7 @@ const TabFilters = () => {
                           htmlFor="minPrice"
                           className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                         >
-                          Min price
+                          Giá thấp nhất
                         </label>
                         <div className="mt-1 relative rounded-md">
                           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -539,7 +535,7 @@ const TabFilters = () => {
                           htmlFor="maxPrice"
                           className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                         >
-                          Max price
+                          Giá cao nhất
                         </label>
                         <div className="mt-1 relative rounded-md">
                           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -561,13 +557,13 @@ const TabFilters = () => {
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -582,14 +578,13 @@ const TabFilters = () => {
   const renderTabOnSale = () => {
     return (
       <div
-        className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border focus:outline-none cursor-pointer transition-all ${
-          isOnSale
+        className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border focus:outline-none cursor-pointer transition-all ${isOnSale
             ? "border-primary-500 bg-primary-50 text-primary-700"
             : "border-neutral-300 dark:border-neutral-700"
-        }`}
+          }`}
         onClick={() => setIsOnSale(!isOnSale)}
       >
-        <span>On sale</span>
+        <span>Đang giảm giá</span>
         {isOnSale && renderXClear()}
       </div>
     );
@@ -641,7 +636,7 @@ const TabFilters = () => {
           onClick={openModalMoreFilter}
         >
           <span>
-            <span className="hidden sm:inline">Flights</span> filters (3)
+            <span className="hidden sm:inline">Chuyến bay</span> bộ lọc (3)
           </span>
           {renderXClear()}
         </div>
@@ -687,7 +682,7 @@ const TabFilters = () => {
                       as="h3"
                       className="text-lg font-medium leading-6 text-gray-900"
                     >
-                      Flight filters
+                     bộ lọc máy bay
                     </Dialog.Title>
                     <span className="absolute left-3 top-3">
                       <ButtonClose onClick={closeModalMoreFilter} />
@@ -699,7 +694,7 @@ const TabFilters = () => {
                       {/* --------- */}
                       {/* ---- */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Airlines</h3>
+                        <h3 className="text-xl font-medium">Hãng hàng không</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(typeOfAirlines)}
                         </div>
@@ -707,7 +702,7 @@ const TabFilters = () => {
                       {/* --------- */}
                       {/* ---- */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Stop points</h3>
+                        <h3 className="text-xl font-medium">Điểm dừng chân</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(stopPoints)}
                         </div>
@@ -716,7 +711,7 @@ const TabFilters = () => {
                       {/* --------- */}
                       {/* ---- */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Range Prices</h3>
+                        <h3 className="text-xl font-medium">Khoảng giá</h3>
                         <div className="mt-6 relative ">
                           <div className="relative flex flex-col space-y-8">
                             <div className="space-y-5">
@@ -737,7 +732,7 @@ const TabFilters = () => {
                                   htmlFor="minPrice"
                                   className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                                 >
-                                  Min price
+                                  Giá thấp nhất
                                 </label>
                                 <div className="mt-1 relative rounded-md">
                                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -760,7 +755,7 @@ const TabFilters = () => {
                                   htmlFor="maxPrice"
                                   className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                                 >
-                                  Max price
+                                  Giá cao nhất
                                 </label>
                                 <div className="mt-1 relative rounded-md">
                                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -787,7 +782,7 @@ const TabFilters = () => {
                       {/* ---- */}
                       <div className="py-7">
                         <h3 className="text-xl font-medium">
-                          Strip times
+                        Thời gian làm thủ tục
                           <span className="text-sm font-normal ml-1 text-primary-500">{` <${tripTimes} hours`}</span>
                         </h3>
                         <div className="mt-6 relative ">
@@ -816,13 +811,13 @@ const TabFilters = () => {
                       onClick={closeModalMoreFilter}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={closeModalMoreFilter}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>

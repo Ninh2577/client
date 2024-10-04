@@ -22,6 +22,7 @@ const widgetMenus: WidgetFooterMenu[] = [
       { href: "#", label: "Hướng dẫn nâng cấp" },
       { href: "#", label: "Hỗ trợ trình duyệt" },
       { href: "#", label: "Hỗ trợ biên tập viên" },
+
     ],
   },
   {
@@ -38,10 +39,11 @@ const widgetMenus: WidgetFooterMenu[] = [
     id: "2",
     title: "Tài nguyên",
     menus: [
-      { href: "#", label: "Các phương pháp hay nhất" },
+      { href: "#", label: "Thực tiễn tốt nhất" },
       { href: "#", label: "Hỗ trợ" },
-      { href: "#", label: "Phát triển" },
+      { href: "#", label: "Nhà phát triển" },
       { href: "#", label: "Học thiết kế" },
+      { href: "#", label: "Phát hành" },
     ],
   },
   {

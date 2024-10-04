@@ -23,9 +23,9 @@ const SectionGridFilterCard: FC<SectionGridFilterCardProps> = ({
         heading="Cars in Tokyo"
         subHeading={
           <span className="block text-neutral-500 dark:text-neutral-400 mt-3">
-            233 cars
+            233 Xe ô tô
             <span className="mx-2">·</span>
-            Aug 12 - 18
+           12 - 18 Tháng 8
           </span>
         }
       />

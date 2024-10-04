@@ -64,7 +64,7 @@ const LangDropdown: FC<LangDropdownProps> = ({
             >
               <GlobeAltIcon className="w-[18px] h-[18px] opacity-80" />
 
-              <span className="ml-2 select-none">Language</span>
+              <span className="ml-2 select-none">Ngôn Ngữ</span>
               <ChevronDownIcon
                 className={`${open ? "-rotate-180" : "text-opacity-70"}
                   ml-2 h-4 w-4  group-hover:text-opacity-80 transition ease-in-out duration-150`}
@@ -88,11 +88,10 @@ const LangDropdown: FC<LangDropdownProps> = ({
                         key={index}
                         href={item.href}
                         onClick={() => close()}
-                        className={`flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 ${
-                          item.active
+                        className={`flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 ${item.active
                             ? "bg-gray-100 dark:bg-neutral-700"
                             : "opacity-80"
-                        }`}
+                          }`}
                       >
                         <div className="">
                           <p className="text-sm font-medium ">{item.name}</p>

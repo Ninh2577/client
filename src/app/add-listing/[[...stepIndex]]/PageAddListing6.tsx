@@ -1,19 +1,18 @@
 import React, { FC } from "react";
 import Textarea from "@/shared/Textarea";
 
-export interface PageAddListing6Props {}
+export interface PageAddListing6Props { }
 
 const PageAddListing6: FC<PageAddListing6Props> = () => {
   return (
     <>
       <div>
         <h2 className="text-2xl font-semibold">
-          Your place description for client
+          Mô tả địa điểm của bạn cho khách
         </h2>
         <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-          Mention the best features of your accommodation, any special amenities
-          like fast Wi-Fi or parking, as well as things you like about the
-          neighborhood.
+          Hãy đề cập đến những đặc điểm tốt nhất của chỗ ở của bạn, bất kỳ tiện nghi đặc biệt nào như Wi-Fi nhanh hoặc bãi đậu xe, cũng như những điều bạn thích về khu vực lân cận.
+
         </span>
       </div>
 

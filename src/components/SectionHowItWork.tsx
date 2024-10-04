@@ -23,6 +23,7 @@ const DEMO_DATA: SectionHowItWorkProps["data"] = [
     img: HIW1img,
     title: "Đặt phòng & thư giãn",
     desc: "Hãy để mỗi chuyến đi là một hành trình đầy cảm hứng, mỗi phòng là một không gian yên bình",
+
   },
   {
     id: 2,
@@ -34,7 +35,7 @@ const DEMO_DATA: SectionHowItWorkProps["data"] = [
     id: 3,
     img: HIW3img,
     title: "Tiết kiệm hơn",
-    desc: "Hãy để mỗi chuyến đi là một hành trình đầy cảm hứng, mỗi phòng là một không gian yên bình",
+    desc: "Để mỗi chuyến đi là một hành trình đầy cảm hứng, mỗi căn phòng là một không gian yên bình",
   },
 ];
 
@@ -47,8 +48,8 @@ const SectionHowItWork: FC<SectionHowItWorkProps> = ({
       className={`nc-SectionHowItWork  ${className}`}
       data-nc-id="SectionHowItWork"
     >
-      <Heading isCenter desc="Giữ bình tĩnh và tiếp tục đi du lịch">
-      Cách thức hoạt động
+      <Heading isCenter desc="Keep calm & travel on">
+        Cách thức hoạt động
       </Heading>
       <div className="mt-20 relative grid md:grid-cols-3 gap-20">
         <Image

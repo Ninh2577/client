@@ -61,9 +61,8 @@ const GuestsInput: FC<GuestsInputProps> = ({
   return (
     <div className={`flex z-10 relative ${className}`} ref={refContainer}>
       <div
-        className={`flex z-10 relative flex-1 text-left justify-between items-center focus:outline-none cursor-pointer ${
-          isOpen ? "nc-hero-field-focused--2" : ""
-        }`}
+        className={`flex z-10 relative flex-1 text-left justify-between items-center focus:outline-none cursor-pointer ${isOpen ? "nc-hero-field-focused--2" : ""
+          }`}
       >
         <div
           className={`${fieldClassName} flex-1`}
@@ -73,7 +72,7 @@ const GuestsInput: FC<GuestsInputProps> = ({
         >
           <div className="flex-1 text-left">
             <span className="block font-semibold">
-              {totalGuests || ""} Guests
+              {totalGuests || ""} Khách
             </span>
             <span className="block mt-1 text-sm text-neutral-400 leading-none font-light">
               {totalGuests ? "Guests" : "Add guests"}

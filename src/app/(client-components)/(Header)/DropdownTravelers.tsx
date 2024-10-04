@@ -17,26 +17,26 @@ interface SolutionItem {
 const solutions: SolutionItem[] = [
   {
     name: "Địa điểm",
-    description: "Stays rental description ",
+    description: "Mô tả cho thuê chỗ ở",
     href: "/listing-stay",
     active: true,
     icon: IconOne,
   },
   {
     name: "Nơi ở",
-    description: "Real Estate description",
+    description: "Mô tả bất động sản",
     href: "/listing-real-estate",
     icon: IconTwo,
   },
   {
     name: "Ô tô",
-    description: "Car rental description",
+    description: "Mô tả thuê xe",
     href: "/listing-car",
     icon: IconThree,
   },
   {
     name: "Ngắm cảnh",
-    description: "Tour and experiences",
+    description: "Chuyến tham quan và trải nghiệm",
     href: "/listing-experiences",
     icon: IconFour,
   },
@@ -77,9 +77,8 @@ export default function DropdownTravelers() {
                       key={index}
                       href={item.href}
                       onClick={() => close()}
-                      className={`flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 ${
-                        item.active ? "bg-neutral-100 dark:bg-neutral-700" : ""
-                      }`}
+                      className={`flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 ${item.active ? "bg-neutral-100 dark:bg-neutral-700" : ""
+                        }`}
                     >
                       <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 bg-primary-50 rounded-md text-primary-500 sm:h-12 sm:w-12">
                         <item.icon aria-hidden="true" />
@@ -101,11 +100,11 @@ export default function DropdownTravelers() {
                   >
                     <span className="flex items-center">
                       <span className="text-sm font-medium ">
-                        Documentation
+                        Tài liệu
                       </span>
                     </span>
                     <span className="block text-sm text-gray-500 dark:text-neutral-400">
-                      Start integrating products and tools
+                      Bắt đầu tích hợp các sản phẩm và công cụ
                     </span>
                   </Link>
                 </div>

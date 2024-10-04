@@ -9,29 +9,31 @@ import NcInputNumber from "@/components/NcInputNumber";
 import FlightDateRangeInput from "./FlightDateRangeInput";
 import { GuestsObject } from "../../type";
 
-export interface FlightSearchFormProps {}
+export interface FlightSearchFormProps { }
 
 const flightClass = [
   {
-    name: "Economy",
+
+    name: "Hạng phổ thông",
     href: "##",
   },
   {
-    name: "Business",
+    name: "Thương gia",
     href: "##",
   },
   {
-    name: "Multiple",
+    name: "Nhiều hạng ghế",
+
     href: "##",
   },
 ];
 
 export type TypeDropOffLocationType = "roundTrip" | "oneWay" | "";
 
-const FlightSearchForm: FC<FlightSearchFormProps> = ({}) => {
+const FlightSearchForm: FC<FlightSearchFormProps> = ({ }) => {
   const [dropOffLocationType, setDropOffLocationType] =
     useState<TypeDropOffLocationType>("roundTrip");
-  const [flightClassState, setFlightClassState] = useState("Economy");
+  const [flightClassState, setFlightClassState] = useState("kinh tế");
 
   const [guestAdultsInputValue, setGuestAdultsInputValue] = useState(2);
   const [guestChildrenInputValue, setGuestChildrenInputValue] = useState(1);
@@ -71,11 +73,10 @@ const FlightSearchForm: FC<FlightSearchFormProps> = ({}) => {
            ${open ? "" : ""}
             px-4 py-1.5 rounded-md inline-flex items-center font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 text-xs`}
             >
-              <span>{`${totalGuests || ""} Guests`}</span>
+              <span>{`${totalGuests || ""} khách`}</span>
               <ChevronDownIcon
-                className={`${
-                  open ? "" : "text-opacity-70"
-                } ml-2 h-4 w-4 group-hover:text-opacity-80 transition ease-in-out duration-150`}
+                className={`${open ? "" : "text-opacity-70"
+                  } ml-2 h-4 w-4 group-hover:text-opacity-80 transition ease-in-out duration-150`}
                 aria-hidden="true"
               />
             </Popover.Button>
@@ -95,16 +96,16 @@ const FlightSearchForm: FC<FlightSearchFormProps> = ({}) => {
                   onChange={(value) => handleChangeData(value, "guestAdults")}
                   max={10}
                   min={1}
-                  label="Adults"
-                  desc="Ages 13 or above"
+                  label="Người lớn"
+                  desc="Từ 13 tuổi trở lên"
                 />
                 <NcInputNumber
                   className="w-full mt-6"
                   defaultValue={guestChildrenInputValue}
                   onChange={(value) => handleChangeData(value, "guestChildren")}
                   max={4}
-                  label="Children"
-                  desc="Ages 2–12"
+                  label="Trẻ em"
+                  desc="Từ 2 đến 12 tuổi"
                 />
 
                 <NcInputNumber
@@ -112,8 +113,8 @@ const FlightSearchForm: FC<FlightSearchFormProps> = ({}) => {
                   defaultValue={guestInfantsInputValue}
                   onChange={(value) => handleChangeData(value, "guestInfants")}
                   max={4}
-                  label="Infants"
-                  desc="Ages 0–2"
+                  label="Em bé"
+                  desc="Từ 0 đến 2 tuổi"
                 />
               </Popover.Panel>
             </Transition>
@@ -135,9 +136,8 @@ const FlightSearchForm: FC<FlightSearchFormProps> = ({}) => {
             >
               <span>{`${flightClassState}`}</span>
               <ChevronDownIcon
-                className={`${
-                  open ? "" : "text-opacity-70"
-                } ml-2 h-4 w-4 group-hover:text-opacity-80 transition ease-in-out duration-150`}
+                className={`${open ? "" : "text-opacity-70"
+                  } ml-2 h-4 w-4 group-hover:text-opacity-80 transition ease-in-out duration-150`}
                 aria-hidden="true"
               />
             </Popover.Button>
@@ -181,24 +181,22 @@ const FlightSearchForm: FC<FlightSearchFormProps> = ({}) => {
     return (
       <div className=" py-5 [ nc-hero-field-padding ] flex flex-row flex-wrap border-b border-neutral-100 dark:border-neutral-700">
         <div
-          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer mr-2 my-1 sm:mr-3 ${
-            dropOffLocationType === "roundTrip"
-              ? "bg-black shadow-black/10 shadow-lg text-white"
-              : "border border-neutral-300 dark:border-neutral-700"
-          }`}
+          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer mr-2 my-1 sm:mr-3 ${dropOffLocationType === "roundTrip"
+            ? "bg-black shadow-black/10 shadow-lg text-white"
+            : "border border-neutral-300 dark:border-neutral-700"
+            }`}
           onClick={(e) => setDropOffLocationType("roundTrip")}
         >
-          Round-trip
+          Vé Khứ hồi
         </div>
         <div
-          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer mr-2 my-1 sm:mr-3 ${
-            dropOffLocationType === "oneWay"
-              ? "bg-black text-white shadow-black/10 shadow-lg"
-              : "border border-neutral-300 dark:border-neutral-700"
-          }`}
+          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer mr-2 my-1 sm:mr-3 ${dropOffLocationType === "oneWay"
+            ? "bg-black text-white shadow-black/10 shadow-lg"
+            : "border border-neutral-300 dark:border-neutral-700"
+            }`}
           onClick={(e) => setDropOffLocationType("oneWay")}
         >
-          One-way
+          Vé một chiều
         </div>
 
         <div className="self-center border-r border-slate-200 dark:border-slate-700 h-8 mr-2 my-1 sm:mr-3"></div>
@@ -219,14 +217,14 @@ const FlightSearchForm: FC<FlightSearchFormProps> = ({}) => {
         {renderRadioBtn()}
         <div className="flex flex-1 rounded-full">
           <LocationInput
-            placeHolder="Flying from"
-            desc="Where do you want to fly from?"
+            placeHolder="Bay từ"
+            desc="Bạn muốn bay từ đâu?"
             className="flex-1"
           />
           <div className="self-center border-r border-slate-200 dark:border-slate-700 h-8"></div>
           <LocationInput
-            placeHolder="Flying to"
-            desc="Where you want to fly to?"
+            placeHolder="Bay đến"
+            desc="Bạn muốn bay đến đâu?"
             className="flex-1"
             divHideVerticalLineClass=" -inset-x-0.5"
           />

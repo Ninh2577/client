@@ -17,44 +17,44 @@ const RealestateSearchForm = () => {
   const [rangePrices, setRangePrices] = useState([100000, 4000000]);
   const [typeOfProperty, setTypeOfProperty] = useState<ClassOfProperties[]>([
     {
-      name: "Duplex House",
-      description: "Have a place to yourself",
+      name: "Nhà Duplex",
+      description: "Có một không gian riêng cho bản thân",
       checked: true,
     },
     {
-      name: "Ferme House",
-      description: "Have your own room and share some common spaces",
+      name: "Nhà Ferme",
+      description: "Có phòng riêng của bạn và chia sẻ một số không gian chung",
       checked: true,
     },
     {
-      name: "Chalet House",
+      name: "Nhà Chalet",
       description:
-        "Have a private or shared room in a boutique hotel, hostel, and more",
+        "Có phòng riêng hoặc phòng chung tại khách sạn boutique, nhà nghỉ, và nhiều hơn nữa",
       checked: true,
     },
     {
-      name: "Maison House",
-      description: "Stay in a shared space, like a common room",
+      name: "Nhà Maison",
+      description: "Ở trong một không gian chung, như phòng sinh hoạt chung",
       checked: false,
     },
   ]);
+
 
   const renderInputLocation = () => {
     const isActive = fieldNameShow === "location";
     return (
       <div
-        className={`w-full bg-white dark:bg-neutral-800 ${
-          isActive
-            ? "rounded-2xl shadow-lg"
-            : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
-        }`}
+        className={`w-full bg-white dark:bg-neutral-800 ${isActive
+          ? "rounded-2xl shadow-lg"
+          : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
+          }`}
       >
         {!isActive ? (
           <button
             className={`w-full flex justify-between text-sm font-medium p-4`}
             onClick={() => setFieldNameShow("location")}
           >
-            <span className="text-neutral-400">Where</span>
+            <span className="text-neutral-400">Ở đâu</span>
             <span>{locationInputTo || "Location"}</span>
           </button>
         ) : (
@@ -86,18 +86,17 @@ const RealestateSearchForm = () => {
 
     return (
       <div
-        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${
-          isActive
-            ? "rounded-2xl shadow-lg"
-            : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
-        }`}
+        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${isActive
+          ? "rounded-2xl shadow-lg"
+          : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
+          }`}
       >
         {!isActive ? (
           <button
             className={`w-full flex justify-between text-sm font-medium p-4`}
             onClick={() => setFieldNameShow("propertyType")}
           >
-            <span className="text-neutral-400">Property</span>
+            <span className="text-neutral-400">Tài sản</span>
             <span className="truncate ml-5">
               {typeOfPropertyText || "Add property"}
             </span>
@@ -117,18 +116,17 @@ const RealestateSearchForm = () => {
 
     return (
       <div
-        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${
-          isActive
-            ? "rounded-2xl shadow-lg"
-            : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
-        }`}
+        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${isActive
+          ? "rounded-2xl shadow-lg"
+          : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
+          }`}
       >
         {!isActive ? (
           <button
             className={`w-full flex justify-between text-sm font-medium p-4`}
             onClick={() => setFieldNameShow("price")}
           >
-            <span className="text-neutral-400">Price</span>
+            <span className="text-neutral-400">Giá</span>
             <span>
               {`$${convertNumbThousand(
                 rangePrices[0] / 1000

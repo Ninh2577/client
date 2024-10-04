@@ -27,8 +27,8 @@ const SectionGridAuthorBox: FC<SectionGridAuthorBoxProps> = ({
       className={`nc-SectionGridAuthorBox relative ${className}`}
       data-nc-id="SectionGridAuthorBox"
     >
-      <Heading desc="Rating based on customer reviews" isCenter>
-      Top 10 tác giả của tháng
+      <Heading desc="Đánh giá dựa trên phản hồi của khách hàng" isCenter>
+        Top 10 tác giả của tháng
       </Heading>
       <div className={`grid gap-6 md:gap-8 ${gridClassName}`}>
         {authors.map((author, index) =>

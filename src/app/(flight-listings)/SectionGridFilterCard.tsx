@@ -11,58 +11,58 @@ export interface SectionGridFilterCardProps {
 const DEMO_DATA: FlightCardProps["data"][] = [
   {
     id: "1",
-    price: "$4,100",
+    price: "3,500,000 VND",
     airlines: {
       logo: "https://www.gstatic.com/flights/airline_logos/70px/KE.png",
-      name: "Korean Air",
+      name: "Ha Long Bay",
     },
   },
   {
     id: "2",
-    price: "$3,380",
+    price: "2,800,000 VND",
     airlines: {
       logo: "https://www.gstatic.com/flights/airline_logos/70px/SQ.png",
-      name: "Singapore Airlines",
+      name: "Hoi An",
     },
   },
   {
     id: "3",
-    price: "$2,380",
+    price: "2,200,000 VND",
     airlines: {
       logo: "https://www.gstatic.com/flights/airline_logos/70px/multi.png",
-      name: "Philippine Airlines",
+      name: "Da Nang",
     },
   },
   {
     id: "1",
-    price: "$4,100",
+    price: "3,000,000 VND",
     airlines: {
       logo: "https://www.gstatic.com/flights/airline_logos/70px/KE.png",
-      name: "Korean Air",
+      name: "Nha Trang",
     },
   },
   {
     id: "2",
-    price: "$3,380",
+    price: "4,200,000 VND",
     airlines: {
       logo: "https://www.gstatic.com/flights/airline_logos/70px/SQ.png",
-      name: "Singapore Airlines",
+      name: "Ho Chi Minh City",
     },
   },
   {
     id: "1",
-    price: "$4,100",
+    price: "2,500,000 VND",
     airlines: {
       logo: "https://www.gstatic.com/flights/airline_logos/70px/KE.png",
-      name: "Korean Air",
+      name: "Sapa",
     },
   },
   {
     id: "2",
-    price: "$3,380",
+    price: "2,900,000 VND",
     airlines: {
       logo: "https://www.gstatic.com/flights/airline_logos/70px/SQ.png",
-      name: "Singapore Airlines",
+      name: "Ha Noi",
     },
   },
 ];
@@ -79,10 +79,10 @@ const SectionGridFilterCard: FC<SectionGridFilterCardProps> = ({
         heading="Singapore - Tokyo"
         subHeading={
           <span className="block text-neutral-500 dark:text-neutral-400 mt-3">
-            22 flights
+            22 Chuyến bay
             <span className="mx-2">·</span>
-            round trip
-            <span className="mx-2">·</span>2 Guests
+            khứ hồi
+            <span className="mx-2">·</span>2 khách
           </span>
         }
       />
@@ -95,7 +95,7 @@ const SectionGridFilterCard: FC<SectionGridFilterCardProps> = ({
         ))}
 
         <div className="flex mt-12 justify-center items-center">
-          <ButtonPrimary loading>Show more</ButtonPrimary>
+          <ButtonPrimary loading>Xem thêm</ButtonPrimary>
         </div>
       </div>
     </div>

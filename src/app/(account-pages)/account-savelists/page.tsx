@@ -22,7 +22,6 @@ const AccountSavelists = () => {
           <h2 className="text-3xl font-semibold">Danh sách đã lưu</h2>
         </div>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
-
         <div>
           <Tab.Group>
             <Tab.List className="flex space-x-1 overflow-x-auto">
@@ -30,11 +29,10 @@ const AccountSavelists = () => {
                 <Tab key={item} as={Fragment}>
                   {({ selected }) => (
                     <button
-                      className={`flex-shrink-0 block !leading-none font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full focus:outline-none ${
-                        selected
+                      className={`flex-shrink-0 block !leading-none font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full focus:outline-none ${selected
                           ? "bg-secondary-900 text-secondary-50 "
                           : "text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                      } `}
+                        } `}
                     >
                       {item}
                     </button>
@@ -50,7 +48,7 @@ const AccountSavelists = () => {
                   ))}
                 </div>
                 <div className="flex mt-11 justify-center items-center">
-                  <ButtonSecondary>Hiển thị thêm</ButtonSecondary>
+                  <ButtonSecondary>Xem thêm</ButtonSecondary>
                 </div>
               </Tab.Panel>
               <Tab.Panel className="mt-8">
@@ -62,7 +60,7 @@ const AccountSavelists = () => {
                   )}
                 </div>
                 <div className="flex mt-11 justify-center items-center">
-                  <ButtonSecondary>Hiển thị thêm</ButtonSecondary>
+                  <ButtonSecondary>Xem thêm</ButtonSecondary>
                 </div>
               </Tab.Panel>
               <Tab.Panel className="mt-8">
@@ -72,7 +70,7 @@ const AccountSavelists = () => {
                   ))}
                 </div>
                 <div className="flex mt-11 justify-center items-center">
-                  <ButtonSecondary>Hiển thị thêm</ButtonSecondary>
+                  <ButtonSecondary>Xem thêm</ButtonSecondary>
                 </div>
               </Tab.Panel>
             </Tab.Panels>

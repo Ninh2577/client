@@ -59,17 +59,16 @@ const CarCard: FC<CarCardProps> = ({
           <div className="flex items-center space-x-2">
             {isAds && <Badge name="ADS" color="green" />}
             <h2
-              className={`  capitalize ${
-                size === "default"
+              className={`  capitalize ${size === "default"
                   ? "text-xl font-semibold"
                   : "text-base font-medium"
-              }`}
+                }`}
             >
               <span className="line-clamp-1">{title}</span>
             </h2>
           </div>
           <div className="flex items-center text-neutral-500 dark:text-neutral-400 text-sm space-x-2">
-            <span className="">{seats} Ghế</span>
+            <span className="">{seats} Chỗ ngồi</span>
             <span>-</span>
             <span className="">{gearshift} </span>
           </div>
