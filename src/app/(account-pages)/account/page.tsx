@@ -98,11 +98,11 @@ const AccountPage = () => {
             <Label>Mặt sau CCCD</Label>
             <Input type="file" className="mt-1.5" accept="image/*" />
           </div>
-          <div>
+          {/* <div>
             <Label>Vai trò</Label>
             <br />
             <RadioGroup />
-          </div>
+          </div> */}
           {/* ---- */}
           <div className="pt-2">
             <ButtonPrimary>Cập nhật thông tin</ButtonPrimary>
