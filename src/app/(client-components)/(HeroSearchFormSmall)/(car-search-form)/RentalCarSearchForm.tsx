@@ -21,7 +21,6 @@ const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({ }) => {
             }`}
           onClick={(e) => setDropOffLocationType("same")}
         >
-          Same drop off
           Trả khách giống nhau
         </div>
         <div
@@ -31,7 +30,7 @@ const RentalCarSearchForm: FC<RentalCarSearchFormProps> = ({ }) => {
             }`}
           onClick={(e) => setDropOffLocationType("different")}
         >
-          Different drop off
+          Cùng điểm xuống
         </div>
       </div>
     );

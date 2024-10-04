@@ -69,7 +69,7 @@ const PropertyTypeSelect: FC<PropertyTypeSelectProps> = ({
                 </span>
               </span>
               <span className="block mt-1 text-sm text-neutral-400 leading-none font-light ">
-                Property type
+                Loại tài sản
               </span>
             </div>
           </Popover.Button>

@@ -86,7 +86,7 @@ const PriceRangeInput: FC<PriceRangeInputProps> = ({
                       htmlFor="minPrice"
                       className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                     >
-                      Min price
+                      Giá tối thiểu
                     </label>
                     <div className="mt-1 relative rounded-md">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -107,7 +107,7 @@ const PriceRangeInput: FC<PriceRangeInputProps> = ({
                       htmlFor="maxPrice"
                       className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                     >
-                      Max price
+                      Giá tối đa
                     </label>
                     <div className="mt-1 relative rounded-md">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">

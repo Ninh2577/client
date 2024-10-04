@@ -54,7 +54,7 @@ const RealestateSearchForm = () => {
             className={`w-full flex justify-between text-sm font-medium p-4`}
             onClick={() => setFieldNameShow("location")}
           >
-            <span className="text-neutral-400">Where</span>
+            <span className="text-neutral-400">Ở đâu</span>
             <span>{locationInputTo || "Location"}</span>
           </button>
         ) : (
@@ -126,7 +126,7 @@ const RealestateSearchForm = () => {
             className={`w-full flex justify-between text-sm font-medium p-4`}
             onClick={() => setFieldNameShow("price")}
           >
-            <span className="text-neutral-400">Price</span>
+            <span className="text-neutral-400">Giá</span>
             <span>
               {`$${convertNumbThousand(
                 rangePrices[0] / 1000

@@ -12,7 +12,7 @@ import Heading2 from "@/shared/Heading2";
 import StayCard2 from "@/components/StayCard2";
 
 const DEMO_STAYS = DEMO_STAY_LISTINGS.filter((_, i) => i < 12);
-export interface SectionGridHasMapProps {}
+export interface SectionGridHasMapProps { }
 
 const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
   const [currentHoverID, setCurrentHoverID] = useState<string | number>(-1);
@@ -49,15 +49,14 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
             onClick={() => setShowFullMapFixed(true)}
           >
             <i className="text-lg las la-map"></i>
-            <span>Show map</span>
+            <span>Hiển thị bản đồ</span>
           </div>
         )}
 
         {/* MAPPPPP */}
         <div
-          className={`xl:flex-1 xl:static xl:block ${
-            showFullMapFixed ? "fixed inset-0 z-50" : "hidden"
-          }`}
+          className={`xl:flex-1 xl:static xl:block ${showFullMapFixed ? "fixed inset-0 z-50" : "hidden"
+            }`}
         >
           {showFullMapFixed && (
             <ButtonClose

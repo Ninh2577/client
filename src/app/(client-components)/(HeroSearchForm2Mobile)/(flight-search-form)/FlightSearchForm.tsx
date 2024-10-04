@@ -35,8 +35,8 @@ const FlightSearchForm = () => {
     return (
       <div
         className={`w-full bg-white dark:bg-neutral-800 ${isActive
-            ? "rounded-2xl shadow-lg"
-            : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
+          ? "rounded-2xl shadow-lg"
+          : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
           }`}
       >
         {!isActive ? (
@@ -44,12 +44,12 @@ const FlightSearchForm = () => {
             className={`w-full flex justify-between text-sm font-medium p-4`}
             onClick={() => setFieldNameShow("locationPickup")}
           >
-            <span className="text-neutral-400">Pick up</span>
+            <span className="text-neutral-400">Điểm đón</span>
             <span>{locationInputPickUp || "Location"}</span>
           </button>
         ) : (
           <LocationInput
-            headingText="Pick up?"
+            headingText="Điểm đón?"
             defaultValue={locationInputPickUp}
             onChange={(value) => {
               setLocationInputPickUp(value);
@@ -66,8 +66,8 @@ const FlightSearchForm = () => {
     return (
       <div
         className={`w-full bg-white dark:bg-neutral-800 ${isActive
-            ? "rounded-2xl shadow-lg"
-            : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
+          ? "rounded-2xl shadow-lg"
+          : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
           }`}
       >
         {!isActive ? (
@@ -75,12 +75,12 @@ const FlightSearchForm = () => {
             className={`w-full flex justify-between text-sm font-medium p-4`}
             onClick={() => setFieldNameShow("locationDropoff")}
           >
-            <span className="text-neutral-400">Drop off</span>
+            <span className="text-neutral-400">Điểm thả</span>
             <span>{locationInputDropOff || "Location"}</span>
           </button>
         ) : (
           <LocationInput
-            headingText="Drop off?"
+            headingText="Điểm thả?"
             defaultValue={locationInputDropOff}
             onChange={(value) => {
               setLocationInputDropOff(value);
@@ -98,8 +98,8 @@ const FlightSearchForm = () => {
     return (
       <div
         className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${isActive
-            ? "rounded-2xl shadow-lg"
-            : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
+          ? "rounded-2xl shadow-lg"
+          : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
           }`}
       >
         {!isActive ? (
@@ -107,7 +107,7 @@ const FlightSearchForm = () => {
             className={`w-full flex justify-between text-sm font-medium p-4  `}
             onClick={() => setFieldNameShow("dates")}
           >
-            <span className="text-neutral-400">When</span>
+            <span className="text-neutral-400">Khi nào</span>
             <span>
               {startDate
                 ? converSelectedDateToString([startDate, endDate])
@@ -126,8 +126,8 @@ const FlightSearchForm = () => {
     return (
       <div
         className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${isActive
-            ? "rounded-2xl shadow-lg"
-            : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
+          ? "rounded-2xl shadow-lg"
+          : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
           }`}
       >
         {!isActive ? (
@@ -135,7 +135,7 @@ const FlightSearchForm = () => {
             className={`w-full flex justify-between text-sm font-medium p-4`}
             onClick={() => setFieldNameShow("general")}
           >
-            <span className="text-neutral-400">Flight type?</span>
+            <span className="text-neutral-400">Loại chuyến bay?</span>
             <span>{`${dropOffLocationType}, ${flightClassState}`}</span>
           </button>
         ) : (
@@ -147,8 +147,8 @@ const FlightSearchForm = () => {
               <div className="flex space-x-2">
                 <div
                   className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer select-none ${dropOffLocationType === "Round-trip"
-                      ? "bg-black shadow-black/10 shadow-lg text-white"
-                      : "border border-neutral-300 dark:border-neutral-700"
+                    ? "bg-black shadow-black/10 shadow-lg text-white"
+                    : "border border-neutral-300 dark:border-neutral-700"
                     }`}
                   onClick={(e) => setDropOffLocationType("Round-trip")}
                 >
@@ -156,8 +156,8 @@ const FlightSearchForm = () => {
                 </div>
                 <div
                   className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer select-none ${dropOffLocationType === "One-way"
-                      ? "bg-black text-white shadow-black/10 shadow-lg"
-                      : "border border-neutral-300 dark:border-neutral-700"
+                    ? "bg-black text-white shadow-black/10 shadow-lg"
+                    : "border border-neutral-300 dark:border-neutral-700"
                     }`}
                   onClick={(e) => setDropOffLocationType("One-way")}
                 >
@@ -225,8 +225,8 @@ const FlightSearchForm = () => {
     return (
       <div
         className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${isActive
-            ? "rounded-2xl shadow-lg"
-            : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
+          ? "rounded-2xl shadow-lg"
+          : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
           }`}
       >
         {!isActive ? (
@@ -234,7 +234,7 @@ const FlightSearchForm = () => {
             className={`w-full flex justify-between text-sm font-medium p-4`}
             onClick={() => setFieldNameShow("guests")}
           >
-            <span className="text-neutral-400">Who</span>
+            <span className="text-neutral-400">Ai</span>
             <span>{guestSelected || `Add guests`}</span>
           </button>
         ) : (
