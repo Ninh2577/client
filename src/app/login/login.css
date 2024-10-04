@@ -30,19 +30,21 @@
     flex-direction: column;
 }
 
-.input-groups {
+.input-login {
+    width: 440px;
+
     margin-bottom: 20px;
     text-align: left;
 }
 
-.input-groups label {
+.input-login label {
     font-size: 14px;
     color: #333;
     margin-bottom: 8px;
     display: block;
 }
 
-.input-groups input {
+.input-login input {
     width: 95%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -51,7 +53,7 @@
     background-color: #fcfcfc;
 }
 
-.input-groups input:focus {
+.input-login input:focus {
     border-color: #007bff;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
@@ -84,14 +86,14 @@
     text-decoration: underline;
 }
 
-.checkbox-groups {
+.checkbox-login {
     margin-top: -10px;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.checkbox-groups input {
+.checkbox-login input {
     margin-right: 8px;
     width: 17px;
     /* Đặt chiều rộng cho checkbox */
@@ -101,7 +103,7 @@
     /* Thay đổi con trỏ khi hover vào checkbox */
 }
 
-.checkbox-groups label {
+.checkbox-login label {
     font-weight: 400;
     font-size: 0.875rem;
     /* Có thể điều chỉnh kích thước chữ nếu cần */

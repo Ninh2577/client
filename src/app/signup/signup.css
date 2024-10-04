@@ -52,20 +52,20 @@
     width: 50%;
 }
 
-.input-groups {
+.input-register {
     margin-bottom: 20px;
     text-align: left;
 }
 
-.input-groups label {
+.input-register label {
     font-size: 14px;
     color: #333;
     margin-bottom: 8px;
     display: block;
 }
 
-.input-groups input {
-    width: 95%;
+.input-register input {
+    width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -73,20 +73,20 @@
     background-color: #fcfcfc;
 }
 
-.input-groups input:focus {
+.input-register input:focus {
     border-color: #007bff;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.checkbox-groups {
+.checkbox-register {
     margin-top: -10px;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.checkbox-groups input {
+.checkbox-register input {
     margin-right: 8px;
     width: 17px;
     /* Đặt chiều rộng cho checkbox */
@@ -96,7 +96,7 @@
     /* Thay đổi con trỏ khi hover vào checkbox */
 }
 
-.checkbox-groups label {
+.checkbox-register label {
     font-weight: 400;
     font-size: 0.875rem;
     /* Có thể điều chỉnh kích thước chữ nếu cần */
@@ -142,19 +142,19 @@
     background-color: #0f7df3;
 }
 
-.signup-groups {
+.signup-register {
     margin-top: 15px;
     font-family: "Arial", "sans-serif";
     font-weight: 400;
 }
 
-.signup-groups a {
+.signup-register a {
     color: black;
     font-weight: bold;
     text-decoration: none;
 }
 
-.signup-groups a:hover {
+.signup-register a:hover {
     text-decoration: underline;
 }
 
