@@ -23,8 +23,8 @@ export interface SectionGridFeaturePlacesProps {
 const SectionGridFeaturePlaces: FC<SectionGridFeaturePlacesProps> = ({
   stayListings = DEMO_DATA,
   gridClass = "",
-  heading = "Featured places to stay",
-  subHeading = "Popular places to stay that Chisfis recommends for you",
+  heading = "Những điểm đến lưu trú được yêu thích",
+  subHeading = "Những lựa chọn nghỉ ngơi phổ biến từ Chisfis",
   headingIsCenter,
   tabs = ["New York", "Tokyo", "Paris", "London"],
   cardType = "card2",
@@ -60,7 +60,7 @@ const SectionGridFeaturePlaces: FC<SectionGridFeaturePlacesProps> = ({
         {stayListings.map((stay) => renderCard(stay))}
       </div>
       <div className="flex mt-16 justify-center items-center">
-        <ButtonPrimary loading>Show me more</ButtonPrimary>
+        <ButtonPrimary loading>Khám phá thêm</ButtonPrimary>
       </div>
     </div>
   );

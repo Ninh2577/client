@@ -12,24 +12,24 @@ import Slider from "rc-slider";
 
 // DEMO DATA
 const typeOfCar = [
-  { name: "Small", description: "$68" },
-  { name: "Medium", description: "$128" },
-  { name: "Large", description: "$268" },
-  { name: "SUV", description: "$268" },
-  { name: "Van", description: "$268" },
-  { name: "Luxury", description: "$268" },
+  { name: "Nhỏ", description: "$68" },
+  { name: "Trung bình", description: "$128" },
+  { name: "Lớn", description: "$268" },
+  { name: "Xe thể thao đa dụng", description: "$268" },
+  { name: "Xe tải", description: "$268" },
+  { name: "Sang trọng", description: "$268" },
 ];
 
 const carSpecifications = [
-  { name: "With air conditioning" },
-  { name: "Automatic transmission" },
-  { name: "Manual transmission" },
-  { name: "2 doors" },
-  { name: "4+ doors" },
+  { name: "Có máy lạnh" },
+  { name: "Hộp số tự động" },
+  { name: "Hộp số tay" },
+  { name: "2 cửa" },
+  { name: "4 cửa" },
 ];
 
 //
-const mileage = [{ name: "Unlimited" }, { name: "Limited" }];
+const mileage = [{ name: "Không giới hạn" }, { name: "Giới hạn" }];
 const supplier = [
   { name: "Alamo", defaultChecked: true },
   { name: "Avis", defaultChecked: true },
@@ -37,9 +37,9 @@ const supplier = [
   { name: "Dollar" },
 ];
 const insurance = [
-  { name: "No insurance", defaultChecked: true },
-  { name: "Zero excess " },
-  { name: "Inclusive" },
+  { name: "Không bảo hiểm", defaultChecked: true },
+  { name: "Không trừ khấu " },
+  { name: "Bao gồm" },
 ];
 
 const TabFilters = () => {
@@ -83,7 +83,7 @@ const TabFilters = () => {
                 open ? "!border-primary-500 " : ""
               }`}
             >
-              <span>Car type</span>
+              <span>Kiểu xe</span>
               <i className="las la-angle-down ml-2"></i>
             </Popover.Button>
             <Transition
@@ -110,13 +110,13 @@ const TabFilters = () => {
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -156,7 +156,7 @@ const TabFilters = () => {
                 <div className="overflow-hidden rounded-2xl shadow-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
                   <div className="relative flex flex-col px-5 py-6 space-y-8">
                     <div className="space-y-5">
-                      <span className="font-medium">Price per day</span>
+                      <span className="font-medium">Giá mỗi ngày</span>
                       <Slider
                         range
                         className="text-red-400"
@@ -174,7 +174,7 @@ const TabFilters = () => {
                           htmlFor="minPrice"
                           className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                         >
-                          Min price
+                          Giá tối thiểu
                         </label>
                         <div className="mt-1 relative rounded-md">
                           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -197,7 +197,7 @@ const TabFilters = () => {
                           htmlFor="maxPrice"
                           className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                         >
-                          Max price
+                          Giá tối đa
                         </label>
                         <div className="mt-1 relative rounded-md">
                           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -219,13 +219,13 @@ const TabFilters = () => {
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -247,7 +247,7 @@ const TabFilters = () => {
         }`}
         onClick={() => setIsOnSale(!isOnSale)}
       >
-        <span>On sale</span>
+        <span>Giảm giá</span>
         {isOnSale && renderXClear()}
       </div>
     );
@@ -263,7 +263,7 @@ const TabFilters = () => {
                 open ? "!border-primary-500 " : ""
               }`}
             >
-              <span>Guests & Bags</span>
+              <span>Khách và đồ dùng cá nhân</span>
               <i className="las la-angle-down ml-2"></i>
             </Popover.Button>
             <Transition
@@ -278,18 +278,18 @@ const TabFilters = () => {
               <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-3 left-0 sm:px-0 lg:max-w-md">
                 <div className="overflow-hidden rounded-2xl shadow-xl bg-white dark:bg-neutral-900   border border-neutral-200 dark:border-neutral-700">
                   <div className="relative flex flex-col px-5 py-6 space-y-5">
-                    <NcInputNumber label="Passengers" max={40} />
-                    <NcInputNumber label="Bags" max={40} />
+                    <NcInputNumber label="Hành khách" max={40} />
+                    <NcInputNumber label="Túi hành lý" max={40} />
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -347,7 +347,7 @@ const TabFilters = () => {
           onClick={openModalMoreFilterMobile}
         >
           <span>
-            <span className="hidden sm:inline">Car</span> filters (3)
+            <span className="hidden sm:inline">Xe</span> Bộ lọc (3)
           </span>
           {renderXClear()}
         </div>
@@ -393,7 +393,7 @@ const TabFilters = () => {
                       as="h3"
                       className="text-lg font-medium leading-6 text-gray-900"
                     >
-                      Experiences filters
+                     Lọc hoạt động người dùng
                     </Dialog.Title>
                     <span className="absolute left-3 top-3">
                       <ButtonClose onClick={closeModalMoreFilterMobile} />
@@ -404,7 +404,7 @@ const TabFilters = () => {
                     <div className="px-4 sm:px-6 divide-y divide-neutral-200 dark:divide-neutral-800">
                       {/* ------ */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Type of car</h3>
+                        <h3 className="text-xl font-medium">Kiểu xe</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(typeOfCar)}
                         </div>
@@ -413,7 +413,7 @@ const TabFilters = () => {
                       {/* ------ */}
                       <div className="py-7">
                         <h3 className="text-xl font-medium">
-                          Car specifications
+                        Thông số xe
                         </h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(carSpecifications)}
@@ -444,7 +444,7 @@ const TabFilters = () => {
                                   htmlFor="minPrice"
                                   className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                                 >
-                                  Min price
+                                 Giá tối thiểu
                                 </label>
                                 <div className="mt-1 relative rounded-md">
                                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -467,7 +467,7 @@ const TabFilters = () => {
                                   htmlFor="maxPrice"
                                   className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                                 >
-                                  Max price
+                                  Giá tối đa
                                 </label>
                                 <div className="mt-1 relative rounded-md">
                                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -493,17 +493,17 @@ const TabFilters = () => {
                       {/* ------ */}
                       <div className="py-7">
                         <h3 className="text-xl font-medium">
-                          Passengers & Bags
+                        Hành khách & Túi hành lý
                         </h3>
                         <div className="mt-6 relative flex-col px-5 py-6 space-y-5">
-                          <NcInputNumber label="Passengers" max={40} />
-                          <NcInputNumber label="Bags" max={40} />
+                          <NcInputNumber label="Hành khách" max={40} />
+                          <NcInputNumber label="Túi hành lý" max={40} />
                         </div>
                       </div>
 
                       {/* ------ */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Mileage</h3>
+                        <h3 className="text-xl font-medium">Khoảng cách</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(mileage)}
                         </div>
@@ -511,7 +511,7 @@ const TabFilters = () => {
 
                       {/* ------ */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Supplier</h3>
+                        <h3 className="text-xl font-medium">Nhà cung cấp</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(supplier)}
                         </div>
@@ -519,7 +519,7 @@ const TabFilters = () => {
 
                       {/* ------ */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Insurance</h3>
+                        <h3 className="text-xl font-medium">Bảo hiểm</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(insurance)}
                         </div>
@@ -532,13 +532,13 @@ const TabFilters = () => {
                       onClick={closeModalMoreFilterMobile}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={closeModalMoreFilterMobile}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -558,7 +558,7 @@ const TabFilters = () => {
           className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-primary-500 bg-primary-50 text-primary-700 focus:outline-none cursor-pointer`}
           onClick={openModalMoreFilter}
         >
-          <span>More filters (3)</span>
+          <span>Các tùy chọn lọc khác (3)</span>
           {renderXClear()}
         </div>
 
@@ -603,7 +603,7 @@ const TabFilters = () => {
                       as="h3"
                       className="text-lg font-medium leading-6 text-gray-900"
                     >
-                      More filters
+                     Các tùy chọn lọc khác
                     </Dialog.Title>
                     <span className="absolute left-3 top-3">
                       <ButtonClose onClick={closeModalMoreFilter} />
@@ -614,26 +614,26 @@ const TabFilters = () => {
                     <div className="px-4 sm:px-6 divide-y divide-neutral-200 dark:divide-neutral-800">
                       <div className="py-7">
                         <h3 className="text-xl font-medium">
-                          Car specifications
+                        Thông số xe
                         </h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(carSpecifications)}
                         </div>
                       </div>
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Mileage</h3>
+                        <h3 className="text-xl font-medium">Khoảng cách</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(mileage)}
                         </div>
                       </div>
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Supplier</h3>
+                        <h3 className="text-xl font-medium">Nhà cung cấp</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(supplier)}
                         </div>
                       </div>
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Insurance</h3>
+                        <h3 className="text-xl font-medium">Bảo hiểm</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(insurance)}
                         </div>
@@ -646,13 +646,13 @@ const TabFilters = () => {
                       onClick={closeModalMoreFilter}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={closeModalMoreFilter}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>

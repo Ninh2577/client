@@ -7,23 +7,23 @@ const AccountPass = () => {
   return (
     <div className="space-y-6 sm:space-y-8">
       {/* HEADING */}
-      <h2 className="text-3xl font-semibold">Update your password</h2>
+      <h2 className="text-3xl font-semibold">Cập nhật mật khẩu của bạn</h2>
       <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
       <div className=" max-w-xl space-y-6">
         <div>
-          <Label>Current password</Label>
+          <Label>Mật khẩu hiện tại</Label>
           <Input type="password" className="mt-1.5" />
         </div>
         <div>
-          <Label>New password</Label>
+          <Label>Mật khẩu mới</Label>
           <Input type="password" className="mt-1.5" />
         </div>
         <div>
-          <Label>Confirm password</Label>
+          <Label>Xác nhận mật khẩu</Label>
           <Input type="password" className="mt-1.5" />
         </div>
         <div className="pt-2">
-          <ButtonPrimary>Update password</ButtonPrimary>
+          <ButtonPrimary>Cập nhật mật khẩu</ButtonPrimary>
         </div>
       </div>
     </div>

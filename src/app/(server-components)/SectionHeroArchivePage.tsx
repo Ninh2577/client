@@ -8,7 +8,7 @@ import Image, { StaticImageData } from "next/image";
 export interface SectionHeroArchivePageProps {
   className?: string;
   listingType?: ReactNode;
-  currentPage: "Stays" | "Experiences" | "Cars" | "Flights";
+  currentPage: "Lưu trú" | "Trải nghiệm" | "Xe" | "Chuyến bay";
   currentTab: SearchTab;
   rightImage?: StaticImageData;
 }
@@ -39,7 +39,7 @@ const SectionHeroArchivePage: FC<SectionHeroArchivePageProps> = ({
             ) : (
               <>
                 <i className="text-2xl las la-home"></i>
-                <span className="ml-2.5">112 properties</span>
+                <span className="ml-2.5">112 địa điểm du lịch</span>
               </>
             )}
           </div>

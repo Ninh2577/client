@@ -14,12 +14,12 @@ const Layout = ({ children }: { children: ReactNode }) => {
       {/* SECTION HERO */}
       <div className="container pt-10 pb-24 lg:pt-16 lg:pb-28">
         <SectionHeroArchivePage
-          currentPage="Experiences"
-          currentTab="Experiences"
+          currentPage="Trải nghiệm"
+          currentTab="Trải nghiệm"
           listingType={
             <>
               <i className="text-2xl las la-umbrella-beach"></i>
-              <span className="ml-2.5">1599 experiences</span>
+              <span className="ml-2.5">1599 Trải nghiệm</span>
             </>
           }
         />
@@ -32,8 +32,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <div className="relative py-16">
           <BackgroundSection />
           <SectionSliderNewCategories
-            heading="Explore by types of stays"
-            subHeading="Explore houses based on 10 types of stays"
+            heading="Khám phá nhiều loại hình lưu trú"
+            subHeading="Tìm kiếm nhà nghỉ theo 10 loại hình lưu trú khác nhau"
             categoryCardType="card5"
             itemPerRow={5}
             sliderStyle="style2"
