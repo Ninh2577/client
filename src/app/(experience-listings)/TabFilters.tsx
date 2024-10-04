@@ -12,35 +12,35 @@ import Slider from "rc-slider";
 // DEMO DATA
 const typeOfExpriences = [
   {
-    name: "Food & drink",
-    description: "Short description for the experience",
+    name: "Đồ ăn và đồ uống",
+    description: "Mô tả ngắn gọn về trải nghiệm",
   },
   {
-    name: "Art and culture",
-    description: "Short description for the experience",
+    name: "Nghệ thuật và văn hóa",
+    description: "Mô tả ngắn gọn về trải nghiệm",
   },
   {
-    name: "Nature and outdoors",
-    description: "Short description for the experience",
+    name: "Thiên nhiên và ngoài trời",
+    description: "Mô tả ngắn gọn về trải nghiệm",
   },
   {
-    name: "Sports",
-    description: "Short description for the experience",
+    name: "Thể thao",
+    description: "Mô tả ngắn gọn về trải nghiệm",
   },
 ];
 
 const timeOfdays = [
   {
-    name: "Morning",
-    description: "Start before 12pm",
+    name: "Buổi sáng",
+    description: "Bắt đầu trước 12 giờ trưa",
   },
   {
-    name: "Afternoon",
-    description: "Start after 12pm",
+    name: "Buổi chiều",
+    description: "Bắt đầu sau 12 giờ trưa",
   },
   {
-    name: "Evening",
-    description: "Start after 5pm",
+    name: "Buổi tối",
+    description: "Bắt đầu sau 5 giờ chiều",
   },
 ];
 
@@ -86,7 +86,7 @@ const TabFilters = () => {
                 open ? "!border-primary-500 " : ""
               }`}
             >
-              <span>Type of experiences</span>
+              <span>Loại trải nghiệm</span>
               <i className="las la-angle-down ml-2"></i>
             </Popover.Button>
             <Transition
@@ -113,13 +113,13 @@ const TabFilters = () => {
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ const TabFilters = () => {
                 open ? "!border-primary-500 " : ""
               }`}
             >
-              <span>Time of day</span>
+              <span>Thời gian trong ngày</span>
               <i className="las la-angle-down ml-2"></i>
             </Popover.Button>
             <Transition
@@ -168,13 +168,13 @@ const TabFilters = () => {
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -214,7 +214,7 @@ const TabFilters = () => {
                 <div className="overflow-hidden rounded-2xl shadow-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
                   <div className="relative flex flex-col px-5 py-6 space-y-8">
                     <div className="space-y-5">
-                      <span className="font-medium">Price per day</span>
+                      <span className="font-medium">Giá mỗi ngày</span>
                       <Slider
                         range
                         min={0}
@@ -231,7 +231,7 @@ const TabFilters = () => {
                           htmlFor="minPrice"
                           className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                         >
-                          Min price
+                          Giá tối thiểu
                         </label>
                         <div className="mt-1 relative rounded-md">
                           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -254,7 +254,7 @@ const TabFilters = () => {
                           htmlFor="maxPrice"
                           className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                         >
-                          Max price
+                          Giá tối đa
                         </label>
                         <div className="mt-1 relative rounded-md">
                           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -276,13 +276,13 @@ const TabFilters = () => {
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Đóng 
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -304,7 +304,7 @@ const TabFilters = () => {
         }`}
         onClick={() => setIsOnSale(!isOnSale)}
       >
-        <span>On sale</span>
+        <span>Đang bán</span>
         {isOnSale && renderXClear()}
       </div>
     );
@@ -355,7 +355,7 @@ const TabFilters = () => {
           onClick={openModalMoreFilter}
         >
           <span>
-            <span className="hidden sm:inline">Experiences</span> filters (3)
+            <span className="hidden sm:inline">Trải nghiệm</span> bộ lọc (3)
           </span>
           {renderXClear()}
         </div>
@@ -401,7 +401,7 @@ const TabFilters = () => {
                       as="h3"
                       className="text-lg font-medium leading-6 text-gray-900"
                     >
-                      Experiences filters
+                      Bộ lọc trải nghiệm
                     </Dialog.Title>
                     <span className="absolute left-3 top-3">
                       <ButtonClose onClick={closeModalMoreFilter} />
@@ -412,7 +412,7 @@ const TabFilters = () => {
                     <div className="px-4 sm:px-6 divide-y divide-neutral-200 dark:divide-neutral-800">
                       <div className="py-7">
                         <h3 className="text-xl font-medium">
-                          Type of experiences
+                        Loại trải nghiệm
                         </h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(moreFilter1)}
@@ -428,7 +428,7 @@ const TabFilters = () => {
                       {/* --------- */}
                       {/* ---- */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Range Prices</h3>
+                        <h3 className="text-xl font-medium">Chọn loại giá</h3>
                         <div className="mt-6 relative ">
                           <div className="relative flex flex-col space-y-8">
                             <div className="space-y-5">
@@ -448,7 +448,7 @@ const TabFilters = () => {
                                   htmlFor="minPrice"
                                   className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                                 >
-                                  Min price
+                                  Giá tối thiểu
                                 </label>
                                 <div className="mt-1 relative rounded-md">
                                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -471,7 +471,7 @@ const TabFilters = () => {
                                   htmlFor="maxPrice"
                                   className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                                 >
-                                  Max price
+                                  Giá tối đa
                                 </label>
                                 <div className="mt-1 relative rounded-md">
                                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -501,13 +501,13 @@ const TabFilters = () => {
                       onClick={closeModalMoreFilter}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Clear
+                      Đóng
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={closeModalMoreFilter}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>

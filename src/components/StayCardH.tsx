@@ -56,13 +56,13 @@ const StayCardH: FC<StayCardHProps> = ({
           <div className="flex items-center space-x-3">
             <i className="las la-user text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-              6 guests
+              6 khách
             </span>
           </div>
           <div className="flex items-center space-x-3">
             <i className="las la-bed text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-              6 beds
+              6 giường
             </span>
           </div>
         </div>
@@ -70,13 +70,13 @@ const StayCardH: FC<StayCardHProps> = ({
           <div className="flex items-center space-x-3">
             <i className="las la-bath text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-              3 baths
+            3 phòng tắm
             </span>
           </div>
           <div className="flex items-center space-x-3">
             <i className="las la-smoking-ban text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-              No smoking
+            Không hút thuốc
             </span>
           </div>
         </div>
@@ -84,7 +84,7 @@ const StayCardH: FC<StayCardHProps> = ({
           <div className="flex items-center space-x-3">
             <i className="las la-door-open text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-              6 bedrooms
+            6 phòng ngủ
             </span>
           </div>
           <div className="flex items-center space-x-3">
@@ -123,7 +123,7 @@ const StayCardH: FC<StayCardHProps> = ({
             {price}
             {` `}
             <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">
-              /night
+              /đêm
             </span>
           </span>
         </div>

@@ -52,7 +52,7 @@ const Collection: FC<CollectionProps> = ({
                 sizeClass="py-3 px-4 sm:py-3.5 sm:px-6"
                 fontSize="text-sm font-medium"
               >
-                Show more
+                Xêm thêm
               </ButtonSecondary>
             </div>
           </div>

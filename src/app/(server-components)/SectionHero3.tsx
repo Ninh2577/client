@@ -15,17 +15,16 @@ const SectionHero3: FC<SectionHero3Props> = ({ className = "" }) => {
     >
       <div className="absolute z-10 inset-x-0 top-[10%] sm:top-[15%] text-center flex flex-col items-center max-w-2xl mx-auto space-y-4 lg:space-y-5 xl:space-y-8">
         <span className="sm:text-lg md:text-xl font-semibold text-neutral-900">
-          Đặt phòng miễn thuế từ  nền tảng Chis.
+          Đặt vé miễn thuế từ Chis. platform
         </span>
         <h2 className="font-bold text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl !leading-[115%] ">
-          Thế hệ mới của <br /> đặt chỗ
+          Thế hệ mới <br /> của đặt phòng
         </h2>
         <ButtonPrimary
           sizeClass="px-6 py-3 lg:px-8 lg:py-4 rounded-xl"
           fontSize="text-sm sm:text-base lg:text-lg font-medium"
         >
-          {/* Keep calm & travel on */}
-          Giữ bình tĩnh và lên đường
+          Giữ bình tĩnh và tiếp tục hành trình
         </ButtonPrimary>
       </div>
       <div className="relative aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-h-8 ">

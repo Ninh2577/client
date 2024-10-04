@@ -66,16 +66,16 @@ const GuestsInput: FC<GuestsInputProps> = ({
         defaultValue={guestAdultsInputValue}
         onChange={(value) => handleChangeData(value, "guestAdults")}
         max={20}
-        label="Adults"
-        desc="Ages 13 or above"
+         label="Người lớn"
+        desc="Từ 13 tuổi trở lên"
       />
       <NcInputNumber
         className="w-full mt-6"
         defaultValue={guestChildrenInputValue}
         onChange={(value) => handleChangeData(value, "guestChildren")}
         max={20}
-        label="Children"
-        desc="Ages 2–12"
+        label="Trẻ em"
+        desc="Từ 2 đến 12 tuổi"
       />
 
       <NcInputNumber
@@ -83,8 +83,8 @@ const GuestsInput: FC<GuestsInputProps> = ({
         defaultValue={guestInfantsInputValue}
         onChange={(value) => handleChangeData(value, "guestInfants")}
         max={20}
-        label="Infants"
-        desc="Ages 0–2"
+        label="Trẻ sơ sinh"
+        desc="Từ 0 đến 2 tuổi"
       />
     </div>
   );
