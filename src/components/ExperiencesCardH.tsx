@@ -73,22 +73,22 @@ const ExperiencesCardH: FC<ExperiencesCardHProps> = ({
         </div>
         <div className="hidden sm:block text-sm text-neutral-500 dark:text-neutral-400 mt-4">
           <span className="line-clamp-2">
-            {`Making a cup of coffee in Vietnam is a whole process that you barely
-            have free time in the middle. But it's also not a really complicated
-            task to start the day with`}
+            {`Pha một tách cà phê ở Việt Nam là cả một quá trình mà bạn hầu như không
+            có thời gian rảnh ở giữa. Nhưng nó cũng không phải là một thực sự phức tạp
+            Nhiệm vụ để bắt đầu ngày mới với`}
           </span>
         </div>
         <div className="flex items-center space-x-8 mt-4  ">
           <div className="flex items-center space-x-2">
             <i className="las la-clock text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-              3 hours
+              3 Giờ
             </span>
           </div>
           <div className="flex items-center space-x-2">
             <i className="las la-user text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-              Up to 6 people
+            Tối đa 6 người
             </span>
           </div>
         </div>
@@ -97,7 +97,7 @@ const ExperiencesCardH: FC<ExperiencesCardHProps> = ({
           <div className="flex items-center space-x-3 text-sm text-neutral-700  dark:text-neutral-300">
             <Avatar imgUrl={author.avatar} userName={author.displayName} />
             <span className="hidden sm:inline-block">
-              <span className="hidden sm:inline">Hosted by</span>{" "}
+              <span className="hidden sm:inline">Chỗ nghỉ:</span>{" "}
               {author.displayName}
             </span>
           </div>
@@ -105,7 +105,7 @@ const ExperiencesCardH: FC<ExperiencesCardHProps> = ({
             {price}
             {` `}
             <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">
-              /person
+              /Người
             </span>
           </span>
         </div>

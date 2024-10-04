@@ -30,29 +30,29 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
         }`}
       >
         <span className="uppercase text-sm text-gray-400 tracking-widest">
-          BENnefits
+          Hồ Chí Minh
         </span>
-        <h2 className="font-semibold text-4xl mt-5">Happening cities </h2>
+        <h2 className="font-semibold text-4xl mt-5">Các thành phố đang diễn ra</h2>
 
         <ul className="space-y-10 mt-16">
           <li className="space-y-4">
             <Badge name="Advertising" />
             <span className="block text-xl font-semibold">
-              Cost-effective advertising
+            Quảng cáo tiết kiệm chi phí
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              With a free listing, you can advertise your rental with no upfront
-              costs
+            Với trang thông tin miễn phí, bạn có thể quảng cáo cho thuê của mình mà không cần trả trước
+            Chi phí
             </span>
           </li>
           <li className="space-y-4">
             <Badge color="green" name="Exposure " />
             <span className="block text-xl font-semibold">
-              Reach millions with Chisfis
+            Tiếp cận hàng triệu người với Chisfis
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              Millions of people are searching for unique places to stay around
-              the world
+            Hàng triệu người đang tìm kiếm những nơi độc đáo để ở xung quanh
+            Thế giới
             </span>
           </li>
           <li className="space-y-4">
@@ -61,8 +61,8 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
               Secure and simple
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              A Holiday Lettings listing gives you a secure and easy way to take
-              bookings and payments online
+            Danh sách Holiday Lettings cung cấp cho bạn một cách an toàn và dễ dàng để thực hiện
+            Đặt chỗ và thanh toán trực tuyến
             </span>
           </li>
         </ul>

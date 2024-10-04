@@ -40,7 +40,7 @@ const ModalSelectDate: FC<ModalSelectDateProps> = ({ renderChildren }) => {
     return renderChildren ? (
       renderChildren({ openModal })
     ) : (
-      <button onClick={openModal}>Select Date</button>
+      <button onClick={openModal}>Chọn ngày</button>
     );
   };
 
@@ -117,7 +117,7 @@ const ModalSelectDate: FC<ModalSelectDateProps> = ({ renderChildren }) => {
                           onChangeDate([null, null]);
                         }}
                       >
-                        Clear dates
+                        Xóa ngày tháng
                       </button>
                       <ButtonPrimary
                         sizeClass="px-6 py-3 !rounded-xl"
@@ -125,7 +125,7 @@ const ModalSelectDate: FC<ModalSelectDateProps> = ({ renderChildren }) => {
                           closeModal();
                         }}
                       >
-                        Save
+                        Lưu
                       </ButtonPrimary>
                     </div>
                   </>

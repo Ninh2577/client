@@ -25,17 +25,17 @@ interface NavItem {
 
 const NAV: NavItem[] = [
   {
-    name: "Explore",
+    name: "Khám phá",
     link: "/",
     icon: MagnifyingGlassIcon,
   },
   {
-    name: "Wishlists",
+    name: "Danh sách yêu thích",
     link: "/account-savelists",
     icon: HeartIcon,
   },
   {
-    name: "Log in",
+    name: "Đăng nhập",
     link: "/account",
     icon: UserCircleIcon,
   },

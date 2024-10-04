@@ -15,7 +15,7 @@ const Collection: FC<CollectionProps> = ({
   className = "",
   featuredImage = "https://images.pexels.com/photos/5059013/pexels-photo-5059013.jpeg?auto=compress&cs=tinysrgb&w=1600",
   name = "Collection",
-  desc = "The most popular <br /> in the world",
+  desc = "Phổ biến nhất <br /> trên thế giới",
   color,
 }) => {
   return (
@@ -52,7 +52,7 @@ const Collection: FC<CollectionProps> = ({
                 sizeClass="py-3 px-4 sm:py-3.5 sm:px-6"
                 fontSize="text-sm font-medium"
               >
-                Show more
+                Hiển thị thêm
               </ButtonSecondary>
             </div>
           </div>
