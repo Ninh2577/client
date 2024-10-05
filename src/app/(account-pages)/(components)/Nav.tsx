@@ -13,6 +13,10 @@ export const Nav = () => {
     "/account-savelists",
     "/account-password",
     "/account-billing",
+    "/ForgotPassword",
+    "/Otp",
+    "/ResetPassword",
+    "/ChangePassword"
   ];
 
   return (

@@ -1,9 +1,9 @@
-
-
 import React, { useState } from 'react';
 import './otp.css';
 
+
 const otp = () => {
+
     return (
         <div className="Otp-wrapper">
             <div className="Otp-container">
@@ -18,7 +18,7 @@ const otp = () => {
                         <input type="text" placeholder="Mã otp" />
                     </div>
                     <br />
-                    <button type="submit" className="btn-Otp">Xát nhận</button>
+                    <a href='/ResetPassword' type="submit" className="btn-Otp">Xát nhận</a>
                 </form>
             </div>
         </div>

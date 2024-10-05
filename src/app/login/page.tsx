@@ -17,7 +17,7 @@ const PageLogin = () => {
                         <label>Mật Khẩu</label>
                         <input type="password" placeholder="********" />
                     </div>
-                    <a href="/forgotPassword" className="forgot-password">Quên mật khẩu?</a>
+                    <a href="/ForgotPassword" className="forgot-password">Quên mật khẩu?</a>
                     <br />
                     <div className="checkbox-login">
                         <input type="checkbox" className="remember" id="remember" />
