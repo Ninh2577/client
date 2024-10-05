@@ -16,27 +16,27 @@ interface SolutionItem {
 
 const solutions: SolutionItem[] = [
   {
-    name: "Stays",
-    description: "Stays rental description ",
+    name: "Địa điểm",
+    description: "Mô tả cho thuê chỗ ở",
     href: "/listing-stay",
     active: true,
     icon: IconOne,
   },
   {
-    name: "Real Estate",
-    description: "Real Estate description",
+    name: "Nơi ở",
+    description: "Mô tả bất động sản",
     href: "/listing-real-estate",
     icon: IconTwo,
   },
   {
-    name: "Cars",
-    description: "Car rental description",
+    name: "Ô tô",
+    description: "Mô tả thuê xe",
     href: "/listing-car",
     icon: IconThree,
   },
   {
-    name: "Experiences",
-    description: "Tour and experiences",
+    name: "Ngắm cảnh",
+    description: "Chuyến tham quan và trải nghiệm",
     href: "/listing-experiences",
     icon: IconFour,
   },
@@ -52,7 +52,7 @@ export default function DropdownTravelers() {
                 group self-center py-2 h-10 sm:h-12 rounded-md text-sm sm:text-base font-medium hover:text-opacity-100 focus:outline-none`}
           >
             <div className={` inline-flex items-center `} role="button">
-              <span>Travelers</span>
+              <span>Du khách</span>
               <ChevronDownIcon
                 className={`${open ? "-rotate-180" : "text-opacity-70 "}
                   ml-2 h-5 w-5 text-neutral-700 group-hover:text-opacity-80 transition ease-in-out duration-150 `}
@@ -77,9 +77,8 @@ export default function DropdownTravelers() {
                       key={index}
                       href={item.href}
                       onClick={() => close()}
-                      className={`flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 ${
-                        item.active ? "bg-neutral-100 dark:bg-neutral-700" : ""
-                      }`}
+                      className={`flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 ${item.active ? "bg-neutral-100 dark:bg-neutral-700" : ""
+                        }`}
                     >
                       <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 bg-primary-50 rounded-md text-primary-500 sm:h-12 sm:w-12">
                         <item.icon aria-hidden="true" />
@@ -101,11 +100,11 @@ export default function DropdownTravelers() {
                   >
                     <span className="flex items-center">
                       <span className="text-sm font-medium ">
-                        Documentation
+                        Tài liệu
                       </span>
                     </span>
                     <span className="block text-sm text-gray-500 dark:text-neutral-400">
-                      Start integrating products and tools
+                      Bắt đầu tích hợp các sản phẩm và công cụ
                     </span>
                   </Link>
                 </div>

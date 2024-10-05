@@ -28,8 +28,8 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "1",
     href: "/listing-stay-map",
-    name: "Nature House",
-    taxonomy: "category",
+    name: "Ngôi nhà thiên nhiên",
+    taxonomy: "loại",
     count: 17288,
     thumbnail:
       "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
@@ -37,8 +37,8 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "2",
     href: "/listing-stay-map",
-    name: "Wooden house",
-    taxonomy: "category",
+    name: "Ngôi nhà gỗ",
+    taxonomy: "loại",
     count: 2118,
     thumbnail:
       "https://images.pexels.com/photos/2351649/pexels-photo-2351649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -46,8 +46,8 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "3",
     href: "/listing-stay-map",
-    name: "Houseboat",
-    taxonomy: "category",
+    name: "Nhà thuyền",
+    taxonomy: "loại",
     count: 36612,
     thumbnail:
       "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -55,8 +55,8 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "4",
     href: "/listing-stay-map",
-    name: "Farm House",
-    taxonomy: "category",
+    name: "Nhà trang trại",
+    taxonomy: "loại",
     count: 18188,
     thumbnail:
       "https://images.pexels.com/photos/248837/pexels-photo-248837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -64,8 +64,8 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "5",
     href: "/listing-stay-map",
-    name: "Dome House",
-    taxonomy: "category",
+    name: "Nhà mái vòm",
+    taxonomy: "loại",
     count: 22288,
     thumbnail:
       "https://images.pexels.com/photos/3613236/pexels-photo-3613236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
@@ -73,8 +73,8 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "6",
     href: "/listing-stay-map",
-    name: "Dome House",
-    taxonomy: "category",
+    name: "Nhà mái vòm",
+    taxonomy: "loại",
     count: 188288,
     thumbnail:
       "https://images.pexels.com/photos/14534337/pexels-photo-14534337.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
@@ -82,8 +82,8 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "7",
     href: "/listing-stay-map",
-    name: "Wooden house",
-    taxonomy: "category",
+    name: "Ngôi nhà gỗ",
+    taxonomy: "loại",
     count: 2118,
     thumbnail:
       "https://images.pexels.com/photos/2351649/pexels-photo-2351649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -91,8 +91,8 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "8",
     href: "/listing-stay-map",
-    name: "Wooden Dome",
-    taxonomy: "category",
+    name: "Mái vòm gỗ",
+    taxonomy: "loại",
     count: 515,
     thumbnail:
       "https://images.pexels.com/photos/9039238/pexels-photo-9039238.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
@@ -100,8 +100,8 @@ const DEMO_CATS: TaxonomyType[] = [
 ];
 
 const SectionSliderNewCategories: FC<SectionSliderNewCategoriesProps> = ({
-  heading = "Suggestions for discovery",
-  subHeading = "Popular places to recommends for you",
+  heading = "Đề xuất khám phá",
+  subHeading = "Những địa điểm phổ biến để giới thiệu cho bạn",
   className = "",
   itemClassName = "",
   categories = DEMO_CATS,

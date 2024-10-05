@@ -35,18 +35,17 @@ const StaySearchForm = () => {
     const isActive = fieldNameShow === "location";
     return (
       <div
-        className={`w-full bg-white dark:bg-neutral-800 ${
-          isActive
+        className={`w-full bg-white dark:bg-neutral-800 ${isActive
             ? "rounded-2xl shadow-lg"
             : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
-        }`}
+          }`}
       >
         {!isActive ? (
           <button
             className={`w-full flex justify-between text-sm font-medium p-4`}
             onClick={() => setFieldNameShow("location")}
           >
-            <span className="text-neutral-400">Where</span>
+            <span className="text-neutral-400">Ở đâu</span>
             <span>{locationInputTo || "Location"}</span>
           </button>
         ) : (
@@ -67,18 +66,17 @@ const StaySearchForm = () => {
 
     return (
       <div
-        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${
-          isActive
+        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${isActive
             ? "rounded-2xl shadow-lg"
             : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
-        }`}
+          }`}
       >
         {!isActive ? (
           <button
             className={`w-full flex justify-between text-sm font-medium p-4  `}
             onClick={() => setFieldNameShow("dates")}
           >
-            <span className="text-neutral-400">When</span>
+            <span className="text-neutral-400">Khi nào</span>
             <span>
               {startDate
                 ? converSelectedDateToString([startDate, endDate])
@@ -107,18 +105,17 @@ const StaySearchForm = () => {
 
     return (
       <div
-        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${
-          isActive
+        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${isActive
             ? "rounded-2xl shadow-lg"
             : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
-        }`}
+          }`}
       >
         {!isActive ? (
           <button
             className={`w-full flex justify-between text-sm font-medium p-4`}
             onClick={() => setFieldNameShow("guests")}
           >
-            <span className="text-neutral-400">Who</span>
+            <span className="text-neutral-400">Ai</span>
             <span>{guestSelected || `Add guests`}</span>
           </button>
         ) : (

@@ -40,7 +40,7 @@ const ModalSelectDate: FC<ModalSelectDateProps> = ({ renderChildren }) => {
     return renderChildren ? (
       renderChildren({ openModal })
     ) : (
-      <button onClick={openModal}>Select Date</button>
+      <button onClick={openModal}>Chọn ngày</button>
     );
   };
 
@@ -80,7 +80,7 @@ const ModalSelectDate: FC<ModalSelectDateProps> = ({ renderChildren }) => {
                         <div className="flex-1 flex flex-col transition-opacity animate-[myblur_0.4s_ease-in-out] overflow-auto">
                           <div className="p-5 ">
                             <span className="block font-semibold text-xl sm:text-2xl">
-                              {` When's your trip?`}
+                              {` Chuyến đi của bạn diễn ra khi nào?`}
                             </span>
                           </div>
                           <div className="flex-1 relative flex z-10 ">
@@ -117,7 +117,7 @@ const ModalSelectDate: FC<ModalSelectDateProps> = ({ renderChildren }) => {
                           onChangeDate([null, null]);
                         }}
                       >
-                        Clear dates
+                        Xóa ngày tháng
                       </button>
                       <ButtonPrimary
                         sizeClass="px-6 py-3 !rounded-xl"
@@ -125,7 +125,7 @@ const ModalSelectDate: FC<ModalSelectDateProps> = ({ renderChildren }) => {
                           closeModal();
                         }}
                       >
-                        Save
+                        Lưu
                       </ButtonPrimary>
                     </div>
                   </>

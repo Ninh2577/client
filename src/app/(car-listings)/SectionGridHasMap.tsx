@@ -25,12 +25,12 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
         {/* CARDSSSS */}
         <div className="min-h-screen w-full xl:w-[780px] 2xl:w-[880px] flex-shrink-0 xl:px-8 ">
           <Heading2
-            heading="Cars in Tokyo"
+            heading="Xe hơi ở Tokyo"
             subHeading={
               <span className="block text-neutral-500 dark:text-neutral-400 mt-3">
-                233 cars
+                233 Xe ô tô
                 <span className="mx-2">·</span>
-                Aug 12 - 18
+               12 - 18 Tháng 8
               </span>
             }
           />
@@ -58,7 +58,7 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
           onClick={() => setShowFullMapFixed(true)}
         >
           <i className="text-lg las la-map"></i>
-          <span>Show map</span>
+          <span>Xem bản đồ</span>
         </div>
 
         {/* MAPPPPP */}

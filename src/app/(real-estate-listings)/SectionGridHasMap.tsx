@@ -28,10 +28,10 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
             heading="Experiences in Tokyo"
             subHeading={
               <span className="block text-neutral-500 dark:text-neutral-400 mt-3">
-                233 experiences
+                233 Trải nghiệm
                 <span className="mx-2">·</span>
-                Aug 12 - 18
-                <span className="mx-2">·</span>2 Guests
+                 12 - 18 tháng 8
+                <span className="mx-2">·</span>2 khác
               </span>
             }
           />
@@ -59,7 +59,7 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
           onClick={() => setShowFullMapFixed(true)}
         >
           <i className="text-lg las la-map"></i>
-          <span>Show map</span>
+          <span>Hiển thị bản đồ</span>
         </div>
 
         {/* MAPPPPP */}
@@ -80,7 +80,7 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
               <Checkbox
                 className="text-xs xl:text-sm text-neutral-800"
                 name="xx"
-                label="Search as I move the map"
+                label="Tìm kiếm khi di chuyển bản đồ"
               />
             </div>
             {/* BELLOW IS MY GOOGLE API KEY -- PLEASE DELETE AND TYPE YOUR API KEY */}

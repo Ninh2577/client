@@ -12,7 +12,7 @@ interface Props {
 }
 
 const LocationInput: FC<Props> = ({
-  onChange = () => {},
+  onChange = () => { },
   className = "",
   defaultValue = "United States",
   headingText = "Where to?",
@@ -84,25 +84,25 @@ const LocationInput: FC<Props> = ({
         <div className="mt-7">
           {value
             ? renderSearchValues({
-                heading: "Locations",
-                items: [
-                  "Afghanistan",
-                  "Albania",
-                  "Algeria",
-                  "American Samao",
-                  "Andorra",
-                ],
-              })
+              heading: "Địa điểm",
+              items: [
+                "Afghanistan",
+                "Albania",
+                "Algeria",
+                "Samoa thuộc Mỹ",
+                "Andorra",
+              ],
+            })
             : renderSearchValues({
-                heading: "Popular destinations",
-                items: [
-                  "Australia",
-                  "Canada",
-                  "Germany",
-                  "United Kingdom",
-                  "United Arab Emirates",
-                ],
-              })}
+              heading: "Điểm đến phổ biến",
+              items: [
+                "Úc",
+                "Canada",
+                "Đức",
+                "Vương quốc Anh",
+                "Các Tiểu vương quốc Ả Rập Thống nhất",
+              ],
+            })}
         </div>
       </div>
     </div>

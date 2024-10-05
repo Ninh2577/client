@@ -9,7 +9,6 @@ import { Popover, Transition } from "@headlessui/react";
 import { PathName } from "@/routers/types";
 import Link from "next/link";
 import Header from "./Header";
-import Header3 from "./Header3";
 import { usePathname } from "next/navigation";
 import { useThemeMode } from "@/utils/useThemeMode";
 
@@ -27,7 +26,6 @@ let OPTIONS = {
 };
 let OBSERVER: IntersectionObserver | null = null;
 const PAGES_HIDE_HEADER_BORDER: PathName[] = [
-  "/home-3",
   "/listing-car-detail",
   "/listing-experiences-detail",
   "/listing-stay-detail",
@@ -39,9 +37,7 @@ const SiteHeader = () => {
   let [headers] = useState<SiteHeaders[]>(["Header 1", "Header 2", "Header 3"]);
 
   let [homePages] = useState<HomePageItem[]>([
-    { name: "Travel", slug: "/" },
-    { name: "Real Estate", slug: "/home-2" },
-    { name: "Booking", slug: "/home-3" },
+    { name: "Travel", slug: "/" }
   ]);
   const [headerSelected, setHeaderSelected] = useState<SiteHeaders>("Header 2");
 
@@ -126,48 +122,48 @@ const SiteHeader = () => {
   };
 
   // FOR DEMO PAGE
-  const renderControlSelections = () => {
-    return (
-      <div className="ControlSelections relative z-40 hidden lg:block">
-        <div className="fixed right-3 top-1/4 z-40 flex items-center">
-          <Popover className="relative">
-            {({ open }) => (
-              <>
-                <Popover.Button
-                  className={`p-2.5 bg-white hover:bg-neutral-100 dark:bg-primary-6000 dark:hover:bg-primary-700 rounded-xl shadow-xl border border-neutral-200 dark:border-primary-6000 z-10 focus:outline-none ${
-                    open ? " focus:ring-2 ring-primary-500" : ""
-                  }`}
-                >
-                  <CogIcon className="w-8 h-8" />
-                </Popover.Button>
-                <Transition
-                  as={Fragment}
-                  enter="transition ease-out duration-200"
-                  enterFrom="opacity-0 translate-y-1"
-                  enterTo="opacity-100 translate-y-0"
-                  leave="transition ease-in duration-150"
-                  leaveFrom="opacity-100 translate-y-0"
-                  leaveTo="opacity-0 translate-y-1"
-                >
-                  <Popover.Panel className="absolute right-0 z-10 mt-3 w-screen max-w-sm">
-                    <div className="rounded-2xl bg-white dark:bg-neutral-800 overflow-hidden nc-custom-shadow-1">
-                      <div className="relative p-6">
-                        <span className="text-xl font-semibold">Customize</span>
-                        <div className="w-full border-b border-neutral-200 dark:border-neutral-700 mt-4"></div>
-                        {renderRadioHeaders()}
-                        {renderRadioHomePages()}
-                      </div>
+  // const renderControlSelections = () => {
+  //   return (
+  //     <div className="ControlSelections relative z-40 hidden lg:block">
+  //       <div className="fixed right-3 top-1/4 z-40 flex items-center">
+  //         <Popover className="relative">
+  //           {({ open }) => (
+  //             <>
+  //               <Popover.Button
+  //                 className={`p-2.5 bg-white hover:bg-neutral-100 dark:bg-primary-6000 dark:hover:bg-primary-700 rounded-xl shadow-xl border border-neutral-200 dark:border-primary-6000 z-10 focus:outline-none ${
+  //                   open ? " focus:ring-2 ring-primary-500" : ""
+  //                 }`}
+  //               >
+  //                 <CogIcon className="w-8 h-8" />
+  //               </Popover.Button>
+  //               <Transition
+  //                 as={Fragment}
+  //                 enter="transition ease-out duration-200"
+  //                 enterFrom="opacity-0 translate-y-1"
+  //                 enterTo="opacity-100 translate-y-0"
+  //                 leave="transition ease-in duration-150"
+  //                 leaveFrom="opacity-100 translate-y-0"
+  //                 leaveTo="opacity-0 translate-y-1"
+  //               >
+  //                 <Popover.Panel className="absolute right-0 z-10 mt-3 w-screen max-w-sm">
+  //                   <div className="rounded-2xl bg-white dark:bg-neutral-800 overflow-hidden nc-custom-shadow-1">
+  //                     <div className="relative p-6">
+  //                       <span className="text-xl font-semibold">Customize</span>
+  //                       <div className="w-full border-b border-neutral-200 dark:border-neutral-700 mt-4"></div>
+  //                       {renderRadioHeaders()}
+  //                       {renderRadioHomePages()}
+  //                     </div>
                     
-                    </div>
-                  </Popover.Panel>
-                </Transition>
-              </>
-            )}
-          </Popover>
-        </div>
-      </div>
-    );
-  };
+  //                   </div>
+  //                 </Popover.Panel>
+  //               </Transition>
+  //             </>
+  //           )}
+  //         </Popover>
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
   const renderHeader = () => {
     let headerClassName = "shadow-sm dark:border-b dark:border-neutral-700";
@@ -181,8 +177,8 @@ const SiteHeader = () => {
         return <Header className={headerClassName} navType="MainNav1" />;
       case "Header 2":
         return <Header className={headerClassName} navType="MainNav2" />;
-      case "Header 3":
-        return <Header3 className={headerClassName} />;
+      // case "Header 3":
+      //   return <Header3 className={headerClassName} />;
 
       default:
         return <Header className={headerClassName} navType="MainNav1" />;
@@ -191,7 +187,7 @@ const SiteHeader = () => {
 
   return (
     <>
-      {renderControlSelections()}
+      {/* {renderControlSelections()} */}
       {renderHeader()}
       <div ref={anchorRef} className="h-1 absolute invisible"></div>
     </>

@@ -15,6 +15,13 @@ export const Nav = () => {
     "/account-billing",
   ];
 
+  const displayNames = {
+    "/account": "Tài khoản",
+    "/account-savelists": "Danh sách đã lưu",
+    "/account-password": "Mật khẩu",
+    "/account-billing": "Thanh toán",
+  };
+
   return (
     <div className="container">
       <div className="flex space-x-8 md:space-x-14 overflow-x-auto hiddenScrollbar">
@@ -24,13 +31,12 @@ export const Nav = () => {
             <Link
               key={item}
               href={item}
-              className={`block py-5 md:py-8 border-b-2 flex-shrink-0 capitalize ${
-                isActive
-                  ? "border-primary-500 font-medium"
-                  : "border-transparent"
-              }`}
+              className={`block py-5 md:py-8 border-b-2 flex-shrink-0 capitalize ${isActive
+                ? "border-primary-500 font-medium"
+                : "border-transparent"
+                }`}
             >
-              {item.replace("-", " ").replace("/", " ")}
+              {displayNames[item] || item.replace("-", " ").replace("/", " ")}
             </Link>
           );
         })}

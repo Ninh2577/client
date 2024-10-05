@@ -16,53 +16,49 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
 }) => {
   return (
     <div
-      className={`nc-SectionOurFeatures relative flex flex-col items-center ${
-        type === "type1" ? "lg:flex-row" : "lg:flex-row-reverse"
-      } ${className}`}
+      className={`nc-SectionOurFeatures relative flex flex-col items-center ${type === "type1" ? "lg:flex-row" : "lg:flex-row-reverse"
+        } ${className}`}
       data-nc-id="SectionOurFeatures"
     >
       <div className="flex-grow">
         <Image src={rightImg} alt="" />
       </div>
       <div
-        className={`max-w-2xl flex-shrink-0 mt-10 lg:mt-0 lg:w-2/5 ${
-          type === "type1" ? "lg:pl-16" : "lg:pr-16"
-        }`}
+        className={`max-w-2xl flex-shrink-0 mt-10 lg:mt-0 lg:w-2/5 ${type === "type1" ? "lg:pl-16" : "lg:pr-16"
+          }`}
       >
         <span className="uppercase text-sm text-gray-400 tracking-widest">
-          BENnefits
+          Hồ Chí Minh
         </span>
-        <h2 className="font-semibold text-4xl mt-5">Happening cities </h2>
-
+        <h2 className="font-semibold text-4xl mt-5">Các thành phố đang diễn ra</h2>
         <ul className="space-y-10 mt-16">
           <li className="space-y-4">
             <Badge name="Advertising" />
             <span className="block text-xl font-semibold">
-              Cost-effective advertising
+              Quảng cáo tiết kiệm chi phí
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              With a free listing, you can advertise your rental with no upfront
-              costs
+              Với trang thông tin miễn phí, bạn có thể quảng cáo cho thuê của mình mà không cần trả trước
+              Chi phí
             </span>
           </li>
           <li className="space-y-4">
             <Badge color="green" name="Exposure " />
             <span className="block text-xl font-semibold">
-              Reach millions with Chisfis
+              Đạt được hàng triệu lượt tiếp cận với Chisfis
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              Millions of people are searching for unique places to stay around
-              the world
+              Hàng triệu người đang tìm kiếm những nơi ở độc đáo trên toàn thế giới
             </span>
           </li>
           <li className="space-y-4">
             <Badge color="red" name="Secure" />
             <span className="block text-xl font-semibold">
-              Secure and simple
+              An toàn và đơn giản
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              A Holiday Lettings listing gives you a secure and easy way to take
-              bookings and payments online
+              Danh sách cho thuê trên Holiday Lettings cung cấp cho bạn một cách an
+              toàn và dễ dàng để nhận đặt phòng và thanh toán trực tuyến
             </span>
           </li>
         </ul>

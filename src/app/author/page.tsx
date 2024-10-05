@@ -32,14 +32,14 @@ const AuthorPage: FC<AuthorPageProps> = ({}) => {
 
         {/* ---- */}
         <div className="space-y-3 text-center flex flex-col items-center">
-          <h2 className="text-3xl font-semibold">Kevin Francis</h2>
+          <h2 className="text-3xl font-semibold">Nguyễn Văn A</h2>
           <StartRating className="!text-base" />
         </div>
 
         {/* ---- */}
         <p className="text-neutral-500 dark:text-neutral-400">
-          Providing lake views, The Symphony 9 Tam Coc in Ninh Binh provides
-          accommodation, an outdoor.
+        Với tầm nhìn hướng hồ, The Symphony 9 Tam Cốc tại Ninh Bình cung cấp
+        chỗ ở, một ngoài trời.
         </p>
 
         {/* ---- */}
@@ -69,7 +69,7 @@ const AuthorPage: FC<AuthorPageProps> = ({}) => {
               />
             </svg>
             <span className="text-neutral-6000 dark:text-neutral-300">
-              Ha Noi, Viet Nam
+              Hà Nội, Việt Nam
             </span>
           </div>
           <div className="flex items-center space-x-4">
@@ -88,7 +88,7 @@ const AuthorPage: FC<AuthorPageProps> = ({}) => {
               />
             </svg>
             <span className="text-neutral-6000 dark:text-neutral-300">
-              Speaking English
+            Nói tiếng Anh
             </span>
           </div>
 
@@ -108,7 +108,7 @@ const AuthorPage: FC<AuthorPageProps> = ({}) => {
               />
             </svg>
             <span className="text-neutral-6000 dark:text-neutral-300">
-              Joined in March 2016
+            Gia nhập vào tháng Ba năm 2023
             </span>
           </div>
         </div>
@@ -122,8 +122,8 @@ const AuthorPage: FC<AuthorPageProps> = ({}) => {
         <div>
           <h2 className="text-2xl font-semibold">{`Kevin Francis's listings`}</h2>
           <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-            {`Kevin Francis's listings is very rich, 5 star reviews help him to be
-            more branded.`}
+            {`Danh sách của Nguyễn Văn A rất phong phú, đánh giá 5 sao giúp anh ấy trở thành
+            có thương hiệu hơn.`}
           </span>
         </div>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
@@ -155,7 +155,7 @@ const AuthorPage: FC<AuthorPageProps> = ({}) => {
                   ))}
                 </div>
                 <div className="flex mt-11 justify-center items-center">
-                  <ButtonSecondary>Show me more</ButtonSecondary>
+                  <ButtonSecondary>Xem thêm</ButtonSecondary>
                 </div>
               </Tab.Panel>
               <Tab.Panel className="">
@@ -167,7 +167,7 @@ const AuthorPage: FC<AuthorPageProps> = ({}) => {
                   )}
                 </div>
                 <div className="flex mt-11 justify-center items-center">
-                  <ButtonSecondary>Show me more</ButtonSecondary>
+                  <ButtonSecondary>Xem thêm</ButtonSecondary>
                 </div>
               </Tab.Panel>
               <Tab.Panel className="">
@@ -177,7 +177,7 @@ const AuthorPage: FC<AuthorPageProps> = ({}) => {
                   ))}
                 </div>
                 <div className="flex mt-11 justify-center items-center">
-                  <ButtonSecondary>Show me more</ButtonSecondary>
+                  <ButtonSecondary>Xem thêm</ButtonSecondary>
                 </div>
               </Tab.Panel>
             </Tab.Panels>
@@ -191,7 +191,7 @@ const AuthorPage: FC<AuthorPageProps> = ({}) => {
     return (
       <div className="listingSection__wrap">
         {/* HEADING */}
-        <h2 className="text-2xl font-semibold">Reviews (23 reviews)</h2>
+        <h2 className="text-2xl font-semibold">Đánh giá (23 đánh giá)</h2>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
 
         {/* comment */}
@@ -201,7 +201,7 @@ const AuthorPage: FC<AuthorPageProps> = ({}) => {
           <CommentListing hasListingTitle className="py-8" />
           <CommentListing hasListingTitle className="py-8" />
           <div className="pt-8">
-            <ButtonSecondary>View more 20 reviews</ButtonSecondary>
+            <ButtonSecondary>Xem thêm 20 đánh giá khác</ButtonSecondary>
           </div>
         </div>
       </div>

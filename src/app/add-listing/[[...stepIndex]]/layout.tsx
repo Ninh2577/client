@@ -19,7 +19,7 @@ const CommonLayout: FC<CommonLayoutProps> = ({ children, params }) => {
   const backtHref = (
     index > 1 ? `/add-listing/${index - 1}` : `/add-listing/${1}`
   ) as Route;
-  const nextBtnText = index > 9 ? "Publish listing" : "Continue";
+  const nextBtnText = index > 9 ? "Đăng bài đăng" : "Tiếp tục";
   return (
     <div
       className={`nc-PageAddListing1 px-4 max-w-3xl mx-auto pb-24 pt-14 sm:py-24 lg:pb-32`}
@@ -37,9 +37,9 @@ const CommonLayout: FC<CommonLayoutProps> = ({ children, params }) => {
 
         {/* --------------------- */}
         <div className="flex justify-end space-x-5">
-          <ButtonSecondary href={backtHref}>Go back</ButtonSecondary>
+          <ButtonSecondary href={backtHref}>Quay lại</ButtonSecondary>
           <ButtonPrimary href={nextHref}>
-            {nextBtnText || "Continue"}
+            {nextBtnText || "Tiếp tục"}
           </ButtonPrimary>
         </div>
       </div>
