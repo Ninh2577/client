@@ -14,8 +14,7 @@ const AccountBilling = () => {
           {` Khi bạn nhận được thanh toán cho một đặt phòng, chúng tôi gọi khoản thanh toán đó là "rút tiền". Hệ thống thanh toán an toàn của chúng tôi hỗ trợ nhiều phương thức rút tiền, có thể được thiết lập bên dưới. Xem thêm tại FAQ.`}
           <br />
           <br />
-         Để nhận thanh toán, bạn cần thiết lập một phương thức rút tiền. Airbnb sẽ phát hành rút tiền khoảng 24 giờ sau khi khách check-in theo lịch trình. Thời gian để tiền xuất hiện trong tài khoản của bạn phụ thuộc vào phương thức rút tiền của bạn. Tìm hiểu thêm`}
-
+          Để nhận thanh toán, bạn cần thiết lập một phương thức rút tiền. Airbnb sẽ phát hành rút tiền khoảng 24 giờ sau khi khách check-in theo lịch trình. Thời gian để tiền xuất hiện trong tài khoản của bạn phụ thuộc vào phương thức rút tiền của bạn. Tìm hiểu thêm
         </span>
         <div className="pt-10">
           <ButtonPrimary>Thêm phương thức rút tiền</ButtonPrimary>
