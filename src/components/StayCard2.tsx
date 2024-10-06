@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import GallerySlider from "@/components/GallerySlider";
+
 import { DEMO_STAY_LISTINGS } from "@/data/listings";
 import { StayDataType } from "@/data/types";
 import StartRating from "@/components/StartRating";
@@ -7,6 +7,7 @@ import BtnLikeIcon from "@/components/BtnLikeIcon";
 import SaleOffBadge from "@/components/SaleOffBadge";
 import Badge from "@/shared/Badge";
 import Link from "next/link";
+import DSTour from "./DanhSachTour";
 
 export interface StayCard2Props {
   className?: string;
@@ -40,7 +41,7 @@ const StayCard2: FC<StayCard2Props> = ({
   const renderSliderGallery = () => {
     return (
       <div className="relative w-full">
-        <GallerySlider
+        <DSTour
           uniqueID={`StayCard2_${id}`}
           ratioClass="aspect-w-12 aspect-h-11"
           galleryImgs={galleryImgs}
