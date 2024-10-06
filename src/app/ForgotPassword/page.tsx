@@ -23,7 +23,6 @@ const ForgotPassword = () => {
     return (
         <div className="forgotPassword-wrapper">
             <div className="forgotPassword-container">
-                <img src={'/images/trend.png'} alt="VJobs logo" style={{ width: 'auto', height: '40px', marginBottom: '20px' }} />
                 <div style={{ marginLeft: '-330px', marginBottom: '10px' }}>
                     <h2 style={{ marginLeft: '-5px' }}>Đặt lại mật khẩu</h2>
                     <p style={{ marginLeft: '317px', fontSize: '13px' }}>Nhập địa chỉ email của bạn. Chúng tôi sẽ gửi mã OTP để bạn đặt lại mật khẩu.</p>

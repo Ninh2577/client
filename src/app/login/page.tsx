@@ -87,8 +87,6 @@ const PageLogin = () => {
     return (
         <div className="login-wrapper">
             <div className="login-container">
-                <img src={'./images/trend.png'} alt="VJobs logo"
-                    style={{ marginLeft: '0px', width: 'auto', height: '40px', fontSize: '1.5rem', marginTop: '-20px', flexShrink: '0' }} />
                 <h2>Đăng Nhập</h2>
                 <form className="login-form" onSubmit={handleLogin}>
                     <div className="input-login">

@@ -91,8 +91,7 @@ const PageSignUp = () => {
   return (
     <div className="register-wrapper">
       <div className="register-container">
-        <img src={'./images/trend.png'} alt="VJobs logo"
-          style={{ marginLeft: '0px', width: 'auto', height: '40px', fontSize: '1.5rem', marginTop: '-20px', flexShrink: '0' }} />
+      
         <h2>Đăng Ký</h2>
         <form className="login-form">
           <div className="input-register">
