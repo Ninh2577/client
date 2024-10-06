@@ -15,24 +15,24 @@ export interface WidgetFooterMenu {
 const widgetMenus: WidgetFooterMenu[] = [
   {
     id: "5",
-    title: "Bắt đầu",
+    title: "Cài đặt ",
     menus: [
       { href: "#", label: "Cài đặt" },
       { href: "#", label: "Ghi chú phát hành" },
       { href: "#", label: "Hướng dẫn nâng cấp" },
       { href: "#", label: "Hỗ trợ trình duyệt" },
-      { href: "#", label: "Hỗ trợ trình soạn thảo" },
+      { href: "#", label: "Hỗ trợ biên tập viên" },
+
     ],
   },
   {
     id: "1",
     title: "Khám phá",
     menus: [
-      { href: "#", label: "Tính năng thiết kế" },
-      { href: "#", label: "Tạo mẫu" },
-      { href: "#", label: "Hệ thống thiết kế" },
-      { href: "#", label: "Bảng giá" },
-      { href: "#", label: "Bảo mật" },
+      { href: "#", label: "Đặc điểm thiết kế" },
+      { href: "#", label: "Thiết kế hệ thống" },
+      { href: "#", label: "Giá" },
+      { href: "#", label: "An ninh" },
     ],
   },
   {
@@ -53,7 +53,7 @@ const widgetMenus: WidgetFooterMenu[] = [
       { href: "#", label: "Diễn đàn thảo luận" },
       { href: "#", label: "Quy tắc ứng xử" },
       { href: "#", label: "Tài nguyên cộng đồng" },
-      { href: "#", label: "Góp phần" },
+      { href: "#", label: "Đóng góp" },
       { href: "#", label: "Chế độ đồng thời" },
     ],
   },

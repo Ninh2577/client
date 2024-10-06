@@ -117,7 +117,7 @@ const ModalSelectDate: FC<ModalSelectDateProps> = ({ renderChildren }) => {
                           onChangeDate([null, null]);
                         }}
                       >
-                       Ngày xóa
+                        Xóa ngày tháng
                       </button>
                       <ButtonPrimary
                         sizeClass="px-6 py-3 !rounded-xl"

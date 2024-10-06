@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import GallerySlider from "@/components/GallerySlider";
+
 import { DEMO_EXPERIENCES_LISTINGS } from "@/data/listings";
 import { ExperiencesDataType } from "@/data/types";
 import StartRating from "@/components/StartRating";
@@ -8,6 +8,7 @@ import SaleOffBadge from "@/components/SaleOffBadge";
 import Badge from "@/shared/Badge";
 import Avatar from "@/shared/Avatar";
 import Link from "next/link";
+import DSTour from "./DanhSachTour";
 
 export interface ExperiencesCardHProps {
   className?: string;
@@ -38,7 +39,7 @@ const ExperiencesCardH: FC<ExperiencesCardHProps> = ({
   const renderSliderGallery = () => {
     return (
       <div className="relative w-full md:w-72 flex-shrink-0 overflow-hidden">
-        <GallerySlider
+        <DSTour
           ratioClass="aspect-w-12 aspect-h-9 md:aspect-h-11"
           galleryImgs={galleryImgs}
           uniqueID={`ExperiencesCardH_${id}`}
@@ -73,20 +74,20 @@ const ExperiencesCardH: FC<ExperiencesCardHProps> = ({
         </div>
         <div className="hidden sm:block text-sm text-neutral-500 dark:text-neutral-400 mt-4">
           <span className="line-clamp-2">
-          {`Uống cà phê ở Việt Nam là một quá trình trải nghiệm thú vị, bạn sẽ không có nhiều thời gian rảnh giữa việc thưởng thức. Nhưng đây không phải là một nhiệm vụ quá phức tạp để bắt đầu ngày mới với`}
+            {`Uống cà phê ở Việt Nam là một quá trình trải nghiệm thú vị, bạn sẽ không có nhiều thời gian rảnh giữa việc thưởng thức. Nhưng đây không phải là một nhiệm vụ quá phức tạp để bắt đầu ngày mới với`}
           </span>
         </div>
         <div className="flex items-center space-x-8 mt-4  ">
           <div className="flex items-center space-x-2">
             <i className="las la-clock text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-            3 giờ 
+              3 Giờ
             </span>
           </div>
           <div className="flex items-center space-x-2">
             <i className="las la-user text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-            Tối đa 6 người
+              Tối đa 6 người
             </span>
           </div>
         </div>
@@ -95,19 +96,19 @@ const ExperiencesCardH: FC<ExperiencesCardHProps> = ({
           <div className="flex items-center space-x-3 text-sm text-neutral-700  dark:text-neutral-300">
             <Avatar imgUrl={author.avatar} userName={author.displayName} />
             <span className="hidden sm:inline-block">
-              <span className="hidden sm:inline">Chủ nhà</span>{" "}
+              <span className="hidden sm:inline">Chỗ nghỉ:</span>{" "}
               {author.displayName}
-            </span>
-          </div>
+            </span >
+          </div >
           <span className="text-base font-semibold text-secondary-700">
             {price}
             {` `}
             <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">
-              /người
-            </span>
-          </span>
-        </div>
-      </div>
+              /Người
+            </span >
+          </span >
+        </div >
+      </div >
     );
   };
 

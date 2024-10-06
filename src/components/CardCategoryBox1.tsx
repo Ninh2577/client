@@ -41,7 +41,7 @@ const CardCategoryBox1: FC<CardCategoryBox1Props> = ({
         <span
           className={`block mt-2 text-sm text-neutral-500 dark:text-neutral-400`}
         >
-          Chỉ mất 19 phút đi xe
+          19 phút lái xe
         </span>
       </div>
     </Link>

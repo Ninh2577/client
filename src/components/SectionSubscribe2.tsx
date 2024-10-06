@@ -18,19 +18,19 @@ const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
       <div className="flex-shrink-0 mb-10 lg:mb-0 lg:mr-10 lg:w-2/5">
         <h2 className="font-semibold text-4xl">Tham gia bản tin của chúng tôi 🎉</h2>
         <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-          Đọc và chia sẻ góc nhìn mới về hầu hết mọi chủ đề. Mọi người đều được chào đón.
+          Chào mừng. Hãy chia sẽ cảm nhận của mình với mọi người
         </span>
         <ul className="space-y-4 mt-10">
           <li className="flex items-center space-x-4">
             <Badge name="01" />
             <span className="font-medium text-neutral-700 dark:text-neutral-300">
-            Nhận thêm chiết khấu
+              Nhận thêm giảm giá
             </span>
           </li>
           <li className="flex items-center space-x-4">
             <Badge color="red" name="02" />
             <span className="font-medium text-neutral-700 dark:text-neutral-300">
-            Nhận tạp chí cao cấp
+              Nhận tạp chí cao cấp
             </span>
           </li>
         </ul>
@@ -38,7 +38,7 @@ const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
           <Input
             required
             aria-required
-            placeholder="Nhập email của bạn"
+            placeholder="Nhập email của bạn."
             type="email"
             rounded="rounded-full"
             sizeClass="h-12 px-5 py-3"

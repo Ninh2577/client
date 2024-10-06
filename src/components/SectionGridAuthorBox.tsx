@@ -44,8 +44,8 @@ const SectionGridAuthorBox: FC<SectionGridAuthorBoxProps> = ({
         )}
       </div>
       <div className="mt-16 flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-5">
-        <ButtonSecondary loading>xem thêm</ButtonSecondary>
-        <ButtonPrimary>Đăng ký làm chủ nhà</ButtonPrimary>
+        <ButtonSecondary loading>Xem thêm </ButtonSecondary>
+        <ButtonPrimary>Trở thành tác giả</ButtonPrimary>
       </div>
     </div>
   );

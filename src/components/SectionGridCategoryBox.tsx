@@ -33,7 +33,7 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "3",
     href: "/listing-stay-map",
-    name: "Paris",
+    name: "Pháp",
     taxonomy: "loại",
     count: 1288,
     thumbnail:
@@ -42,6 +42,7 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "4",
     href: "/listing-stay-map",
+
     name: "London",
     taxonomy: "loại",
     count: 112,
@@ -106,10 +107,10 @@ const SectionGridCategoryBox: React.FC<SectionGridCategoryBoxProps> = ({
   return (
     <div className={`nc-SectionGridCategoryBox relative ${className}`}>
       <Heading
-        desc="Discover great places near where you live"
+        desc="Khám phá những địa điểm tuyệt vời gần nơi bạn sống"
         isCenter={headingCenter}
       >
-       Khám phá gần đó
+        Khám phá vùng lân cận
       </Heading>
       <div className={`grid ${gridClassName} gap-5 sm:gap-6 md:gap-8`}>
         {categories.map((item, i) => (
