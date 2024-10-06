@@ -88,10 +88,10 @@ const AccountPage: FC<AccountPageProps> = () => {
             <Label>Năm sinh</Label>
             <Input className="mt-1.5" type="date" />
           </div>
-          <div>
+          {/* <div>
             <Label>Mật khẩu</Label>
             <Input className="mt-1.5" placeholder="************" />
-          </div>
+          </div> */}
           <div>
             <Label>Địa chỉ</Label>
             <Input className="mt-1.5" placeholder="cần thơ" />
