@@ -1,58 +1,40 @@
 .register-wrapper {
-    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 800px;
     background-color: #f7fbff;
+    font-family: "Arial", "sans-serif";
+
 }
 
 .register-container {
+    margin-top: 30px;
     background-color: #ffffff;
-    width: 700px;
+    width: 500px;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .register-container h2 {
-    margin-left: -479px;
     font-family: "Arial", "sans-serif";
+    margin: 0;
     font-weight: 600;
     font-size: clamp(2rem, 10vw, 2.15rem);
     line-height: 1.5;
-    margin-top: 15px;
 }
 
 .register-form {
     display: flex;
     flex-direction: column;
-    font-family: "Arial", "sans-serif";
-}
-
-.register-form .row .col-6 {
-    padding-right: 5px;
-    float: left;
-    width: 46%;
-}
-
-.register-form .row .col-7 .rolessss label {
-    margin-left: -228px;
-}
-
-.register-form .row .col-7 .rolessss .cheks {
-    margin-top: 4px;
-    margin-left: -201px;
-}
-
-
-.register-form .row .col-7 {
-    float: right;
-    width: 50%;
 }
 
 .input-register {
+    width: 440px;
+
     margin-bottom: 20px;
     text-align: left;
 }
@@ -65,7 +47,7 @@
 }
 
 .input-register input {
-    width: 100%;
+    width: 95%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -77,6 +59,33 @@
     border-color: #007bff;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.forgot-password {
+    font-family: "Inter", "sans-serif";
+    font-size: 14;
+    line-height: 1.43;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    cursor: pointer;
+    user-select: none;
+    color: var(--template-palette-text-primary);
+    font-weight: 500;
+    position: relative;
+    vertical-align: middle;
+    text-decoration: none;
+    width: fit-content;
+    align-self: baseline;
+    margin-left: 295px;
+    margin-top: -3px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
 }
 
 .checkbox-register {
@@ -121,7 +130,7 @@
     height: 2.5rem;
     color: white;
     font-size: 16px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
     width: 100%;
     min-width: 64px;
     padding: 6px 16px;
@@ -135,26 +144,25 @@
     vertical-align: middle;
     cursor: pointer;
     border: none;
-
 }
 
 .btn-register:hover {
     background-color: #0f7df3;
 }
 
-.signup-register {
+.signup-prompts {
     margin-top: 15px;
     font-family: "Arial", "sans-serif";
     font-weight: 400;
 }
 
-.signup-register a {
+.signup-prompts a {
     color: black;
     font-weight: bold;
     text-decoration: none;
 }
 
-.signup-register a:hover {
+.signup-prompts a:hover {
     text-decoration: underline;
 }
 
@@ -188,7 +196,6 @@
 }
 
 .social-register button {
-    font-family: "Arial", "sans-serif";
     width: 100%;
     box-shadow: none;
     border-radius: 9px;
@@ -199,7 +206,7 @@
     border-color: hsl(220, 20%, 88%);
     background-color: hsla(220, 35%, 97%, 0.3);
     padding: 5px 15px;
-    /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     min-width: 64px;
     line-height: 1.75;
     font-weight: 500;
@@ -210,7 +217,6 @@
 }
 
 .btn-google {
-    font-family: "Arial", "sans-serif";
     display: flex;
     /* Sử dụng flexbox để căn chỉnh nội dung */
     align-items: center;
@@ -236,6 +242,7 @@
 }
 
 .btn-facebook {
+
     display: flex;
     /* Sử dụng flexbox để căn chỉnh nội dung */
     align-items: center;
@@ -260,6 +267,6 @@
     /* Hiệu ứng chuyển màu nền khi hover */
 }
 
-.social-register button:hover {
+.social-login button:hover {
     background-color: hsla(196, 28%, 79%, 0.436);
 }
