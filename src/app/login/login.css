@@ -1,0 +1,270 @@
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+    background-color: #f7fbff;
+    font-family: "Arial", "sans-serif";
+
+}
+
+.login-container {
+    background-color: #ffffff;
+    width: 500px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    font-family: "Arial", "sans-serif";
+    margin: 0;
+    font-weight: 600;
+    font-size: clamp(2rem, 10vw, 2.15rem);
+    line-height: 1.5;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-login {
+    width: 440px;
+
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-login label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-login input {
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fcfcfc;
+}
+
+.input-login input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.forgot-password {
+    font-family: "Inter", "sans-serif";
+    font-size: 14;
+    line-height: 1.43;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    cursor: pointer;
+    user-select: none;
+    color: var(--template-palette-text-primary);
+    font-weight: 500;
+    position: relative;
+    vertical-align: middle;
+    text-decoration: none;
+    width: fit-content;
+    align-self: baseline;
+    margin-left: 295px;
+    margin-top: -3px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.checkbox-login {
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-login input {
+    margin-right: 8px;
+    width: 17px;
+    /* Đặt chiều rộng cho checkbox */
+    height: 17px;
+    /* Đặt chiều cao cho checkbox */
+    cursor: pointer;
+    /* Thay đổi con trỏ khi hover vào checkbox */
+}
+
+.checkbox-login label {
+    font-weight: 400;
+    font-size: 0.875rem;
+    /* Có thể điều chỉnh kích thước chữ nếu cần */
+    line-height: 1.5;
+    margin: 0;
+    /* Loại bỏ margin */
+    display: flex;
+    /* Đảm bảo label có thể căn giữa */
+    align-items: center;
+    /* Căn giữa nội dung trong label */
+}
+
+
+.btn-login {
+    /* background-color: hsl(220, 35%, 3%); */
+    background-color: #007bff;
+    /* background-image: linear-gradient(to bottom, hsl(220, 20%, 25%), hsl(220, 30%, 6%)); */
+    /* box-shadow: inset 0 1px 0 hsl(220, 20%, 35%), inset 0 -1px 0 1px hsl(220, 0%, 0%); */
+    /* border: 1px solid hsl(220, 20%, 25%); */
+    border-radius: 6px;
+    text-transform: none;
+    height: 2.5rem;
+    color: white;
+    font-size: 16px;
+    /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
+    width: 100%;
+    min-width: 64px;
+    padding: 6px 16px;
+    font-family: "Arial", "sans-serif";
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.75;
+    box-sizing: border-box;
+    text-decoration: none;
+    user-select: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-login:hover {
+    background-color: #0f7df3;
+}
+
+.signup-prompts {
+    margin-top: 15px;
+    font-family: "Arial", "sans-serif";
+    font-weight: 400;
+}
+
+.signup-prompts a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-prompts a:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #999;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+.separator::before {
+    margin-right: 10px;
+}
+
+.separator::after {
+    margin-left: 10px;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-login button {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 9px;
+    text-transform: none;
+    height: 2.5rem;
+    color: var(--template-palette-text-primary);
+    border: 1px solid;
+    border-color: hsl(220, 20%, 88%);
+    background-color: hsla(220, 35%, 97%, 0.3);
+    padding: 5px 15px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    min-width: 64px;
+    line-height: 1.75;
+    font-weight: 500;
+    font-size: 20;
+    box-sizing: border-box;
+    user-select: none;
+    vertical-align: middle;
+}
+
+.btn-google {
+    display: flex;
+    /* Sử dụng flexbox để căn chỉnh nội dung */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    background-color: #4285f4;
+    /* Màu nền Google */
+    color: white;
+    /* Màu chữ */
+    padding: 10px 20px;
+    /* Padding */
+    border: none;
+    /* Bỏ viền */
+    border-radius: 5px;
+    /* Bo góc */
+    font-size: 14px;
+    /* Kích thước chữ */
+    cursor: pointer;
+    /* Con trỏ tay khi hover */
+    transition: background-color 0.3s;
+    /* Hiệu ứng chuyển màu nền khi hover */
+}
+
+.btn-facebook {
+
+    display: flex;
+    /* Sử dụng flexbox để căn chỉnh nội dung */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    background-color: #4285f4;
+    /* Màu nền Google */
+    color: white;
+    /* Màu chữ */
+    padding: 10px 20px;
+    /* Padding */
+    border: none;
+    /* Bỏ viền */
+    border-radius: 5px;
+    /* Bo góc */
+    font-size: 14px;
+    /* Kích thước chữ */
+    cursor: pointer;
+    /* Con trỏ tay khi hover */
+    transition: background-color 0.3s;
+    /* Hiệu ứng chuyển màu nền khi hover */
+}
+
+.social-login button:hover {
+    background-color: hsla(196, 28%, 79%, 0.436);
+}

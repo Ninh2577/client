@@ -17,7 +17,7 @@ export interface TaxonomyType {
   thumbnail?: string;
   desc?: string;
   color?: TwMainColor | string;
-  taxonomy: "loại" | "Nhãn";
+  taxonomy: "category" | "Label";
   listingType?: "Lưu trữ" | "Trải nghiệm" | "Xe hơi";
 }
 
