@@ -22,7 +22,7 @@ const ButtonSubmit: FC<Props> = ({
         (document.querySelector(".nc-Footer") as HTMLElement | null)?.click();
       }}
     >
-      <span className="mr-3 md:hidden">Search</span>
+      <span className="mr-3 md:hidden">Tìm kiếm</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-6 w-6"

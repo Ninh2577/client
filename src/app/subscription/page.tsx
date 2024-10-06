@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import ButtonPrimary from "@/shared/ButtonPrimary";
 import ButtonSecondary from "@/shared/ButtonSecondary";
 
-export interface PageSubcriptionProps {}
+export interface PageSubcriptionProps { }
 
 export interface PricingItem {
   isPopular: boolean;
@@ -17,54 +17,54 @@ export interface PricingItem {
 const pricings: PricingItem[] = [
   {
     isPopular: false,
-    name: "Starter",
-    pricing: "$5",
-    per: "/mo",
-    features: ["Automated Reporting", "Faster Processing", "Customizations"],
-    desc: ` Literally you probably haven't heard of them jean shorts.`,
+    name: "Gói Khởi Đầu",
+    pricing: "5$",
+    per: "/tháng",
+    features: ["Báo cáo tự động", "Xử lý nhanh hơn", "Tùy chỉnh riêng"],
+    desc: ` Thực sự bạn có thể chưa nghe đến chúng, giống như những chuyến phiêu lưu bất ngờ.`,
   },
   {
     isPopular: true,
-    name: "Basic",
-    pricing: "$15",
-    per: "/mo",
+    name: "Gói Cơ Bản",
+    pricing: "15$",
+    per: "/tháng",
     features: [
-      "Everything in Starter",
-      "100 Builds",
-      "Progress Reports",
-      "Premium Support",
+      "Mọi thứ trong Gói Khởi Đầu",
+      "100 Chuyến tham quan",
+      "Báo cáo hành trình",
+      "Hỗ trợ cao cấp",
     ],
-    desc: ` Literally you probably haven't heard of them jean shorts.`,
+    desc: ` Thực sự bạn có thể chưa nghe đến chúng, giống như những chuyến phiêu lưu bất ngờ.`,
   },
   {
     isPopular: false,
-    name: "Plus",
-    pricing: "$25",
-    per: "/mo",
+    name: "Gói Nâng Cao",
+    pricing: "25$",
+    per: "/tháng",
     features: [
-      "Everything in Basic",
-      "Unlimited Builds",
-      "Advanced Analytics",
-      "Company Evaluations",
+      "Mọi thứ trong Gói Cơ Bản",
+      "Chuyến tham quan không giới hạn",
+      "Phân tích hành trình nâng cao",
+      "Đánh giá công ty du lịch",
     ],
-    desc: ` Literally you probably haven't heard of them jean shorts.`,
+    desc: ` Thực sự bạn có thể chưa nghe đến chúng, giống như những chuyến phiêu lưu bất ngờ.`,
   },
 ];
+
 
 const PageSubcription: FC<PageSubcriptionProps> = () => {
   const renderPricingItem = (pricing: PricingItem, index: number) => {
     return (
       <div
         key={index}
-        className={`h-full relative px-6 py-8 rounded-3xl border-2 flex flex-col overflow-hidden ${
-          pricing.isPopular
-            ? "border-primary-500"
-            : "border-neutral-100 dark:border-neutral-700"
-        }`}
+        className={`h-full relative px-6 py-8 rounded-3xl border-2 flex flex-col overflow-hidden ${pricing.isPopular
+          ? "border-primary-500"
+          : "border-neutral-100 dark:border-neutral-700"
+          }`}
       >
         {pricing.isPopular && (
           <span className="bg-primary-500 text-white px-3 py-1 tracking-widest text-xs absolute right-3 top-3 rounded-full z-10">
-            POPULAR
+            PHỔ BIẾN
           </span>
         )}
         <div className="mb-8">
@@ -92,10 +92,10 @@ const PageSubcription: FC<PageSubcriptionProps> = () => {
         </nav>
         <div className="flex flex-col mt-auto">
           {pricing.isPopular ? (
-            <ButtonPrimary>Submit</ButtonPrimary>
+            <ButtonPrimary>Nộp</ButtonPrimary>
           ) : (
             <ButtonSecondary>
-              <span className="font-medium">Submit</span>
+              <span className="font-medium">Nộp</span>
             </ButtonSecondary>
           )}
           <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-3">
@@ -111,10 +111,10 @@ const PageSubcription: FC<PageSubcriptionProps> = () => {
       <header className="text-center max-w-2xl mx-auto my-20">
         <h2 className="flex items-center text-3xl leading-[115%] md:text-5xl md:leading-[115%] font-semibold text-neutral-900 dark:text-neutral-100 justify-center">
           <span className="mr-4 text-3xl md:text-4xl leading-none">💎</span>
-          Subscription
+          Đăng ký
         </h2>
         <span className="block text-sm mt-2 text-neutral-700 sm:text-base dark:text-neutral-200">
-          Pricing to fit the needs of any companie size.
+          Định giá phù hợp với nhu cầu của mọi quy mô công ty.
         </span>
       </header>
       <section className="text-neutral-600 text-sm md:text-base overflow-hidden">

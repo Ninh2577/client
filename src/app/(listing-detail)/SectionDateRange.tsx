@@ -5,9 +5,9 @@ import DatePickerCustomDay from "@/components/DatePickerCustomDay";
 
 const SectionDateRange = () => {
   const [startDate, setStartDate] = useState<Date | null>(
-    new Date("2023/02/06")
+    new Date("2024/10/01")
   );
-  const [endDate, setEndDate] = useState<Date | null>(new Date("2023/02/23"));
+  const [endDate, setEndDate] = useState<Date | null>(new Date("2024/10/30"));
   const onChangeDate = (dates: [Date | null, Date | null]) => {
     const [start, end] = dates;
     setStartDate(start);
@@ -19,9 +19,9 @@ const SectionDateRange = () => {
       <div className="listingSection__wrap overflow-hidden">
         {/* HEADING */}
         <div>
-          <h2 className="text-2xl font-semibold">Availability</h2>
+          <h2 className="text-2xl font-semibold">Tình trạng còn chỗ</h2>
           <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-            Prices may increase on weekends or holidays
+          Giá có thể tăng vào cuối tuần hoặc các ngày lễ.
           </span>
         </div>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>

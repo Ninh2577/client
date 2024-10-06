@@ -20,8 +20,8 @@ const WidgetCategories: FC<WidgetCategoriesProps> = ({
       className={`nc-WidgetCategories rounded-3xl overflow-hidden ${className}`}
     >
       <WidgetHeading1
-        title="✨ Trending topic"
-        viewAll={{ label: "View all", href: "/#" }}
+        title="✨Chủ đề thịnh hành"
+        viewAll={{ label: "Xem tất cả", href: "/#" }}
       />
       <div className="flow-root">
         <div className="flex flex-col divide-y divide-neutral-200 dark:divide-neutral-700">

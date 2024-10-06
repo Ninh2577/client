@@ -46,6 +46,7 @@ const RentalCarDatesRangeInput: FC<RentalCarDatesRangeInputProps> = ({
             }) || "Add dates"}
             {endDate
               ? " - " +
+
                 endDate?.toLocaleDateString("vi-VN", {
                   month: "short",
                   day: "2-digit",
@@ -68,9 +69,8 @@ const RentalCarDatesRangeInput: FC<RentalCarDatesRangeInputProps> = ({
         {({ open }) => (
           <>
             <div
-              className={`flex-1 z-10 flex items-center focus:outline-none ${
-                open ? "nc-hero-field-focused" : ""
-              }`}
+              className={`flex-1 z-10 flex items-center focus:outline-none ${open ? "nc-hero-field-focused" : ""
+                }`}
             >
               <Popover.Button
                 className={`flex-1 z-10 flex relative ${fieldClassName} items-center space-x-3 focus:outline-none `}

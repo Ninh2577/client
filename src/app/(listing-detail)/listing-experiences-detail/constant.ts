@@ -22,11 +22,11 @@ export const PHOTOS: string[] = [
 ];
 
 export const includes_demo = [
-  { name: "Set Menu Lunch on boat" },
-  { name: "Express Bus From Hanoi To Halong and Return" },
-  { name: "Mineral Water On Express Bus" },
-  { name: "Kayak or Bamboo Boat. Life Jacket." },
-  { name: "Halong Bay Entrance Ticket" },
+  { name: "Thực đơn bữa trưa trên du thuyền" },
+  { name: "Xe bus từ Hà Nội đến Hạ Long và ngược lại" },
+  { name: "Dịch vụ trên xe" },
+  { name: "Cung cấp áo phao và thuyền." },
+  { name: "Quà lưu niệm ở Hạ Long" },
 ];
 
 export const imageGallery: ListingGalleryImage[] = [...PHOTOS].map(

@@ -10,23 +10,23 @@ import avatar6 from "@/images/avatars/Image-6.png";
 
 const notifications = [
   {
-    name: "Eden Tuan",
-    description: "Measure actions your users take",
-    time: "3 minutes ago",
+    name: "Eden Tuấn",
+    description: "Đo lường các hành động mà người dùng của bạn thực hiện",
+    time: "3 phút trước",
     href: "##",
     avatar: avatar4,
   },
   {
     name: "Leo Messi",
-    description: "Create your own targeted content",
-    time: "1 minute ago",
+    description: "Tạo nội dung nhắm mục tiêu của riêng bạn",
+    time: "1 phút trước",
     href: "##",
     avatar: avatar5,
   },
   {
     name: "Leo Kante",
-    description: "Keep track of your growth",
-    time: "3 minutes ago",
+    description: "Theo dõi sự phát triển của bạn",
+    time: "3 phút trước",
     href: "##",
     avatar: avatar6,
   },
@@ -43,9 +43,8 @@ const NotifyDropdown: FC<Props> = ({ className = "" }) => {
         {({ open }) => (
           <>
             <Popover.Button
-              className={` ${
-                open ? "" : "text-opacity-90"
-              } group self-center w-10 h-10 sm:w-12 sm:h-12 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded-full inline-flex items-center justify-center text-base font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 relative`}
+              className={` ${open ? "" : "text-opacity-90"
+                } group self-center w-10 h-10 sm:w-12 sm:h-12 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded-full inline-flex items-center justify-center text-base font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 relative`}
             >
               <span className="w-2 h-2 bg-blue-500 absolute top-2 right-2 rounded-full"></span>
               <BellIcon className="h-6 w-6" />
@@ -62,7 +61,7 @@ const NotifyDropdown: FC<Props> = ({ className = "" }) => {
               <Popover.Panel className="absolute z-10 w-screen max-w-xs sm:max-w-sm px-4 top-full -right-28 sm:right-0 sm:px-0">
                 <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className="relative grid gap-8 bg-white dark:bg-neutral-800 p-7">
-                    <h3 className="text-xl font-semibold">Notifications</h3>
+                    <h3 className="text-xl font-semibold">Thông báo</h3>
                     {notifications.map((item, index) => (
                       <a
                         key={index}

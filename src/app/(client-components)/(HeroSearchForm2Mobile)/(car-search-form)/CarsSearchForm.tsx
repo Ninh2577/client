@@ -26,23 +26,22 @@ const CarsSearchForm = () => {
     const isActive = fieldNameShow === "locationPickup";
     return (
       <div
-        className={`w-full bg-white dark:bg-neutral-800 ${
-          isActive
-            ? "rounded-2xl shadow-lg"
-            : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
-        }`}
+        className={`w-full bg-white dark:bg-neutral-800 ${isActive
+          ? "rounded-2xl shadow-lg"
+          : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
+          }`}
       >
         {!isActive ? (
           <button
             className={`w-full flex justify-between text-sm font-medium p-4`}
             onClick={() => setFieldNameShow("locationPickup")}
           >
-            <span className="text-neutral-400">Pick up</span>
+            <span className="text-neutral-400">Điểm đón?</span>
             <span>{locationInputPickUp || "Location"}</span>
           </button>
         ) : (
           <LocationInput
-            headingText="Pick up?"
+            headingText="Điểm đón?"
             defaultValue={locationInputPickUp}
             onChange={(value) => {
               setLocationInputPickUp(value);
@@ -62,23 +61,22 @@ const CarsSearchForm = () => {
     const isActive = fieldNameShow === "locationDropoff";
     return (
       <div
-        className={`w-full bg-white dark:bg-neutral-800 ${
-          isActive
-            ? "rounded-2xl shadow-lg"
-            : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
-        }`}
+        className={`w-full bg-white dark:bg-neutral-800 ${isActive
+          ? "rounded-2xl shadow-lg"
+          : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
+          }`}
       >
         {!isActive ? (
           <button
             className={`w-full flex justify-between text-sm font-medium p-4`}
             onClick={() => setFieldNameShow("locationDropoff")}
           >
-            <span className="text-neutral-400">Drop off</span>
+            <span className="text-neutral-400">Điểm thả</span>
             <span>{locationInputDropOff || "Location"}</span>
           </button>
         ) : (
           <LocationInput
-            headingText="Drop off?"
+            headingText="Điểm thả?"
             defaultValue={locationInputDropOff}
             onChange={(value) => {
               setLocationInputDropOff(value);
@@ -95,18 +93,17 @@ const CarsSearchForm = () => {
 
     return (
       <div
-        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${
-          isActive
-            ? "rounded-2xl shadow-lg"
-            : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
-        }`}
+        className={`w-full bg-white dark:bg-neutral-800 overflow-hidden ${isActive
+          ? "rounded-2xl shadow-lg"
+          : "rounded-xl shadow-[0px_2px_2px_0px_rgba(0,0,0,0.25)]"
+          }`}
       >
         {!isActive ? (
           <button
             className={`w-full flex justify-between text-sm font-medium p-4  `}
             onClick={() => setFieldNameShow("dates")}
           >
-            <span className="text-neutral-400">When</span>
+            <span className="text-neutral-400">Khi nào</span>
             <span>
               {startDate
                 ? converSelectedDateToString([startDate, endDate])
@@ -124,24 +121,22 @@ const CarsSearchForm = () => {
     return (
       <div className="flex justify-center items-center space-x-3">
         <div
-          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer ${
-            dropOffLocationType === "same"
-              ? "bg-black text-white shadow-black/10 shadow-lg"
-              : "border border-neutral-300 dark:border-neutral-700"
-          }`}
+          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer ${dropOffLocationType === "same"
+            ? "bg-black text-white shadow-black/10 shadow-lg"
+            : "border border-neutral-300 dark:border-neutral-700"
+            }`}
           onClick={(e) => setDropOffLocationType("same")}
         >
-          Same drop off
+          Trả xe tại cùng một địa điểm
         </div>
         <div
-          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer ${
-            dropOffLocationType === "different"
-              ? "bg-black text-white shadow-black/10 shadow-lg"
-              : "border border-neutral-300 dark:border-neutral-700"
-          }`}
+          className={`py-1.5 px-4 flex items-center rounded-full font-medium text-xs cursor-pointer ${dropOffLocationType === "different"
+            ? "bg-black text-white shadow-black/10 shadow-lg"
+            : "border border-neutral-300 dark:border-neutral-700"
+            }`}
           onClick={(e) => setDropOffLocationType("different")}
         >
-          Different drop off
+          Trả xe tại địa điểm khác
         </div>
       </div>
     );

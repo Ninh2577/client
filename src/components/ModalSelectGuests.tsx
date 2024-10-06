@@ -79,7 +79,7 @@ const ModalSelectGuests: FC<ModalSelectGuestsProps> = ({ renderChildren }) => {
                         className="underline font-semibold flex-shrink-0"
                         onClick={() => {}}
                       >
-                        Clear data
+                        Xóa ngày tháng
                       </button>
                       <ButtonPrimary
                         sizeClass="px-6 py-3 !rounded-xl"
@@ -87,7 +87,7 @@ const ModalSelectGuests: FC<ModalSelectGuestsProps> = ({ renderChildren }) => {
                           closeModal();
                         }}
                       >
-                        Save
+                        Lưu
                       </ButtonPrimary>
                     </div>
                   </>

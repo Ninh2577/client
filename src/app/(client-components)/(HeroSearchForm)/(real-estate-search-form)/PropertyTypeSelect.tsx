@@ -13,6 +13,7 @@ const defaultPropertyType: ClassOfProperties[] = [
   },
   {
     name: "Nhà Ferme",
+
     description: "Có phòng riêng và chia sẻ một số không gian chung",
     checked: false,
   },
@@ -55,9 +56,8 @@ const PropertyTypeSelect: FC<PropertyTypeSelectProps> = ({
       {({ open, close }) => (
         <>
           <Popover.Button
-            className={`flex z-10 text-left w-full flex-shrink-0 items-center ${fieldClassName} space-x-3 focus:outline-none cursor-pointer ${
-              open ? "nc-hero-field-focused" : ""
-            }`}
+            className={`flex z-10 text-left w-full flex-shrink-0 items-center ${fieldClassName} space-x-3 focus:outline-none cursor-pointer ${open ? "nc-hero-field-focused" : ""
+              }`}
             onClickCapture={() => document.querySelector("html")?.click()}
           >
             <div className="text-neutral-300 dark:text-neutral-400">

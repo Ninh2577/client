@@ -42,6 +42,7 @@ const AccountPage: FC<AccountPageProps> = () => {
       <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
       <div className="flex flex-col md:flex-row">
         <div className="flex-shrink-0 flex items-start">
+
           <div className="relative w-32 h-32 bg-gray-200 rounded-full border border-gray-300 overflow-hidden flex items-center justify-center">
             {profileImage ? (
               <img
@@ -61,6 +62,7 @@ const AccountPage: FC<AccountPageProps> = () => {
               </div>
             )}
             <input type="file" accept="image/*" className="absolute inset-0 opacity-0 cursor-pointer" onChange={handleProfileImageChange} />
+
           </div>
         </div>
 
@@ -69,10 +71,12 @@ const AccountPage: FC<AccountPageProps> = () => {
             <Label>Họ tên</Label>
             <Input className="mt-1.5" placeholder="Nhập họ và tên" />
           </div>
+
           <div>
             <Label>Email</Label>
             <Input className="mt-1.5" placeholder="địa chỉ email" />
           </div>
+
           <div>
             <Label>Số điện thoại</Label>
             <Input className="mt-1.5" defaultValue="Nhập sdt" />
@@ -83,6 +87,7 @@ const AccountPage: FC<AccountPageProps> = () => {
               <option value="Male">Nam</option>
               <option value="Female">Nữ</option>
             </Select>
+
           </div>
           <div className="max-w-lg">
             <Label>Năm sinh</Label>

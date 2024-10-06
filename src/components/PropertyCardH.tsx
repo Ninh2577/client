@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import GallerySlider from "@/components/GallerySlider";
+
 import { DEMO_STAY_LISTINGS } from "@/data/listings";
 import StartRating from "@/components/StartRating";
 import BtnLikeIcon from "@/components/BtnLikeIcon";
@@ -7,6 +7,7 @@ import SaleOffBadge from "@/components/SaleOffBadge";
 import Badge from "@/shared/Badge";
 import { StayDataType } from "@/data/types";
 import Link from "next/link";
+import DSTour from "./DanhSachTour";
 
 export interface PropertyCardHProps {
   className?: string;
@@ -35,7 +36,7 @@ const PropertyCardH: FC<PropertyCardHProps> = ({
   const renderSliderGallery = () => {
     return (
       <div className="flex-shrink-0 p-3 w-full sm:w-64 ">
-        <GallerySlider
+        <DSTour
           ratioClass="aspect-w-1 aspect-h-1"
           galleryImgs={galleryImgs}
           className="w-full h-full rounded-2xl overflow-hidden"
@@ -58,7 +59,8 @@ const PropertyCardH: FC<PropertyCardHProps> = ({
             <i className="las la-bed text-lg"></i>
           </span>
           <span className="text-xs text-neutral-500 dark:text-neutral-400">
-            6 giường
+            6 Giường
+
           </span>
         </div>
 

@@ -20,7 +20,7 @@ export interface GallerySliderProps {
   navigation?: boolean;
 }
 
-export default function GallerySlider({
+export default function DSTour({
   className = "",
   galleryImgs,
   ratioClass = "aspect-w-4 aspect-h-3",

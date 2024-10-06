@@ -13,57 +13,58 @@ import convertNumbThousand from "@/utils/convertNumbThousand";
 // DEMO DATA
 const typeOfPaces = [
   {
-    name: "Entire place",
-    description: "Have a place to yourself",
+    name: "Toàn bộ căn hộ",
+    description: "Có một không gian riêng cho bạn",
   },
   {
-    name: "Private room",
-    description: "Have your own room and share some common spaces",
+    name: "Phòng riêng",
+    description: "Có phòng riêng và chia sẻ một số không gian chung",
   },
   {
-    name: "Hotel room",
-    description:
-      "Have a private or shared room in a boutique hotel, hostel, and more",
+    name: "Phòng khách sạn",
+    description: "Có phòng riêng hoặc chung trong khách sạn boutique, nhà nghỉ, và nhiều hơn nữa",
   },
   {
-    name: "Shared room",
-    description: "Stay in a shared space, like a common room",
+    name: "Phòng chia sẻ",
+    description: "Lưu trú trong không gian chung, như phòng sinh hoạt chung",
   },
 ];
 
 const moreFilter1 = [
-  { name: "Kitchen", defaultChecked: true },
-  { name: "Air conditioning", defaultChecked: true },
-  { name: "Heating" },
-  { name: "Dryer" },
-  { name: "Washer" },
+  { name: "Bếp", defaultChecked: true },
+  { name: "Điều hòa", defaultChecked: true },
+  { name: "Sưởi" },
+  { name: "Máy sấy" },
+  { name: "Máy giặt" },
   { name: "Wifi" },
-  { name: "Indoor fireplace" },
-  { name: "Breakfast" },
-  { name: "Hair dryer" },
-  { name: " Dedicated workspace" },
+  { name: "Lò sưởi trong nhà" },
+  { name: "Bữa sáng" },
+  { name: "Máy sấy tóc" },
+  { name: "Không gian làm việc riêng" },
 ];
 
+
 const moreFilter2 = [
-  { name: " Free parking on premise" },
-  { name: "Hot tub" },
-  { name: "Gym" },
-  { name: " Pool" },
-  { name: " EV charger" },
+  { name: "Đỗ xe miễn phí trong khuôn viên" },
+  { name: "Bồn tắm nước nóng" },
+  { name: "Phòng tập thể dục" },
+  { name: "Hồ bơi" },
+  { name: "Sạc EV" },
 ];
 
 const moreFilter3 = [
-  { name: " House" },
-  { name: "Bed and breakfast" },
-  { name: "Apartment", defaultChecked: true },
-  { name: " Boutique hotel" },
-  { name: " Bungalow" },
-  { name: " Chalet", defaultChecked: true },
-  { name: " Condominium", defaultChecked: true },
-  { name: " Cottage" },
-  { name: " Guest suite" },
-  { name: " Guesthouse" },
+  { name: "Nhà" },
+  { name: "Nhà nghỉ" },
+  { name: "Căn hộ", defaultChecked: true },
+  { name: "Khách sạn boutique" },
+  { name: "Bungalow" },
+  { name: "Chalet", defaultChecked: true },
+  { name: "Căn hộ chung cư", defaultChecked: true },
+  { name: "Nhà nghỉ nhỏ" },
+  { name: "Phòng khách" },
+  { name: "Nhà khách" },
 ];
+
 
 const moreFilter4 = [{ name: " Pets allowed" }, { name: "Smoking allowed" }];
 
@@ -104,9 +105,8 @@ const TabFilters = () => {
         {({ open, close }) => (
           <>
             <Popover.Button
-              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-6000 focus:outline-none ${
-                open ? "!border-primary-500 " : ""
-              }`}
+              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-6000 focus:outline-none ${open ? "!border-primary-500 " : ""
+                }`}
             >
               <span>Type of place</span>
               <i className="las la-angle-down ml-2"></i>
@@ -135,13 +135,13 @@ const TabFilters = () => {
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Dọn sạch
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Áp dụng
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -159,11 +159,10 @@ const TabFilters = () => {
         {({ open, close }) => (
           <>
             <Popover.Button
-              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-6000 focus:outline-none ${
-                open ? "!border-primary-500 " : ""
-              }`}
+              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-6000 focus:outline-none ${open ? "!border-primary-500 " : ""
+                }`}
             >
-              <span>Rooms of Beds</span>
+              <span>Phòng Giường</span>
               <i className="las la-angle-down ml-2"></i>
             </Popover.Button>
             <Transition
@@ -184,13 +183,13 @@ const TabFilters = () => {
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Dọn sạch
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Thêm mới
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -230,7 +229,7 @@ const TabFilters = () => {
                 <div className="overflow-hidden rounded-2xl shadow-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
                   <div className="relative flex flex-col px-5 py-6 space-y-8">
                     <div className="space-y-5">
-                      <span className="font-medium">Price per day</span>
+                      <span className="font-medium">Giá mỗi ngày</span>
                       <Slider
                         range
                         className="text-red-400"
@@ -248,7 +247,7 @@ const TabFilters = () => {
                           htmlFor="minPrice"
                           className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                         >
-                          Min price
+                          Giá thấp nhất
                         </label>
                         <div className="mt-1 relative rounded-md">
                           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -271,7 +270,7 @@ const TabFilters = () => {
                           htmlFor="maxPrice"
                           className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                         >
-                          Max price
+                          Giá cao nhất
                         </label>
                         <div className="mt-1 relative rounded-md">
                           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -293,13 +292,13 @@ const TabFilters = () => {
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800 flex items-center justify-between">
                     <ButtonThird onClick={close} sizeClass="px-4 py-2 sm:px-5">
-                      Clear
+                      Dọn sạch
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={close}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Thêm mới
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -352,7 +351,7 @@ const TabFilters = () => {
           className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-primary-500 bg-primary-50 text-primary-700 focus:outline-none cursor-pointer`}
           onClick={openModalMoreFilter}
         >
-          <span>More filters (3)</span>
+          <span>Thêm bộ lọc (3)</span>
           {renderXClear()}
         </div>
 
@@ -397,7 +396,7 @@ const TabFilters = () => {
                       as="h3"
                       className="text-lg font-medium leading-6 text-gray-900"
                     >
-                      More filters
+                      Thêm bộ lọc
                     </Dialog.Title>
                     <span className="absolute left-3 top-3">
                       <ButtonClose onClick={closeModalMoreFilter} />
@@ -407,25 +406,27 @@ const TabFilters = () => {
                   <div className="flex-grow overflow-y-auto">
                     <div className="px-10 divide-y divide-neutral-200 dark:divide-neutral-800">
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Amenities</h3>
+                        <h3 className="text-xl font-medium">Tiện nghi</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(moreFilter1)}
                         </div>
                       </div>
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Facilities</h3>
+                        <h3 className="text-xl font-medium">Cơ sở</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(moreFilter2)}
                         </div>
                       </div>
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Property type</h3>
+                        <h3 className="text-xl font-medium">Loại tài sản</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(moreFilter3)}
                         </div>
                       </div>
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">House rules</h3>
+                        <h3 className="text-xl font-medium">Nội quy nhà
+                          {/* House rules */}
+                        </h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(moreFilter4)}
                         </div>
@@ -438,13 +439,13 @@ const TabFilters = () => {
                       onClick={closeModalMoreFilter}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Clear
+                      Dọn sạch
                     </ButtonThird>
                     <ButtonPrimary
                       onClick={closeModalMoreFilter}
                       sizeClass="px-4 py-2 sm:px-5"
                     >
-                      Apply
+                      Thêm mới
                     </ButtonPrimary>
                   </div>
                 </div>
@@ -463,7 +464,7 @@ const TabFilters = () => {
           className={`flex lg:hidden items-center justify-center px-4 py-2 text-sm rounded-full border border-primary-500 bg-primary-50 text-primary-700 focus:outline-none cursor-pointer`}
           onClick={openModalMoreFilterMobile}
         >
-          <span>More filters (3)</span>
+          <span>Thêm bộ lọc (3)</span>
           {renderXClear()}
         </div>
 
@@ -508,7 +509,7 @@ const TabFilters = () => {
                       as="h3"
                       className="text-lg font-medium leading-6 text-gray-900"
                     >
-                      More filters
+                      Thêm bộ lọc
                     </Dialog.Title>
                     <span className="absolute left-3 top-3">
                       <ButtonClose onClick={closeModalMoreFilterMobile} />
@@ -519,7 +520,7 @@ const TabFilters = () => {
                     <div className="px-4 sm:px-6 divide-y divide-neutral-200 dark:divide-neutral-800">
                       {/* ---- */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Type of place</h3>
+                        <h3 className="text-xl font-medium">Loại địa điểm</h3>
                         <div className="mt-6 relative ">
                           {renderMoreFilterItem(typeOfPaces)}
                         </div>
@@ -527,7 +528,10 @@ const TabFilters = () => {
 
                       {/* ---- */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Range Prices</h3>
+                        <h3 className="text-xl font-medium">
+                          {/* Range Prices */}
+                          Giá phạm vi
+                        </h3>
                         <div className="mt-6 relative ">
                           <div className="relative flex flex-col space-y-8">
                             <div className="space-y-5">
@@ -548,7 +552,7 @@ const TabFilters = () => {
                                   htmlFor="minPrice"
                                   className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                                 >
-                                  Min price
+                                  Giá thấp nhất
                                 </label>
                                 <div className="mt-1 relative rounded-md">
                                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -571,7 +575,7 @@ const TabFilters = () => {
                                   htmlFor="maxPrice"
                                   className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
                                 >
-                                  Max price
+                                  Giá cao nhất
                                 </label>
                                 <div className="mt-1 relative rounded-md">
                                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -596,7 +600,7 @@ const TabFilters = () => {
 
                       {/* ---- */}
                       <div className="py-7">
-                        <h3 className="text-xl font-medium">Rooms and beds</h3>
+                        <h3 className="text-xl font-medium">Phòng giường</h3>
                         <div className="mt-6 relative flex flex-col space-y-5">
                           <NcInputNumber label="Beds" max={10} />
                           <NcInputNumber label="Bedrooms" max={10} />
