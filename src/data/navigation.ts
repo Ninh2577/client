@@ -69,13 +69,13 @@ const demoChildMenus: NavItemType[] = [
   },
   {
     id: ncNanoId(),
-    href: "/home-2",
+    href: "/",
     name: "Real estate",
     isNew: true,
   },
   {
     id: ncNanoId(),
-    href: "/home-3",
+    href: "/",
     name: "Home 3",
     isNew: true,
   },
@@ -154,7 +154,7 @@ const templatesChildrenMenus: NavItemType[] = [
   { id: ncNanoId(), href: "/pay-done", name: "Pay done" },
   //
   { id: ncNanoId(), href: "/author", name: "Author page" },
-  { id: ncNanoId(), href: "/account", name: "Account page" },
+  { id: ncNanoId(), href: "/taikhoan", name: "Account page" },
   //
   {
     id: ncNanoId(),
@@ -197,7 +197,7 @@ export const NAVIGATION_DEMO: NavItemType[] = [
             href: "/listing-stay-map",
             name: "Stay page (map)",
           },
-          { id: ncNanoId(), href: "/listing-stay-detail", name: "Stay Detail" },
+          { id: ncNanoId(), href: "/chitiettour", name: "Stay Detail" },
         ],
       },
 
@@ -305,7 +305,7 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
         href: "/listing-stay-map",
         name: "Stay listings (map)",
       },
-      { id: ncNanoId(), href: "/listing-stay-detail", name: "Stay detail" },
+      { id: ncNanoId(), href: "/chitiettour", name: "Stay detail" },
 
       //
       {
