@@ -10,9 +10,9 @@ export const Nav = () => {
 
   const listNav: Route[] = [
     "/taikhoan",
-    "/account-savelists",
-    "/account-password",
-    "/account-billing",
+    "/DSLuu",
+    "/taikhoanmatkhau",
+    "/taikhoanthanhtoan",
     // "/ForgotPassword",
     // "/Otp",
     // "/ResetPassword",
@@ -21,9 +21,9 @@ export const Nav = () => {
 
   const displayNames = {
     "/taikhoan": "Tài khoản",
-    "/account-savelists": "Danh sách đã lưu",
-    "/account-password": "Mật khẩu",
-    "/account-billing": "Thanh toán",
+    "/DSLuu": "Danh sách đã lưu",
+    "/taikhoanmatkhau": "Mật khẩu",
+    "/taikhoanthanhtoan": "Thanh toán",
   };
 
   return (
