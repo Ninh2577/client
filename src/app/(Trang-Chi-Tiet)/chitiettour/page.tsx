@@ -382,7 +382,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
         {/* == */}
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
         <div>
-          <ButtonSecondary href="/author">Xem hồ sơ máy chủ lưu trữ</ButtonSecondary>
+          <ButtonSecondary href="/trangcanhan">Xem trang cá nhân </ButtonSecondary>
         </div>
       </div>
     );

@@ -24,7 +24,7 @@ const Page = ({
     return (
       <header className="container rounded-xl">
         <div className="max-w-screen-md mx-auto space-y-5">
-          <Badge href="/blog" color="purple" name="Traveler" />
+          <Badge href="/baiviet" color="purple" name="Traveler" />
           <h1
             className=" text-neutral-900 font-semibold text-3xl md:text-4xl md:!leading-[120%] lg:text-4xl dark:text-neutral-100 max-w-4xl "
             title="Quiet ingenuity: 120,000 lunches and counting"

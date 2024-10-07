@@ -31,7 +31,7 @@ export interface SectionStatisticProps {
   className?: string;
 }
 
-const SectionStatistic: FC<SectionStatisticProps> = ({ className = "" }) => {
+const ThongKe: FC<SectionStatisticProps> = ({ className = "" }) => {
   return (
     <div className={`nc-SectionStatistic relative ${className}`}>
       <Heading
@@ -58,4 +58,4 @@ const SectionStatistic: FC<SectionStatisticProps> = ({ className = "" }) => {
   );
 };
 
-export default SectionStatistic;
+export default ThongKe;

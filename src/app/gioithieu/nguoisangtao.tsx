@@ -40,7 +40,7 @@ const FOUNDER_DEMO: People[] = [
   },
 ];
 
-const SectionFounder = () => {
+const NguoiSangTao = () => {
   return (
     <div className="nc-SectionFounder relative">
       <Heading
@@ -74,4 +74,4 @@ const SectionFounder = () => {
   );
 };
 
-export default SectionFounder;
+export default NguoiSangTao;

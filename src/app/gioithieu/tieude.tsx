@@ -10,7 +10,7 @@ export interface SectionHeroProps {
   btnText: string;
 }
 
-const SectionHero: FC<SectionHeroProps> = ({
+const TieuDe: FC<SectionHeroProps> = ({
   className = "",
   rightImg,
   heading,
@@ -37,4 +37,4 @@ const SectionHero: FC<SectionHeroProps> = ({
   );
 };
 
-export default SectionHero;
+export default TieuDe;
