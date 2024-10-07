@@ -342,13 +342,13 @@ export default function AvatarDropdown({ className = "" }: Props) {
         <>
           <div className="flex space-x-2">
             <Link
-              href={"/login" as Route<string>}
+              href={"/dangnhap" as Route<string>}
               className="self-center text-opacity-90 group px-4 -mr-5 py-2 rounded-full inline-flex items-center text-sm text-gray-700 dark:text-neutral-300 font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
               Đăng Nhập
             </Link>
             <Link
-              href={"/signup" as Route<string>}
+              href={"/dangky" as Route<string>}
               className="self-center text-opacity-90 group px-4 py-2 rounded-full inline-flex items-center text-sm text-gray-700 dark:text-neutral-300 font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
               Đăng Ký

@@ -118,7 +118,7 @@ const PageLogin = () => {
                     <button type="submit" className="btn-login">Đăng nhập</button>
                 </form>
                 <div className="signup-prompts">
-                    Chưa có tài khoản? <a href="/signup">Đăng ký</a>
+                    Chưa có tài khoản? <a href="/dangky">Đăng ký</a>
                 </div>
                 <div className="separator">hoặc</div>
                 <div className="social-login">

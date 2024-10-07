@@ -3,7 +3,7 @@
 import { Tab } from "@headlessui/react";
 import CarCard from "@/components/CarCard";
 import ExperiencesCard from "@/components/ExperiencesCard";
-import StayCard from "@/components/StayCard";
+import StayCard from "@/components/thesanpham";
 import {
   DEMO_CAR_LISTINGS,
   DEMO_EXPERIENCES_LISTINGS,

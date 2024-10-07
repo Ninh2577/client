@@ -14,7 +14,7 @@ const PageResetPassword = () => {
         console.log("Mật khẩu mới đã được đặt:", newPassword);
 
         // Sau khi đổi mật khẩu thành công, chuyển hướng về trang đăng nhập
-        router.push('/login'); // Chuyển đến trang đăng nhập
+        router.push('/dangnhap'); // Chuyển đến trang đăng nhập
     };
 
     return (
