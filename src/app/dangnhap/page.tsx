@@ -109,7 +109,7 @@ const PageLogin = () => {
                         />
                         {passwordError && <div className="error-message">{passwordError}</div>}
                     </div>
-                    <a href="/ForgotPassword" className="forgot-password">Quên mật khẩu?</a>
+                    <a href="/quenmatkhau" className="forgot-password">Quên mật khẩu?</a>
                     <br />
                     <div className="checkbox-login">
                         <input type="checkbox" className="remember" id="remember" />
