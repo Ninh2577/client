@@ -9,7 +9,7 @@ export const Nav = () => {
   const pathname = usePathname();
 
   const listNav: Route[] = [
-    "/account",
+    "/taikhoan",
     "/account-savelists",
     "/account-password",
     "/account-billing",
@@ -20,7 +20,7 @@ export const Nav = () => {
   ];
 
   const displayNames = {
-    "/account": "Tài khoản",
+    "/taikhoan": "Tài khoản",
     "/account-savelists": "Danh sách đã lưu",
     "/account-password": "Mật khẩu",
     "/account-billing": "Thanh toán",
