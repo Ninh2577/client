@@ -3,7 +3,8 @@
 import { Tab } from "@headlessui/react";
 import { PencilSquareIcon } from "@heroicons/react/24/outline";
 import React, { FC, Fragment, useState } from "react";
-import visaPng from "@/images/vis.png";
+import vnpay from "@/images/vnpay.png";
+import paypal from "@/images/paypal.png";
 import mastercardPng from "@/images/mastercard.svg";
 import Input from "@/shared/Input";
 import Label from "@/components/Label";
@@ -162,13 +163,15 @@ const CheckOutPagePageMain: FC<CheckOutPagePageMainProps> = ({
                 <Tab as={Fragment}>
                   {({ selected }) => (
                     <button
-                      className={`px-4 py-1.5 sm:px-6 sm:py-2.5 rounded-full focus:outline-none ${selected
-                        ? "bg-neutral-800 dark:bg-neutral-200 text-white dark:text-neutral-900"
-                        : "text-neutral-6000 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                        }`}
-                    >
-                      Paypal
+                    className={`px-4 py-1.5 sm:px-6 sm:py-2.5  rounded-full flex items-center justify-center focus:outline-none  ${selected
+                      ? "bg-neutral-800 dark:bg-neutral-200 text-white dark:text-neutral-900"
+                      : " text-neutral-6000 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                      }`}
+                  >                   
+                      <span className="mr-2.5">Paypal</span>
+                      <Image className="w-8" src={paypal} alt="visa" />
                     </button>
+                    
                   )}
                 </Tab>
                 <Tab as={Fragment}>
@@ -179,13 +182,13 @@ const CheckOutPagePageMain: FC<CheckOutPagePageMainProps> = ({
                         : " text-neutral-6000 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
                         }`}
                     >
-                      <span className="mr-2.5">Thẻ tín dụng</span>
-                      <Image className="w-8" src={visaPng} alt="visa" />
-                      <Image
+                      <span className="mr-2.5">VNPAY</span>
+                      <Image className="w-8" src={vnpay} alt="visa" />
+                      {/* <Image
                         className="w-8"
                         src={mastercardPng}
                         alt="mastercard"
-                      />
+                      /> */}
                     </button>
                   )}
                 </Tab>
@@ -220,9 +223,10 @@ const CheckOutPagePageMain: FC<CheckOutPagePageMainProps> = ({
                   </div>
                 </Tab.Panel>
 
+                  {/* chứa giao diện thanh toán vnpay ở đây  */}
                 <Tab.Panel className="space-y-5">
                   <div className="space-y-1">
-                    <Label>Email </Label>
+                    {/* <Label>Email </Label>
                     <Input type="email" defaultValue="example@gmail.com" />
                   </div>
                   <div className="space-y-1">
@@ -234,13 +238,13 @@ const CheckOutPagePageMain: FC<CheckOutPagePageMainProps> = ({
                     <Textarea placeholder="..." />
                     <span className="text-sm text-neutral-500 block">
                       Viết vài câu về bản thân.
-                    </span>
+                    </span> */}
                   </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
             <div className="pt-8">
-              <ButtonPrimary href={"/pay-done"}>Xác nhận và thanh toán</ButtonPrimary>
+              <ButtonPrimary href={"/chitietbill"}>Xác nhận và thanh toán</ButtonPrimary>
             </div>
           </div>
         </div>

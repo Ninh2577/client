@@ -150,8 +150,8 @@ const templatesChildrenMenus: NavItemType[] = [
     ],
   },
   //
-  { id: ncNanoId(), href: "/checkout", name: "Checkout" },
-  { id: ncNanoId(), href: "/pay-done", name: "Pay done" },
+  { id: ncNanoId(), href: "/thanhtoan", name: "thanh toán" },
+  { id: ncNanoId(), href: "/chitietbill", name: "chi tiết hóa đơn" },
   //
   { id: ncNanoId(), href: "/author", name: "Author page" },
   { id: ncNanoId(), href: "/taikhoan", name: "Account page" },

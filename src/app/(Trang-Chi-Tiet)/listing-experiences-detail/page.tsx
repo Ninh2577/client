@@ -418,7 +418,7 @@ const ListingExperiencesDetailPage: FC<
         </div>
 
         {/* SUBMIT */}
-        <ButtonPrimary href={"/checkout"}>Đặt vé</ButtonPrimary>
+        <ButtonPrimary href={"/thanhtoan"}>Đặt vé</ButtonPrimary>
       </div>
     );
   };
