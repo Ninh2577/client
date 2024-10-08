@@ -21,7 +21,6 @@ import StayDatesRangeInput from "./StayDatesRangeInput";
 import GuestsInput from "./GuestsInput";
 import SectionDateRange from "../SectionDateRange";
 import { Route } from "next";
-// import { Router } from 'next/router';
 
 export interface ListingStayDetailPageProps {}
 
@@ -552,7 +551,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
 
         {/* SUBMIT */}
         <ButtonPrimary href={"/thanhtoan"}>Đặt vé</ButtonPrimary>
-      </div>
+      </div>      
     );
   };
 
