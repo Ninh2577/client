@@ -1,18 +1,20 @@
 "use client";
 
-import React, { Fragment, FC, useState } from "react";
+import React, { Fragment, FC, useState, useEffect } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import NcInputNumber from "@/components/NcInputNumber";
 import { UserPlusIcon } from "@heroicons/react/24/outline";
 import ClearDataButton from "@/app/(client-components)/(HeroSearchForm)/ClearDataButton";
 import { GuestsObject } from "@/app/(client-components)/type";
 
-export interface GuestsInputProps {
+interface GuestsInputProps {
+  value: number;
+  onChange: (value: number) => void;
   className?: string;
 }
 
-const GuestsInput: FC<GuestsInputProps> = ({ className = "flex-1" }) => {
-  const [guestAdultsInputValue, setGuestAdultsInputValue] = useState(2);
+const GuestsInput: FC<GuestsInputProps> = ({ value, onChange, className }) => {
+  const [guestAdultsInputValue, setGuestAdultsInputValue] = useState(value);
   const [guestChildrenInputValue, setGuestChildrenInputValue] = useState(1);
   const [guestInfantsInputValue, setGuestInfantsInputValue] = useState(1);
 
@@ -34,7 +36,13 @@ const GuestsInput: FC<GuestsInputProps> = ({ className = "flex-1" }) => {
       setGuestInfantsInputValue(value);
       newValue.guestInfants = value;
     }
+
+    onChange(newValue.guestAdults + newValue.guestChildren + newValue.guestInfants);
   };
+
+  useEffect(() => {
+    onChange(guestAdultsInputValue + guestChildrenInputValue + guestInfantsInputValue);
+  }, [guestAdultsInputValue, guestChildrenInputValue, guestInfantsInputValue]);
 
   const totalGuests =
     guestChildrenInputValue + guestAdultsInputValue + guestInfantsInputValue;
@@ -90,7 +98,7 @@ const GuestsInput: FC<GuestsInputProps> = ({ className = "flex-1" }) => {
                 defaultValue={guestAdultsInputValue}
                 onChange={(value) => handleChangeData(value, "guestAdults")}
                 max={10}
-                min={1}
+                min={0}
                 label="Người lớn"
                 desc="Từ 13 tuổi trở lên"
               />
@@ -119,4 +127,4 @@ const GuestsInput: FC<GuestsInputProps> = ({ className = "flex-1" }) => {
   );
 };
 
-export default GuestsInput;
+export default GuestsInput
