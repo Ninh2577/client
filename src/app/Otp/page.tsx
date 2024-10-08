@@ -13,7 +13,7 @@ const Otp = () => {
         console.log("Mã OTP đã được nhập:", otp);
 
         // Chuyển đến trang đổi mật khẩu
-        router.push('/ResetPassword'); // Chuyển đến trang ResetPassword
+        router.push('/doimatkhau'); // Chuyển đến trang ResetPassword
     };
 
     return (
