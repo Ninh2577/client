@@ -21,6 +21,7 @@ import StayDatesRangeInput from "./StayDatesRangeInput";
 import GuestsInput from "./GuestsInput";
 import SectionDateRange from "../SectionDateRange";
 import { Route } from "next";
+// import { Router } from 'next/router';
 
 export interface ListingStayDetailPageProps {}
 
@@ -116,7 +117,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
   const renderSection2 = () => {
     return (
       <div className="listingSection__wrap">
-        <h2 className="text-2xl font-semibold">Lưu giữ thông tin</h2>
+        <h2 className="text-2xl font-semibold">Mô tả</h2>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
         <div className="text-neutral-6000 dark:text-neutral-300">
           <span>
@@ -604,7 +605,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
           >
             <Squares2X2Icon className="w-5 h-5" />
             <span className="ml-2 text-neutral-800 text-sm font-medium">
-            Hiển thị tất cả ảnh
+            Hiển thị tất cả 
             </span>
           </button>
         </div>
