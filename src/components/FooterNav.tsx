@@ -31,12 +31,12 @@ const NAV: NavItem[] = [
   },
   {
     name: "Danh sách yêu thích",
-    link: "/account-savelists",
+    link: "/DSLuu",
     icon: HeartIcon,
   },
   {
     name: "Đăng nhập",
-    link: "/account",
+    link: "/taikhoan",
     icon: UserCircleIcon,
   },
   {
