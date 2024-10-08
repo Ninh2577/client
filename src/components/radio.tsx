@@ -13,8 +13,8 @@ const RadioGroup = () => {
   };
 
   return (
-    <Radio.Group onChange={handleChange} value={selectedValue} className="mt-1.5 ml-[80px]">
-      <Radio value={1} >Nữ</Radio>
+    <Radio.Group  onChange={handleChange} value={selectedValue} className="mt-1.5 ml-[80px]">
+      <Radio  value={1} className=''>Nữ</Radio>
       <Radio style={{marginLeft: '-130px'}} value={2} >Nam</Radio>
       {/* ... */}
     </Radio.Group>

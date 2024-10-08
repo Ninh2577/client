@@ -4,7 +4,7 @@
     align-items: center;
     min-height: 800px;
     background-color: #f7fbff;
-    font-family: "Arial", "sans-serif";
+    font-family: __Poppins_c3367d, __Poppins_Fallback_c3367d;
 
 }
 
@@ -15,10 +15,12 @@
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
+    font-family: __Poppins_c3367d, __Poppins_Fallback_c3367d;
+
 }
 
 .login-container h2 {
-    font-family: "Arial", "sans-serif";
+    font-family: __Poppins_c3367d, __Poppins_Fallback_c3367d;
     margin: 0;
     font-weight: 600;
     font-size: clamp(2rem, 10vw, 2.15rem);
@@ -60,7 +62,7 @@
 }
 
 .forgot-password {
-    font-family: "Inter", "sans-serif";
+    font-family: __Poppins_c3367d, __Poppins_Fallback_c3367d;
     font-size: 14;
     line-height: 1.43;
     background-color: transparent;
@@ -78,7 +80,7 @@
     text-decoration: none;
     width: fit-content;
     align-self: baseline;
-    margin-left: 295px;
+    margin-left: 275px;
     margin-top: -3px;
 }
 
@@ -132,7 +134,7 @@
     width: 100%;
     min-width: 64px;
     padding: 6px 16px;
-    font-family: "Arial", "sans-serif";
+    font-family: __Poppins_c3367d, __Poppins_Fallback_c3367d;
     font-weight: 500;
     font-size: 17px;
     line-height: 1.75;
@@ -150,7 +152,7 @@
 
 .signup-prompts {
     margin-top: 15px;
-    font-family: "Arial", "sans-serif";
+    font-family: __Poppins_c3367d, __Poppins_Fallback_c3367d;
     font-weight: 400;
 }
 
@@ -237,9 +239,12 @@
     /* Con trỏ tay khi hover */
     transition: background-color 0.3s;
     /* Hiệu ứng chuyển màu nền khi hover */
+    font-family: __Poppins_c3367d, __Poppins_Fallback_c3367d;
+
 }
 
 .btn-facebook {
+    font-family: __Poppins_c3367d, __Poppins_Fallback_c3367d;
 
     display: flex;
     /* Sử dụng flexbox để căn chỉnh nội dung */

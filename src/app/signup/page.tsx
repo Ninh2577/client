@@ -121,12 +121,12 @@ const PageSignUp = () => {
           <div className='rolessss' style={{ marginLeft: '-356px' }}>
             <label>Giới tính</label>
             <br />
-            <RadioGroup />
+            <RadioGroup/>
           </div>
           <br/>
           <br />
           <div className="checkbox-register">
-            <input type="checkbox" className="remember" id="remember" />
+            <input type="checkbox" style={{borderRadius:'4px'}} className="remember" id="remember" />
             <label htmlFor="remember">Tôi muốn đăng ký nhận thông báo qua email.</label>
           </div>
           <button type="submit" className="btn-register">Đăng ký</button>
