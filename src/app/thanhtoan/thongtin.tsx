@@ -14,7 +14,7 @@ const ThongTin: React.FC = () => {
   const [diaChi, setDiaChi] = useState("");
   const [soCCCD, setSoCCCD] = useState("");
   const [soluong, setSoLuong] = useState(1);
-  const [tongSoLuong, setTongSoLuong] = useState(5); // Tổng số thông tin cần nhập
+  const [tongSoLuong, setTongSoLuong] = useState(2); // Tổng số thông tin cần nhập
 
   const handlePageClick = (pageNumber: number) => {
     setSoLuong(pageNumber);
@@ -129,24 +129,25 @@ const ThongTin: React.FC = () => {
             />
           </div>
         </form>
-
-        {/* Hiển thị số trang */}
-        <div className="flex justify-center mt-4 space-x-2">
-          {Array.from({ length: tongSoLuong }, (_, index) => (
-            <button
-              key={index + 1}
-              type="button"
-              className={`py-2 px-4 rounded ${
-                soluong === index + 1
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-300 text-gray-800"
-              }`}
-              onClick={() => handlePageClick(index + 1)}
-            >
-              {index + 1}
-            </button>
-          ))}
-        </div>
+              
+        {tongSoLuong > 1 && (
+          <div className="flex justify-center mt-4 space-x-2">
+            {Array.from({ length: tongSoLuong }, (_, index) => (
+              <button
+                key={index + 1}
+                type="button"
+                className={`py-2 px-4 rounded ${
+                  soluong === index + 1
+                    ? "bg-blue-500 text-white"
+                    : "bg-gray-300 text-gray-800"
+                }`}
+                onClick={() => handlePageClick(index + 1)}
+              >
+                {index + 1}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

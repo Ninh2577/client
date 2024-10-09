@@ -22,7 +22,7 @@ const Page = () => {
           <ThongTin />
           <button 
             onClick={handleCheckout} 
-            className="mt-4 bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center" 
+            className="mt-4 mb-4 bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center" 
           > 
             <span className="text-2xl">&#x2794;</span> {/* Mũi tên chuyển tiếp */}
           </button>
@@ -32,7 +32,7 @@ const Page = () => {
           <CheckOutPagePageMain />
           <button 
             onClick={handleBack} 
-            className="mt-4 bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center"
+            className="mt-4 mb-4 bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center"
           >
             <span className="text-2xl">&#x2190;</span> {/* Mũi tên quay lại */}
           </button>

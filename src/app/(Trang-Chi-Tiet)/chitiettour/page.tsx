@@ -49,7 +49,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
     router.push(`${thisPathname}/?modal=PHOTO_TOUR_SCROLLABLE` as Route);
   };
 
-  const renderSection2 = () => {
+  const renderSection1 = () => {
     return (
       <div className="listingSection__wrap !space-y-6">
         {/* 1 */}
@@ -118,58 +118,58 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
     );
   };
 
-  const renderSection1 = () => {
-    if (quantity < 1) {
-      return null; // Ẩn form nếu số lượng < 1
-    }
-    // const renderSection4 = () => {
-    return (
-      <div className="listingSection__wrap">
-        {/* HEADING */}
-        <div>
-          <h2 className="text-2xl font-semibold">Thông tin người dùng</h2>
-        </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
-        {/* FORM */}
-        <div className="flow-root">
-          <form className="text-sm sm:text-base text-neutral-6000 dark:text-neutral-300 space-y-4">
-            <div className="p-4 rounded-lg">
-              <Label>Họ tên</Label>
-              <Input className="mt-1.5" placeholder="Nhập họ và tên" />
-            </div>
-            <div className="p-4 rounded-lg">
-              <Label>Email</Label>
-              <Input className="mt-1.5" placeholder="địa chỉ email" />
-            </div>
-            <div className="p-4 rounded-lg">
-              <Label>Số điện thoại</Label>
-              <Input className="mt-1.5" placeholder="Nhập số điện thoại" />
-            </div>
-            <div className="p-4 rounded-lg">
-              <Label>Giới tính</Label>
-              <Select className="mt-1.5">
-                <option value="Male">Nam</option>
-                <option value="Female">Nữ</option>
-              </Select>
-            </div>
-            <div className="p-4 rounded-lg">
-              <Label>Năm sinh</Label>
-              <Input className="mt-1.5" type="date" />
-            </div>
-            <div className="p-4 rounded-lg">
-              <Label>Địa chỉ</Label>
-              <Input className="mt-1.5" placeholder="Nhập địa chỉ" />
-            </div>
-            <div className="p-4 rounded-lg">
-              <Label>Số CCCD</Label>
-              <Input className="mt-1.5" placeholder="Nhập số CCCD" />
-            </div>
-            <ButtonPrimary className="mt-4">Lưu thông tin</ButtonPrimary>
-          </form>
-        </div>
-      </div>
-    );
-  };
+  // const renderSection2 = () => {
+  //   if (quantity < 1) {
+  //     return null; // Ẩn form nếu số lượng < 1
+  //   }
+  //   // const renderSection4 = () => {
+  //   return (
+  //     <div className="listingSection__wrap">
+  //       {/* HEADING */}
+  //       <div>
+  //         <h2 className="text-2xl font-semibold">Thông tin người dùng</h2>
+  //       </div>
+  //       <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
+  //       {/* FORM */}
+  //       <div className="flow-root">
+  //         <form className="text-sm sm:text-base text-neutral-6000 dark:text-neutral-300 space-y-4">
+  //           <div className="p-4 rounded-lg">
+  //             <Label>Họ tên</Label>
+  //             <Input className="mt-1.5" placeholder="Nhập họ và tên" />
+  //           </div>
+  //           <div className="p-4 rounded-lg">
+  //             <Label>Email</Label>
+  //             <Input className="mt-1.5" placeholder="địa chỉ email" />
+  //           </div>
+  //           <div className="p-4 rounded-lg">
+  //             <Label>Số điện thoại</Label>
+  //             <Input className="mt-1.5" placeholder="Nhập số điện thoại" />
+  //           </div>
+  //           <div className="p-4 rounded-lg">
+  //             <Label>Giới tính</Label>
+  //             <Select className="mt-1.5">
+  //               <option value="Male">Nam</option>
+  //               <option value="Female">Nữ</option>
+  //             </Select>
+  //           </div>
+  //           <div className="p-4 rounded-lg">
+  //             <Label>Năm sinh</Label>
+  //             <Input className="mt-1.5" type="date" />
+  //           </div>
+  //           <div className="p-4 rounded-lg">
+  //             <Label>Địa chỉ</Label>
+  //             <Input className="mt-1.5" placeholder="Nhập địa chỉ" />
+  //           </div>
+  //           <div className="p-4 rounded-lg">
+  //             <Label>Số CCCD</Label>
+  //             <Input className="mt-1.5" placeholder="Nhập số CCCD" />
+  //           </div>
+  //           <ButtonPrimary className="mt-4">Lưu thông tin</ButtonPrimary>
+  //         </form>
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
   const renderSection3 = () => {
     return (
@@ -634,7 +634,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
         {/* CONTENT */}
         <div className="w-full lg:w-3/5 xl:w-2/3 space-y-8 lg:space-y-10 lg:pr-10">
           {renderSection1()}
-          {renderSection2()}
+          {/* {renderSection2()} */}
           {renderSection3()}
           {renderSection4()}
           <SectionDateRange />
