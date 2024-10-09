@@ -92,10 +92,10 @@ const PageSubcription: FC<PageSubcriptionProps> = () => {
         </nav>
         <div className="flex flex-col mt-auto">
           {pricing.isPopular ? (
-            <ButtonPrimary>Nộp</ButtonPrimary>
+            <ButtonPrimary href={"/thanhtoan"}>Đăng ký</ButtonPrimary>
           ) : (
-            <ButtonSecondary>
-              <span className="font-medium">Nộp</span>
+            <ButtonSecondary href={"/thanhtoan"}>
+              <span className="font-medium">Đăng ký</span>
             </ButtonSecondary>
           )}
           <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-3">
