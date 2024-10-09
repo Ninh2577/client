@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, Fragment, useState, useEffect } from "react";
+import React, { FC, Fragment, useState } from "react";
 import Label from "@/components/Label";
 import Select from "@/shared/Select";
 import { Dialog, Transition } from "@headlessui/react";
@@ -28,7 +28,6 @@ export interface ListingStayDetailPageProps {}
 
 const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
   const [quantity, setQuantity] = useState(1); // Giá trị là 1
-  // const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   let [isOpenModalAmenities, setIsOpenModalAmenities] = useState(false);
   const thisPathname = usePathname();
@@ -575,7 +574,6 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
       </div>
     );
   };
-
   return (
     <div className="nc-ListingStayDetailPage">
       {/*  HEADER */}
