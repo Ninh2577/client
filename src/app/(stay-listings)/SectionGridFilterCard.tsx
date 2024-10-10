@@ -4,7 +4,7 @@ import { StayDataType } from "@/data/types";
 import Pagination from "@/shared/Pagination";
 import TabFilters from "./TabFilters";
 import Heading2 from "@/shared/Heading2";
-import StayCard2 from "@/components/StayCard2";
+import StayCard2 from "@/components/thesanphamhome";
 
 export interface SectionGridFilterCardProps {
   className?: string;

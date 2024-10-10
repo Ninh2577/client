@@ -69,25 +69,25 @@ const demoChildMenus: NavItemType[] = [
   },
   {
     id: ncNanoId(),
-    href: "/home-2",
+    href: "/",
     name: "Real estate",
     isNew: true,
   },
   {
     id: ncNanoId(),
-    href: "/home-3",
+    href: "/",
     name: "Home 3",
     isNew: true,
   },
 ];
 
 const otherPageChildMenus: NavItemType[] = [
-  { id: ncNanoId(), href: "/blog", name: "Blog page" },
-  { id: ncNanoId(), href: "/blog/single" as Route, name: "Blog single" },
-  { id: ncNanoId(), href: "/about", name: "About" },
-  { id: ncNanoId(), href: "/contact", name: "Contact us" },
-  { id: ncNanoId(), href: "/login", name: "Login" },
-  { id: ncNanoId(), href: "/signup", name: "Signup" },
+  { id: ncNanoId(), href: "/baiviet", name: "Trang bài viết" },
+  { id: ncNanoId(), href: "/baiviet/single" as Route, name: "bài viết" },
+  { id: ncNanoId(), href: "/gioithieu", name: "Giới thiệu" },
+  { id: ncNanoId(), href: "/lienhe", name: "Liên hệ" },
+  { id: ncNanoId(), href: "/dangnhap", name: "Đăng nhập" },
+  { id: ncNanoId(), href: "/dangky", name: "Đăng ký" },
 ];
 
 const templatesChildrenMenus: NavItemType[] = [
@@ -150,16 +150,16 @@ const templatesChildrenMenus: NavItemType[] = [
     ],
   },
   //
-  { id: ncNanoId(), href: "/checkout", name: "Checkout" },
-  { id: ncNanoId(), href: "/pay-done", name: "Pay done" },
+  { id: ncNanoId(), href: "/thanhtoan", name: "thanh toán" },
+  { id: ncNanoId(), href: "/chitietbill", name: "chi tiết hóa đơn" },
   //
-  { id: ncNanoId(), href: "/author", name: "Author page" },
-  { id: ncNanoId(), href: "/account", name: "Account page" },
+  { id: ncNanoId(), href: "/trangcanhan", name: "Trang cá nhân" },
+  { id: ncNanoId(), href: "/taikhoan", name: "Thông tin tài khoản" },
   //
   {
     id: ncNanoId(),
-    href: "/subscription",
-    name: "Subscription",
+    href: "/goithanhvien",
+    name: "Đăng ký gói thành viên",
   },
 ];
 
@@ -197,7 +197,7 @@ export const NAVIGATION_DEMO: NavItemType[] = [
             href: "/listing-stay-map",
             name: "Stay page (map)",
           },
-          { id: ncNanoId(), href: "/listing-stay-detail", name: "Stay Detail" },
+          { id: ncNanoId(), href: "/chitiettour", name: "Stay Detail" },
         ],
       },
 
@@ -227,17 +227,17 @@ export const NAVIGATION_DEMO: NavItemType[] = [
       },
 
       //
-      {
-        id: ncNanoId(),
-        href: "/listing-car",
-        name: "Cars listings",
-        type: "dropdown",
-        children: [
-          { id: ncNanoId(), href: "/listing-car", name: "Cars page" },
-          { id: ncNanoId(), href: "/listing-car-map", name: "Cars page (map)" },
-          { id: ncNanoId(), href: "/listing-car-detail", name: "Car Detail" },
-        ],
-      },
+      // {
+      //   id: ncNanoId(),
+      //   href: "/listing-car",
+      //   name: "Cars listings",
+      //   type: "dropdown",
+      //   children: [
+      //     { id: ncNanoId(), href: "/listing-car", name: "Cars page" },
+      //     { id: ncNanoId(), href: "/listing-car-map", name: "Cars page (map)" },
+      //     { id: ncNanoId(), href: "/listing-car-detail", name: "Car Detail" },
+      //   ],
+      // },
 
       //
       {
@@ -268,16 +268,16 @@ export const NAVIGATION_DEMO: NavItemType[] = [
   },
   {
     id: ncNanoId(),
-    href: "/author",
-    name: "Templates",
+    href: "/trangcanhan",
+    name: "Định dạng ",
     type: "dropdown",
     children: templatesChildrenMenus,
   },
 
   {
     id: ncNanoId(),
-    href: "/blog",
-    name: "Other pages",
+    href: "/baiviet",
+    name: "Các trang khác",
     type: "dropdown",
     children: otherPageChildMenus,
   },
@@ -305,7 +305,7 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
         href: "/listing-stay-map",
         name: "Stay listings (map)",
       },
-      { id: ncNanoId(), href: "/listing-stay-detail", name: "Stay detail" },
+      { id: ncNanoId(), href: "/chitiettour", name: "Stay detail" },
 
       //
       {
@@ -325,40 +325,40 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
       },
     ],
   },
-  {
-    id: ncNanoId(),
-    href: "/listing-car",
-    name: "Listing pages",
-    children: [
-      { id: ncNanoId(), href: "/listing-car", name: "Cars listings" },
-      { id: ncNanoId(), href: "/listing-car-map", name: "Cars listings (map)" },
-      { id: ncNanoId(), href: "/listing-car-detail", name: "Car detail" },
+  // {
+  //   id: ncNanoId(),
+  //   href: "/listing-car",
+  //   name: "Listing pages",
+  //   children: [
+  //     { id: ncNanoId(), href: "/listing-car", name: "Cars listings" },
+  //     { id: ncNanoId(), href: "/listing-car-map", name: "Cars listings (map)" },
+  //     { id: ncNanoId(), href: "/listing-car-detail", name: "Car detail" },
 
-      //
-      {
-        id: ncNanoId(),
-        href: "/listing-real-estate",
-        name: "Real estate listings",
-      },
-      {
-        id: ncNanoId(),
-        href: "/listing-real-estate-map",
-        name: "Real estate (map)",
-      },
-      //
-      {
-        id: ncNanoId(),
-        href: "/listing-flights",
-        name: "Flights listings",
-      },
-    ],
-  },
+  //     //
+  //     {
+  //       id: ncNanoId(),
+  //       href: "/listing-real-estate",
+  //       name: "Real estate listings",
+  //     },
+  //     {
+  //       id: ncNanoId(),
+  //       href: "/listing-real-estate-map",
+  //       name: "Real estate (map)",
+  //     },
+  //     //
+  //     {
+  //       id: ncNanoId(),
+  //       href: "/listing-flights",
+  //       name: "Flights listings",
+  //     },
+  //   ],
+  // },
 
   //
   {
     id: ncNanoId(),
-    href: "/author",
-    name: "Templates",
+    href: "/trangcanhan",
+    name: "Định dạng",
     type: "dropdown",
     children: templatesChildrenMenus,
   },
@@ -366,8 +366,8 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
   //
   {
     id: ncNanoId(),
-    href: "/blog",
-    name: "Other pages",
+    href: "/baiviet",
+    name: "Các trang khác",
     type: "dropdown",
     children: otherPageChildMenus,
   },

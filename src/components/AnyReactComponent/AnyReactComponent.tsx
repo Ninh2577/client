@@ -3,7 +3,7 @@
 import { Transition } from "@headlessui/react";
 import CarCard from "@/components/CarCard";
 import ExperiencesCard from "@/components/ExperiencesCard";
-import StayCard from "@/components/StayCard";
+import StayCard from "@/components/thesanpham";
 import { CarDataType, ExperiencesDataType, StayDataType } from "@/data/types";
 import React, { FC, Fragment } from "react";
 import { useState } from "react";

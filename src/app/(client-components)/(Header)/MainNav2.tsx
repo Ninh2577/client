@@ -3,7 +3,7 @@ import Logo from "@/shared/Logo";
 import MenuBar from "@/shared/MenuBar";
 import LangDropdown from "./LangDropdown";
 import NotifyDropdown from "./NotifyDropdown";
-import AvatarDropdown from "./AvatarDropdown";
+import MenuAvater from "./MenuAvater";
 import DropdownTravelers from "./DropdownTravelers";
 import HeroSearchForm2MobileFactory from "../(HeroSearchForm2Mobile)/HeroSearchForm2MobileFactory";
 import Link from "next/link";
@@ -73,11 +73,11 @@ const MainNav2: FC<MainNav2Props> = ({ className = "" }) => {
 
 
             {/* <NotifyDropdown /> */}
-            <AvatarDropdown />
+            <MenuAvater />
           </div>
           <div className="flex space-x-2 lg:hidden">
             <NotifyDropdown />
-            <AvatarDropdown />
+            <MenuAvater />
             <MenuBar />
           </div>
         </div>
