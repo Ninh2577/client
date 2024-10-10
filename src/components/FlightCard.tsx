@@ -41,26 +41,26 @@ const FlightCard: FC<FlightCardProps> = ({ className = "", data }) => {
             <div className="ml-4 space-y-10 text-sm">
               <div className="flex flex-col space-y-1">
                 <span className=" text-neutral-500 dark:text-neutral-400">
-                Thứ Hai, ngày 12 tháng 8 · 10:00
+
+                  Thứ Hai, ngày 12 tháng 8 · 10:00
                 </span>
                 <span className=" font-semibold">
-                Sân bay quốc tế Tân Sơn Nhất (SGN)
+                  Sân bay quốc tế Tân Sơn Nhất (SGN)
                 </span>
               </div>
               <div className="flex flex-col space-y-1">
                 <span className=" text-neutral-500 dark:text-neutral-400">
-                Thứ Hai, ngày 16 tháng 8 · 10:00
+                  Thứ Hai, ngày 16 tháng 8 · 10:00
                 </span>
                 <span className=" font-semibold">
-                Sân bay quốc tế Nội Bài (HAN)
+                  Sân bay quốc tế Nội Bài (HAN)
                 </span>
               </div>
             </div>
           </div>
           <div className="border-l border-neutral-200 dark:border-neutral-700 md:mx-6 lg:mx-10"></div>
           <ul className="text-sm text-neutral-500 dark:text-neutral-400 space-y-1 md:space-y-2">
-            <li>Thời   
-            gian bay: 7 giờ 45 phút</li>
+            <li>Thời gian bay: 7 giờ 45 phút</li>
             <li>Vietnam Airlines · Hạng thương gia · Boeing 787 · VN 847</li>
           </ul>
         </div>
@@ -76,12 +76,12 @@ const FlightCard: FC<FlightCardProps> = ({ className = "", data }) => {
         <div className="my-7 md:my-10 space-y-5 md:pl-24">
           <div className="border-t border-neutral-200 dark:border-neutral-700" />
           <div className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
-          Thời gian quá cảnh: 15 giờ 45 phút - Bangkok (BKK)
-          </div>
+            Thời gian quá cảnh: 15 giờ 45 phút - Bangkok (BKK)
+          </div >
           <div className="border-t border-neutral-200 dark:border-neutral-700" />
-        </div>
+        </div >
         {renderDetailTop()}
-      </div>
+      </div >
     );
   };
 
@@ -95,9 +95,8 @@ const FlightCard: FC<FlightCardProps> = ({ className = "", data }) => {
         <a href="##" className="absolute inset-0" />
 
         <span
-          className={`absolute right-0 bottom-0 sm:bottom-auto sm:top-1/2 sm:-translate-y-1/2 w-10 h-10 bg-neutral-50 dark:bg-neutral-800 rounded-full flex items-center justify-center cursor-pointer ${
-            isOpen ? "transform -rotate-180" : ""
-          }`}
+          className={`absolute right-0 bottom-0 sm:bottom-auto sm:top-1/2 sm:-translate-y-1/2 w-10 h-10 bg-neutral-50 dark:bg-neutral-800 rounded-full flex items-center justify-center cursor-pointer ${isOpen ? "transform -rotate-180" : ""
+            }`}
           onClick={() => setIsOpen(!isOpen)}
         >
           <i className="text-xl las la-angle-down"></i>
@@ -142,50 +141,50 @@ const FlightCard: FC<FlightCardProps> = ({ className = "", data }) => {
               <span>7 giờ 45 phút</span>
               <span className="mx-2">·</span>
               <span>HAN</span>
-            </div>
-          </div>
+            </div >
+          </div >
 
           {/* TIME - NAME */}
-          <div className="hidden lg:block  min-w-[150px] flex-[4] ">
+          <div div className="hidden lg:block  min-w-[150px] flex-[4] " >
             <div className="font-medium text-lg">11:00 - 20:00</div>
             <div className="text-sm text-neutral-500 font-normal mt-0.5">
               {data.airlines.name}
             </div>
-          </div>
+          </div >
 
           {/* TIMME */}
-          <div className="hidden lg:block flex-[4] whitespace-nowrap">
+          <div div className="hidden lg:block flex-[4] whitespace-nowrap" >
             <div className="font-medium text-lg"> HND - SIN</div>
             <div className="text-sm text-neutral-500 font-normal mt-0.5">
-            7 giờ 15 phút
+              7 giờ 15 phút
             </div>
-          </div>
+          </div >
 
           {/* TYPE */}
-          <div className="hidden lg:block flex-[4] whitespace-nowrap">
+          <div div className="hidden lg:block flex-[4] whitespace-nowrap" >
             <div className="font-medium text-lg">1 điểm dừng</div>
             <div className="text-sm text-neutral-500 font-normal mt-0.5">
-            2 giờ 15 phút ở BKK
-            </div>
-          </div>
+              2 giờ 15 phút BKK
+            </div >
+          </div >
 
           {/* PRICE */}
-          <div className="flex-[4] whitespace-nowrap sm:text-right">
+          < div className="flex-[4] whitespace-nowrap sm:text-right" >
             <div>
               <span className="text-xl font-semibold text-secondary-6000">
                 {data.price}
               </span>
             </div>
             <div className="text-xs sm:text-sm text-neutral-500 font-normal mt-0.5">
-            khứ hồi
+              khứ hồi
             </div>
-          </div>
-        </div>
-      </div>
+          </div >
+        </div >
+      </div >
 
       {/* DETAIL */}
       {renderDetail()}
-    </div>
+    </div >
   );
 };
 

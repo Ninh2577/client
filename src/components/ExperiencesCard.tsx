@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import GallerySlider from "@/components/GallerySlider";
+
 import { DEMO_EXPERIENCES_LISTINGS } from "@/data/listings";
 import { ExperiencesDataType } from "@/data/types";
 import StartRating from "@/components/StartRating";
@@ -8,6 +8,7 @@ import SaleOffBadge from "@/components/SaleOffBadge";
 import Badge from "@/shared/Badge";
 import Link from "next/link";
 import { MapPinIcon } from "@heroicons/react/24/outline";
+import DSTour from "./DanhSachTour";
 
 export interface ExperiencesCardProps {
   className?: string;
@@ -41,7 +42,7 @@ const ExperiencesCard: FC<ExperiencesCardProps> = ({
   const renderSliderGallery = () => {
     return (
       <div className="relative w-full rounded-2xl overflow-hidden ">
-        <GallerySlider
+        <DSTour
           uniqueID={`ExperiencesCard_${id}`}
           ratioClass={ratioClass}
           galleryImgs={galleryImgs}

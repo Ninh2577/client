@@ -30,7 +30,7 @@ const CardCategory6: FC<CardCategory6Props> = ({
         <span className="absolute inset-0 bg-gradient-to-t from-black/60"></span>
         <h2 className={`relative text-lg lg:text-xl font-semibold`}>{name}</h2>
         <span className={`relative block mt-1.5 text-sm text-neutral-100`}>
-          {convertNumbThousand(count)} điểm đến
+          {convertNumbThousand(count)} Thuộc tính
         </span>
       </div>
     </Link>

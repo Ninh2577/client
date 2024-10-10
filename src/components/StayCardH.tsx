@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import GallerySlider from "@/components/GallerySlider";
+
 import { DEMO_STAY_LISTINGS } from "@/data/listings";
 import { StayDataType } from "@/data/types";
 import StartRating from "@/components/StartRating";
@@ -7,6 +7,7 @@ import BtnLikeIcon from "@/components/BtnLikeIcon";
 import SaleOffBadge from "@/components/SaleOffBadge";
 import Badge from "@/shared/Badge";
 import Link from "next/link";
+import DSTour from "./DanhSachTour";
 
 export interface StayCardHProps {
   className?: string;
@@ -37,7 +38,7 @@ const StayCardH: FC<StayCardHProps> = ({
   const renderSliderGallery = () => {
     return (
       <div className="relative flex-shrink-0 w-full md:w-72 ">
-        <GallerySlider
+        <DSTour
           ratioClass="aspect-w-6 aspect-h-5"
           galleryImgs={galleryImgs}
           uniqueID={`StayCardH_${id}`}
@@ -56,13 +57,13 @@ const StayCardH: FC<StayCardHProps> = ({
           <div className="flex items-center space-x-3">
             <i className="las la-user text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-              6 khách
+              6 Khách
             </span>
           </div>
           <div className="flex items-center space-x-3">
             <i className="las la-bed text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-              6 giường
+              6 Giường
             </span>
           </div>
         </div>
@@ -70,13 +71,13 @@ const StayCardH: FC<StayCardHProps> = ({
           <div className="flex items-center space-x-3">
             <i className="las la-bath text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-            3 phòng tắm
+              3 Phòng tắm
             </span>
           </div>
           <div className="flex items-center space-x-3">
             <i className="las la-smoking-ban text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-            Không hút thuốc
+              Không hút thuốc
             </span>
           </div>
         </div>
@@ -84,7 +85,7 @@ const StayCardH: FC<StayCardHProps> = ({
           <div className="flex items-center space-x-3">
             <i className="las la-door-open text-lg"></i>
             <span className="text-sm text-neutral-500 dark:text-neutral-400">
-            6 phòng ngủ
+              6 Phòng ngủ
             </span>
           </div>
           <div className="flex items-center space-x-3">
@@ -123,7 +124,7 @@ const StayCardH: FC<StayCardHProps> = ({
             {price}
             {` `}
             <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">
-              /đêm
+              /Đêm
             </span>
           </span>
         </div>
