@@ -36,6 +36,7 @@ const MobileFooterSticky = () => {
             <ButtonPrimary
               sizeClass="px-5 sm:px-7 py-3 !rounded-2xl"
               onClick={openModal}
+              href={"/thanhtoan"}
             >
               Đặt vé
             </ButtonPrimary>

@@ -1,6 +1,8 @@
 "use client";
 
 import React, { FC, Fragment, useState } from "react";
+import Label from "@/components/Label";
+import Select from "@/shared/Select";
 import { Dialog, Transition } from "@headlessui/react";
 import { ArrowRightIcon, Squares2X2Icon } from "@heroicons/react/24/outline";
 import CommentListing from "@/components/CommentListing";
@@ -22,10 +24,10 @@ import GuestsInput from "./GuestsInput";
 import SectionDateRange from "../SectionDateRange";
 import { Route } from "next";
 
-export interface ListingStayDetailPageProps {}
+export interface ListingStayDetailPageProps { }
 
-const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
-  //
+const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({ }) => {
+  const [quantity, setQuantity] = useState(1); // Giá trị là 1
 
   let [isOpenModalAmenities, setIsOpenModalAmenities] = useState(false);
 
@@ -55,7 +57,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
 
         {/* 2 */}
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-         Du lịch nhật bản
+          Du lịch nhật bản
         </h2>
 
         {/* 3 */}
@@ -113,33 +115,58 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
     );
   };
 
-  const renderSection2 = () => {
-    return (
-      <div className="listingSection__wrap">
-        <h2 className="text-2xl font-semibold">Lưu giữ thông tin</h2>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
-        <div className="text-neutral-6000 dark:text-neutral-300">
-          <span>
-          Với tầm nhìn hướng hồ, The Symphony 9 Tam Cốc tại Ninh Bình cung cấp
-            chỗ ở, hồ bơi ngoài trời, quầy bar, sảnh khách chung, a
-            vườn và tiện nghi BBQ. Wi-Fi được cung cấp miễn phí.
-          </span>
-          <br />
-          <br />
-          <span>
-          Có một phòng tắm riêng với chậu vệ sinh trong tất cả các đơn vị, cùng với một
-          máy sấy tóc và đồ vệ sinh cá nhân miễn phí.
-          </span>
-          <br /> <br />
-          <span>
-          Symphony 9 Tam Coc có sân hiên. Cả hai đều cho thuê xe đạp
-            dịch vụ và dịch vụ cho thuê xe hơi được cung cấp tại chỗ nghỉ,
-            trong khi du khách có thể đi xe đạp gần đó.
-          </span>
-        </div>
-      </div>
-    );
-  };
+  // const renderSection2 = () => {
+  //   if (quantity < 1) {
+  //     return null; // Ẩn form nếu số lượng < 1
+  //   }
+  //   // const renderSection4 = () => {
+  //   return (
+  //     <div className="listingSection__wrap">
+  //       {/* HEADING */}
+  //       <div>
+  //         <h2 className="text-2xl font-semibold">Thông tin người dùng</h2>
+  //       </div>
+  //       <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
+  //       {/* FORM */}
+  //       <div className="flow-root">
+  //         <form className="text-sm sm:text-base text-neutral-6000 dark:text-neutral-300 space-y-4">
+  //           <div className="p-4 rounded-lg">
+  //             <Label>Họ tên</Label>
+  //             <Input className="mt-1.5" placeholder="Nhập họ và tên" />
+  //           </div>
+  //           <div className="p-4 rounded-lg">
+  //             <Label>Email</Label>
+  //             <Input className="mt-1.5" placeholder="địa chỉ email" />
+  //           </div>
+  //           <div className="p-4 rounded-lg">
+  //             <Label>Số điện thoại</Label>
+  //             <Input className="mt-1.5" placeholder="Nhập số điện thoại" />
+  //           </div>
+  //           <div className="p-4 rounded-lg">
+  //             <Label>Giới tính</Label>
+  //             <Select className="mt-1.5">
+  //               <option value="Male">Nam</option>
+  //               <option value="Female">Nữ</option>
+  //             </Select>
+  //           </div>
+  //           <div className="p-4 rounded-lg">
+  //             <Label>Năm sinh</Label>
+  //             <Input className="mt-1.5" type="date" />
+  //           </div>
+  //           <div className="p-4 rounded-lg">
+  //             <Label>Địa chỉ</Label>
+  //             <Input className="mt-1.5" placeholder="Nhập địa chỉ" />
+  //           </div>
+  //           <div className="p-4 rounded-lg">
+  //             <Label>Số CCCD</Label>
+  //             <Input className="mt-1.5" placeholder="Nhập số CCCD" />
+  //           </div>
+  //           <ButtonPrimary className="mt-4">Lưu thông tin</ButtonPrimary>
+  //         </form>
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
   const renderSection3 = () => {
     return (
@@ -165,7 +192,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
         <div className="w-14 border-b border-neutral-200"></div>
         <div>
           <ButtonSecondary onClick={openModalAmenities}>
-          Xem thêm 20 tiện nghi
+            Xem thêm 20 tiện nghi
           </ButtonSecondary>
         </div>
         {renderMotalAmenities()}
@@ -252,7 +279,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
         <div>
           <h2 className="text-2xl font-semibold">Giá phòng</h2>
           <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-          Giá có thể tăng vào cuối tuần hoặc ngày lễ
+            Giá có thể tăng vào cuối tuần hoặc ngày lễ
           </span>
         </div>
         <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
@@ -306,7 +333,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
           />
           <div>
             <a className="block text-xl font-medium" href="##">
-            Kevin Francis
+              Kevin Francis
             </a>
             <div className="mt-1.5 flex items-center text-sm text-neutral-500 dark:text-neutral-400">
               <StartRating />
@@ -318,7 +345,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
 
         {/* desc */}
         <span className="block text-neutral-6000 dark:text-neutral-300">
-        Với tầm nhìn hướng hồ, The Symphony 9 Tam Cốc tại Ninh Bình cung cấp
+          Với tầm nhìn hướng hồ, The Symphony 9 Tam Cốc tại Ninh Bình cung cấp
           chỗ ở, hồ bơi ngoài trời, quầy bar, sảnh khách chung, a
           sân vườn và tiện nghi BBQ...
         </span>
@@ -468,7 +495,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
         <div>
           <h4 className="text-lg font-semibold">Chính sách hủy</h4>
           <span className="block mt-3 text-neutral-500 dark:text-neutral-400">
-          Hoàn tiền 50% giá trị đặt phòng khi khách hàng hủy phòng
+            Hoàn tiền 50% giá trị đặt phòng khi khách hàng hủy phòng
             trong vòng 48 giờ sau khi đặt phòng thành công và 14 ngày trước khi
             thời gian nhận phòng. <br />
             Sau đó, hủy phòng 14 ngày trước thời gian nhận phòng, nhận 50%
@@ -499,7 +526,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
           <div className="prose sm:prose">
             <ul className="mt-3 text-neutral-500 dark:text-neutral-400 space-y-2">
               <li>
-              Ban và tôi sẽ làm việc cùng nhau để giữ cảnh quan và
+                Ban và tôi sẽ làm việc cùng nhau để giữ cảnh quan và
                 Môi trường xanh và sạch bằng cách không xả rác, không sử dụng
                 chất kích thích và tôn trọng mọi người xung quanh.
               </li>
@@ -554,7 +581,6 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
       </div>
     );
   };
-
   return (
     <div className="nc-ListingStayDetailPage">
       {/*  HEADER */}
@@ -576,9 +602,8 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
           {PHOTOS.filter((_, i) => i >= 1 && i < 5).map((item, index) => (
             <div
               key={index}
-              className={`relative rounded-md sm:rounded-xl overflow-hidden ${
-                index >= 3 ? "hidden sm:block" : ""
-              }`}
+              className={`relative rounded-md sm:rounded-xl overflow-hidden ${index >= 3 ? "hidden sm:block" : ""
+                }`}
             >
               <div className="aspect-w-4 aspect-h-3 sm:aspect-w-6 sm:aspect-h-5">
                 <Image
@@ -604,7 +629,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
           >
             <Squares2X2Icon className="w-5 h-5" />
             <span className="ml-2 text-neutral-800 text-sm font-medium">
-            Hiển thị tất cả ảnh
+              Hiển thị tất cả ảnh
             </span>
           </button>
         </div>
@@ -615,7 +640,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({}) => {
         {/* CONTENT */}
         <div className="w-full lg:w-3/5 xl:w-2/3 space-y-8 lg:space-y-10 lg:pr-10">
           {renderSection1()}
-          {renderSection2()}
+          {/* {renderSection2()} */}
           {renderSection3()}
           {renderSection4()}
           <SectionDateRange />
