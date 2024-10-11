@@ -1,8 +1,8 @@
 // radio.tsx
-'use client'
-import React, { useState } from 'react';
-import type { RadioChangeEvent } from 'antd';
-import { Radio } from 'antd';
+"use client";
+import React, { useState } from "react";
+import type { RadioChangeEvent } from "antd";
+import { Radio } from "antd";
 
 const RadioGroup = () => {
   const [selectedValue, setSelectedValue] = useState(1);
@@ -13,9 +13,15 @@ const RadioGroup = () => {
   };
 
   return (
-    <Radio.Group onChange={handleChange} value={selectedValue} className="mt-1.5 ml-[80px]">
-      <Radio value={1} >Nữ</Radio>
-      <Radio style={{ marginLeft: '-130px' }} value={2} >Nam</Radio>
+    <Radio.Group
+      onChange={handleChange}
+      value={selectedValue}
+      className="mt-1.5 ml-[80px]"
+    >
+      <Radio value={1}>Nữ</Radio>
+      <Radio style={{ marginLeft: "-130px" }} value={2}>
+        Nam
+      </Radio>
       {/* ... */}
     </Radio.Group>
   );

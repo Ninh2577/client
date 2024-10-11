@@ -168,7 +168,9 @@ const PageLogin = () => {
       const data = await response.json();
       console.log("Dữ liệu từ API: ", data);
 
-      const { token, email: userEmail, role } = data;
+      const token = data.token;
+      const userEmail = data.email;
+      const role = data.role;
       const userRole = role ? "admin" : "user"; // Lưu vai trò người dùng
 
       // Thông báo cho người dùng
@@ -176,7 +178,7 @@ const PageLogin = () => {
 
       // Lưu thông tin vào localStorage
       localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify({ email: userEmail }));
+      localStorage.setItem("user", JSON.stringify({ userEmail }));
 
       // Chuyển hướng về trang chính
       window.location.href = "/";
