@@ -13,6 +13,8 @@
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
+    font-family: __Poppins_c3367d, __Poppins_Fallback_c3367d;
+
 }
 
 .Otp-container h2 {
@@ -20,7 +22,7 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 1.5;
-    font-family: "Arial", "sans-serif";
+    font-family: __Poppins_c3367d, __Poppins_Fallback_c3367d;
 
 }
 
@@ -74,7 +76,7 @@
      width: 100%;
      min-width: 64px;
      padding: 6px 16px;
-     font-family: "Arial", "sans-serif";
+     font-family: __Poppins_c3367d, __Poppins_Fallback_c3367d;
      font-weight: 500;
      font-size: 17px;
      line-height: 1.75;
