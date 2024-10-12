@@ -106,7 +106,7 @@ const PageSignUp = () => {
   const [soDienThoai, setSoDienThoai] = useState("");
   const [diaChi, setDiaChi] = useState("");
   const [namSinh, setNamSinh] = useState("");
-  const [gioiTinh, setGioiTinh] = useState(true);
+  const [gioiTinh, setGioiTinh] = useState(1);
 
   // Kiểm tra email hợp lệ
   const validateEmail = (email: string) => {
@@ -116,6 +116,9 @@ const PageSignUp = () => {
   const validatePhoneNumber = (phoneNumber: string) => {
     const phoneRegex = /^(?:\+?(\d{1,3}))?(\d{10})$/; // Kiểm tra số điện thoại Việt Nam
     return phoneRegex.test(phoneNumber);
+  };
+  const handleGioiTinhChange = (value: number) => {
+    setGioiTinh(value); // Cập nhật giới tính khi thay đổi
   };
 
   const validateForm = () => {
@@ -148,6 +151,10 @@ const PageSignUp = () => {
       toast.error("Địa chỉ không được để trống!");
       return false;
     }
+    if (!namSinh) {
+      toast.error("Năm sinh không được để trống!");
+      return false;
+    }
 
     return true;
   };
@@ -174,13 +181,13 @@ const PageSignUp = () => {
           namSinh,
         }),
       });
-      const data = await response.text();
+      const data = await response.json();
       if (response.ok) {
-        toast.success("Đăng ký thành công!");
+        toast.success(data.msg); // Hiển thị thông báo thành công
         // Chuyển hướng về trang chính
-        window.location.href = "dangNhap";
+        window.location.href = "http://localhost:3000/dangnhap";
       } else {
-        toast.error("Đăng ký thất bại: " + data);
+        toast.error(data.msg); // Hiển thị thông báo thành công
       }
     } catch (error) {
       console.error("Error:", error);
@@ -204,7 +211,7 @@ const PageSignUp = () => {
           <div className="input-register">
             <label>Email</label>
             <input
-              type="email"
+              type="text"
               placeholder="Địa chỉ email"
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -220,7 +227,7 @@ const PageSignUp = () => {
           <div className="input-register">
             <label>SĐT</label>
             <input
-              type="password"
+              type="text"
               placeholder="Số điện thoại"
               onChange={(e) => setSoDienThoai(e.target.value)}
             />
@@ -229,7 +236,7 @@ const PageSignUp = () => {
             <label>Địa chỉ</label>
             <input
               type="text"
-              placeholder="địa chỉ"
+              placeholder="Địa chỉ"
               onChange={(e) => setDiaChi(e.target.value)}
             />
           </div>
@@ -237,14 +244,13 @@ const PageSignUp = () => {
             <label>Năm sinh</label>
             <input
               type="date"
-              placeholder="Năm sinh"
-              onChange={(e) => setNamSinh(e.target.value)}
+              onChange={(e) => setNamSinh(e.target.value)} // Lưu giá trị theo định dạng YYYY-MM-DD
             />
           </div>
           <div className="rolessss" style={{ marginLeft: "-356px" }}>
             <label>Giới tính</label>
             <br />
-            <RadioGroup />
+            <RadioGroup onGenderChange={handleGioiTinhChange} />
           </div>
           <br />
           <br />
@@ -277,7 +283,7 @@ const PageSignUp = () => {
             Đăng nhập với Google
           </button>
           <br />
-          <button style={{ marginTop: "-3px" }} className="btn-facebook">
+          <button style={{ marginTop: "-12px" }} className="btn-facebook">
             <img
               src={"./images/icons8-facebook-48.png"}
               alt="Facebook Icon"

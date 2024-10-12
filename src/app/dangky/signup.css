@@ -274,6 +274,6 @@
     /* Hiệu ứng chuyển màu nền khi hover */
 }
 
-.social-login button:hover {
+.social-register button:hover {
     background-color: hsla(196, 28%, 79%, 0.436);
 }

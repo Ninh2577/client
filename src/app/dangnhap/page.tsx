@@ -169,8 +169,9 @@ const PageLogin = () => {
       console.log("Dữ liệu từ API: ", data);
 
       const token = data.token;
-      const userEmail = data.email;
+      // const userEmail = data.email;
       const role = data.role;
+      const userHoTen = data.hoTen;
       const userRole = role ? "admin" : "user"; // Lưu vai trò người dùng
 
       // Thông báo cho người dùng
@@ -178,7 +179,8 @@ const PageLogin = () => {
 
       // Lưu thông tin vào localStorage
       localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify({ userEmail }));
+      localStorage.setItem("user", userHoTen);
+      // localStorage.setItem("user", JSON.stringify({ userEmail, userHoTen }));
 
       // Chuyển hướng về trang chính
       window.location.href = "/";
@@ -213,7 +215,7 @@ const PageLogin = () => {
           <a href="/quenmatkhau" className="forgot-password">
             Quên mật khẩu?
           </a>
-
+        <br />
           <div className="checkbox-login">
             <input type="checkbox" className="remember" id="remember" />
             <label htmlFor="remember">Ghi nhớ</label>
@@ -240,7 +242,7 @@ const PageLogin = () => {
             Đăng nhập với Google
           </button>
 
-          <button className="btn-facebook" style={{ marginTop: "-3px" }}>
+          <button className="btn-facebook" style={{ marginTop: "12px" }}>
             <img
               src="./images/icons8-facebook-48.png"
               alt="Facebook Icon"
