@@ -8,15 +8,39 @@ const PageResetPassword = () => {
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault(); // Ngăn chặn hành vi mặc định của form
-        // Bạn có thể thêm logic để thay đổi mật khẩu ở đây
-        console.log("Mật khẩu mới đã được đặt:", newPassword);
+    // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    //     e.preventDefault(); // Ngăn chặn hành vi mặc định của form
+    //     // Bạn có thể thêm logic để thay đổi mật khẩu ở đây
+    //     console.log("Mật khẩu mới đã được đặt:", newPassword);
 
-        // Sau khi đổi mật khẩu thành công, chuyển hướng về trang đăng nhập
-        router.push('/dangnhap'); // Chuyển đến trang đăng nhập
+    //     // Sau khi đổi mật khẩu thành công, chuyển hướng về trang đăng nhập
+    //     router.push('/dangnhap'); // Chuyển đến trang đăng nhập
+    // };
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        
+        if (newPassword !== confirmPassword) {
+            console.error("Mật khẩu không khớp");
+            return;
+        }
+
+        // Gửi yêu cầu đến API để đổi mật khẩu
+        const response = await fetch("http://localhost:8080/api/reset-password", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ newPassword }),
+        });
+
+        if (response.ok) {
+            console.log("Mật khẩu mới đã được đặt:", newPassword);
+            router.push('/dangnhap'); // Chuyển đến trang đăng nhập
+        } else {
+            console.error("Lỗi khi đổi mật khẩu");
+        }
     };
-
     return (
         <div className="ResetPassword-wrapper">
             <div className="ResetPassword-container">

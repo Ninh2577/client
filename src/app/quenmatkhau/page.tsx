@@ -1,48 +1,74 @@
-"use client"
-import React, { useState } from 'react';
-import { useRouter } from 'next/navigation'; // Sử dụng next/navigation cho App Router
-import './ForgotPassword.css';
-
+"use client";
+import React, { useState } from "react";
+import { useRouter } from "next/navigation"; // Sử dụng next/navigation cho App Router
+import "./ForgotPassword.css";
+import { toast, ToastContainer } from "react-toastify"; // Import thư viện
+import "react-toastify/dist/ReactToastify.css"; // Import CSS của react-toastify
 
 const ForgotPassword = () => {
-    const router = useRouter(); // Khởi tạo useRouter
-    const [email, setEmail] = useState('');
+  const router = useRouter();
+  const [email, setEmail] = useState("");
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault(); // Ngăn chặn hành vi mặc định của form
+  //   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //     e.preventDefault();
 
-        // Logic gửi mã OTP qua email
-        // Giả lập gửi mã thành công và chuyển đến trang OTP
-        // Bạn có thể thay thế phần này bằng API thực tế
-        console.log("Mã OTP đã được gửi đến:", email);
+  //     console.log("Mã OTP đã được gửi đến:", email);
 
-        // Chuyển đến trang nhập mã OTP
-        router.push('/Otp'); // Chuyển đến trang OTP
-    };
+  //     router.push("/Otp");
+  //   };
 
-    return (
-        <div className="forgotPassword-wrapper">
-            <div className="forgotPassword-container">
-                <div style={{ marginLeft: '-330px', marginBottom: '10px' }}>
-                    <h2 style={{ marginLeft: '-5px' }}>Đặt lại mật khẩu</h2>
-                    <p style={{ marginLeft: '317px', fontSize: '13px' }}>Nhập địa chỉ email của bạn. Chúng tôi sẽ gửi mã OTP để bạn đặt lại mật khẩu.</p>
-                </div>
-                <form className="forgotPassword-form" onSubmit={handleSubmit}>
-                    <div className="input-forgot">
-                        <label>Email</label>
-                        <input
-                            type="email"
-                            placeholder="Địa chỉ email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <button type="submit" className="btn-forgotPassword">Gửi</button>
-                </form>
-            </div>
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!email) {
+      toast.error("Email không được để trống.");
+      return;
+    }
+    // Gửi yêu cầu đến API gửi mã OTP
+    const response = await fetch("http://localhost:8080/api/send-otp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    });
+
+    if (response.ok) {
+      toast.success("Mã OTP đã được gửi đến: " + email); // Hiển thị thông báo thành công
+      router.push("/Otp");
+    } else {
+      const errorMessage = await response.json();
+      toast.error(errorMessage.message || "Có lỗi xảy ra!"); // Hiển thị thông báo lỗi
+    }
+  };
+
+  return (
+    <div className="forgotPassword-wrapper">
+      <div className="forgotPassword-container">
+        <div style={{ marginLeft: "-330px", marginBottom: "10px" }}>
+          <h2 style={{ marginLeft: "-5px" }}>Đặt lại mật khẩu</h2>
+          <p style={{ marginLeft: "317px", fontSize: "13px" }}>
+            Nhập địa chỉ email của bạn. Chúng tôi sẽ gửi mã OTP để bạn đặt lại
+            mật khẩu.
+          </p>
         </div>
-    );
+        <form className="forgotPassword-form" onSubmit={handleSubmit}>
+          <div className="input-forgot">
+            <label>Email</label>
+            <input
+              type="text"
+              placeholder="Địa chỉ email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <button type="submit" className="btn-forgotPassword">
+            Gửi
+          </button>
+        </form>
+      </div>
+      <ToastContainer />
+    </div>
+  );
 };
 
 export default ForgotPassword;
