@@ -58,7 +58,6 @@ const PageLogin = () => {
       console.log("Dữ liệu từ API: ", data);
 
       const token = data.token;
-      // const userEmail = data.email;
       const role = data.role;
       const userHoTen = data.hoTen;
       const userRole = role ? "admin" : "user"; // Lưu vai trò người dùng
@@ -66,9 +65,10 @@ const PageLogin = () => {
       // Thông báo cho người dùng
       toast.success(`Đăng nhập thành công! Vai trò: ${userRole}`);
 
-      // Lưu thông tin vào localStorage
+      // Lưu thông tin vào localStorages
       localStorage.setItem("token", token);
       localStorage.setItem("user", userHoTen);
+      localStorage.setItem("diaChi",data.diaChi);
       // localStorage.setItem("user", JSON.stringify({ userEmail, userHoTen }));
 
       // Chuyển hướng về trang chính
@@ -104,7 +104,7 @@ const PageLogin = () => {
           <a href="/quenmatkhau" className="forgot-password">
             Quên mật khẩu?
           </a>
-        <br />
+          <br />
           <div className="checkbox-login">
             <input type="checkbox" className="remember" id="remember" />
             <label htmlFor="remember">Ghi nhớ</label>
