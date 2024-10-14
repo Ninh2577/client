@@ -8,34 +8,49 @@ import "react-toastify/dist/ReactToastify.css"; // Import CSS
 const Otp = () => {
   const router = useRouter(); // Khởi tạo useRouter
   const [otp, setOtp] = useState(""); // Khởi tạo state cho OTP
+  const email = localStorage.getItem("email"); // Lấy email từ localStorage
 
-  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  //     e.preventDefault(); // Ngăn chặn hành vi mặc định của form
-
-  //     console.log("Mã OTP đã được nhập:", otp);
-
-  //     // Chuyển đến trang đổi mật khẩu
-  //     router.push('/doimatkhau'); // Chuyển đến trang ResetPassword
-  // };
+  console.log(email);
+  const validateForm = () => {
+    if (!otp) {
+      toast.error("Otp không được để trống.");
+      return false;
+    }
+    return true;
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!validateForm()) return;
 
-    const response = await fetch("http://localhost:8080/api/verify-otp", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ otp }),
-    });
+    try {
+      const response = await fetch("http://localhost:8080/api/verify-otp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ otp, email }),
+      });
 
-    if (response.ok) {
-      toast.success("OTP đã được xác nhận thành công!"); // Thông báo xác nhận thành công
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message);
+      }
+
+      const data = await response.json();
+      toast.success(data.message);
       router.push("/doimatkhau");
-    } else {
-      const errorMessage = await response.text();
-      toast.error(errorMessage || "OTP không hợp lệ hoặc đã hết hạn!"); // Thông báo lỗi
+    } catch (error: any) {
+      toast.error(error.message);
     }
+
+    // if (response.ok) {
+    //   toast.success("OTP đã được xác nhận thành công!"); // Thông báo xác nhận thành công
+    //   router.push("/doimatkhau");
+    // } else {
+    //   const errorMessage = await response.text();
+    //   toast.error(errorMessage || "OTP không hợp lệ hoặc đã hết hạn!"); // Thông báo lỗi
+    // }
   };
 
   return (

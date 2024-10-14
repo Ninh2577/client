@@ -9,35 +9,49 @@ const ForgotPassword = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");
 
-  //   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  //     e.preventDefault();
+  // Kiểm tra email hợp lệ
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
 
-  //     console.log("Mã OTP đã được gửi đến:", email);
+  const validateForm = () => {
+    if (!email) {
+      toast.error("Email không được để trống.");
+      return false;
+    } else if (!validateEmail(email)) {
+      toast.error("Email không hợp lệ.");
+      return false;
+    }
 
-  //     router.push("/Otp");
-  //   };
+    return true;
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!email) {
-      toast.error("Email không được để trống.");
-      return;
-    }
-    // Gửi yêu cầu đến API gửi mã OTP
-    const response = await fetch("http://localhost:8080/api/send-otp", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    });
 
-    if (response.ok) {
-      toast.success("Mã OTP đã được gửi đến: " + email); // Hiển thị thông báo thành công
+    // Kiểm tra form trước khi tiếp tục
+    if (!validateForm()) return;
+    try {
+      const response = await fetch("http://localhost:8080/api/send-otp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Gửi OTP thất bại.");
+      }
+
+      const data = await response.json();
+      toast.success(data.message);
+      localStorage.setItem("email", email); // Lưu email vào localStorage
       router.push("/Otp");
-    } else {
-      const errorMessage = await response.json();
-      toast.error(errorMessage.message || "Có lỗi xảy ra!"); // Hiển thị thông báo lỗi
+    } catch (error: any) {
+      toast.error(error.message || "Gửi OTP thất bại.");
     }
   };
 
