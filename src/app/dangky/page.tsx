@@ -6,16 +6,6 @@ import "react-toastify/dist/ReactToastify.css"; // Import CSS của react-toasti
 import RadioGroup from "@/components/radio";
 
 const PageSignUp = () => {
-  // Sử dụng useEffect để gọi API khi component render
-  // useEffect(() => {
-  //   // Gọi API để lấy dữ liệu bảo vệ
-  //   fetch("http://localhost:8080/api/protected", {
-  //     method: "GET",
-  //     credentials: "include", // Đảm bảo cookie token được gửi đi
-  //   })
-  //     .then((response) => response.json()) // Chuyển đổi phản hồi thành JSON
-  //     .then((data) => console.log(data.token)); // In ra token
-  // }, []);
 
   const [hoTen, setHoTen] = useState("");
   const [email, setEmail] = useState("");

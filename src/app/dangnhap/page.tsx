@@ -60,6 +60,7 @@ const PageLogin = () => {
       const token = data.token;
       const role = data.role;
       const userHoTen = data.hoTen;
+      alert(role);
       const userRole = role ? "admin" : "user"; // Lưu vai trò người dùng
 
       // Thông báo cho người dùng
@@ -68,7 +69,7 @@ const PageLogin = () => {
       // Lưu thông tin vào localStorages
       localStorage.setItem("token", token);
       localStorage.setItem("user", userHoTen);
-      localStorage.setItem("diaChi",data.diaChi);
+      localStorage.setItem("diaChi", data.diaChi);
       // localStorage.setItem("user", JSON.stringify({ userEmail, userHoTen }));
 
       // Chuyển hướng về trang chính
