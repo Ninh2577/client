@@ -68,6 +68,7 @@ const PageLogin = () => {
 
       // Lưu thông tin vào localStorages
       localStorage.setItem("token", token);
+      localStorage.setItem("role", role);
       localStorage.setItem("user", userHoTen);
       localStorage.setItem("diaChi", data.diaChi);
       // localStorage.setItem("user", JSON.stringify({ userEmail, userHoTen }));
