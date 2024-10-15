@@ -60,7 +60,6 @@ const PageLogin = () => {
       const token = data.token;
       const role = data.role;
       const userHoTen = data.hoTen;
-      alert(role);
       const userRole = role ? "admin" : "user"; // Lưu vai trò người dùng
 
       // Thông báo cho người dùng

@@ -43,6 +43,7 @@ export default function AvatarDropdown({ className = "" }: Props) {
       localStorage.removeItem("token");
       localStorage.removeItem("email");
       localStorage.removeItem("diaChi");
+      localStorage.removeItem("role");
 
       // Cập nhật trạng thái đăng nhập
       setIsLoggedIn(false);
