@@ -13,19 +13,52 @@ interface Props {
 export default function AvatarDropdown({ className = "" }: Props) {
   // State để kiểm tra trạng thái đăng nhập
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Giả sử người dùng chưa đăng nhập
+  const [user, setUser] = useState<string | null>(null);
+  const [diaChi, setDiaChi] = useState<string | null>(null);
 
   // Hàm để cập nhật trạng thái đăng nhập
   useEffect(() => {
-    const user = localStorage.getItem('user');
-    if (user) {
+    const userData = localStorage.getItem("user");
+    const address = localStorage.getItem("diaChi");
+
+    if (userData) {
+      setUser(userData);
+      setDiaChi(address);
       setIsLoggedIn(true);
     }
   }, []);
+  const handleLogout = async () => {
+    try {
+      // Gọi API logout từ phía server
+      await fetch("http://localhost:8080/api/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include", // Bao gồm cookie trong request
+      });
 
-  const handleLogout = () => {
-    localStorage.removeItem('user'); // Xóa thông tin người dùng trong localStorage
-    setIsLoggedIn(false); // Cập nhật trạng thái đăng nhập
+      // Xóa thông tin người dùng từ localStorage
+      localStorage.removeItem("user");
+      localStorage.removeItem("token");
+      localStorage.removeItem("email");
+      localStorage.removeItem("diaChi");
+      localStorage.removeItem("role");
+
+      // Cập nhật trạng thái đăng nhập
+      setIsLoggedIn(false);
+    } catch (error) {
+      console.error("Đăng xuất thất bại:", error);
+    }
   };
+
+  // const handleLogout = () => {
+  //   localStorage.removeItem("user"); // Xóa thông tin người dùng trong localStorage
+  //   localStorage.removeItem("token");
+  //   localStorage.removeItem("email");
+  //   localStorage.removeItem("diaChi");
+  //   setIsLoggedIn(false); // Cập nhật trạng thái đăng nhập
+  // };
   return (
     <>
       {isLoggedIn ? ( // Chỉ hiển thị AvatarDropdown nếu người dùng đã đăng nhập
@@ -62,8 +95,8 @@ export default function AvatarDropdown({ className = "" }: Props) {
                           <Avatar sizeClass="w-12 h-12" />
 
                           <div className="flex-grow">
-                            <h4 className="font-semibold">Eden Smith</h4>
-                            <p className="text-xs mt-0.5">Los Angeles, CA</p>
+                            <h4 className="font-semibold">{user}</h4>
+                            <p className="text-xs mt-0.5">{diaChi}</p>
                           </div>
                         </div>
 
@@ -100,7 +133,9 @@ export default function AvatarDropdown({ className = "" }: Props) {
                             </svg>
                           </div>
                           <div className="ml-4">
-                            <p className="text-sm font-medium ">{"Tài khoản của tôi"}</p>
+                            <p className="text-sm font-medium ">
+                              {"Tài khoản của tôi"}
+                            </p>
                           </div>
                         </Link>
 
@@ -179,7 +214,9 @@ export default function AvatarDropdown({ className = "" }: Props) {
                             </svg>
                           </div>
                           <div className="ml-4">
-                            <p className="text-sm font-medium ">{"Danh sách yêu thích"}</p>
+                            <p className="text-sm font-medium ">
+                              {"Danh sách yêu thích"}
+                            </p>
                           </div>
                         </Link>
 
@@ -220,7 +257,9 @@ export default function AvatarDropdown({ className = "" }: Props) {
                               </svg>
                             </div>
                             <div className="ml-4">
-                              <p className="text-sm font-medium ">{"Màu tối"}</p>
+                              <p className="text-sm font-medium ">
+                                {"Màu tối"}
+                              </p>
                             </div>
                           </div>
                           <SwitchDarkMode2 />
@@ -327,7 +366,12 @@ export default function AvatarDropdown({ className = "" }: Props) {
                             </svg>
                           </div>
                           <div className="ml-4">
-                            <p className="text-sm font-medium " onClick={handleLogout}>{"Đăng xuất"}</p>
+                            <p
+                              className="text-sm font-medium "
+                              onClick={handleLogout}
+                            >
+                              {"Đăng xuất"}
+                            </p>
                           </div>
                         </Link>
                       </div>
@@ -355,9 +399,7 @@ export default function AvatarDropdown({ className = "" }: Props) {
             </Link>
           </div>
         </>
-      )
-      }
+      )}
     </>
   );
 }
-
