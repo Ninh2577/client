@@ -1,0 +1,8 @@
+/* styles.css */
+.table-centered td {
+  text-align: center; /* Canh giữa nội dung trong ô */
+}
+
+.table-centered th {
+  text-align: center; /* Canh giữa tiêu đề cột */
+}
