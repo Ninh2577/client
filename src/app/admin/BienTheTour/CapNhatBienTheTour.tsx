@@ -367,8 +367,8 @@ const FormCapNhatBienTheTour: React.FC<FormCapNhatBienTheTourProps> = ({
                   <TextArea rows={3} placeholder="Mô tả" />
                 </Form.Item>
               </div>
-            </div>
-          </div>
+            </div >
+          </div >
           <div className="flex justify-between mt-3 text-white">
             <Button className="bg-gray-400  text-white" onClick={onBack}>
               Quay Lại
@@ -377,9 +377,9 @@ const FormCapNhatBienTheTour: React.FC<FormCapNhatBienTheTourProps> = ({
               Xác Nhận
             </Button>
           </div>
-        </Form>
-      </Modal>
-    </div>
+        </Form >
+      </Modal >
+    </div >
   );
 };
 

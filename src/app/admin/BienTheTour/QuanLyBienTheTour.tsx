@@ -207,89 +207,89 @@ const columns = (
   showEditModal: (user: Tour) => void,
   handleDelete: (id: string) => void
 ) => [
-  {
-    title: "ID",
-    dataIndex: "id",
-    key: "id",
-    render: (text: string) => (
-      <a
-        href="#!"
-        onClick={(e) => e.preventDefault()}
-        className="text-blue-500 hover:underline"
-      >
-        {text}
-      </a>
-    ),
-    width: 50,
-  },
-  {
-    title: "Tên Tour",
-    dataIndex: "tenTour",
-    key: "tenTour",
-    ellipsis: {
-      showTitle: false,
+    {
+      title: "ID",
+      dataIndex: "id",
+      key: "id",
+      render: (text: string) => (
+        <a
+          href="#!"
+          onClick={(e) => e.preventDefault()}
+          className="text-blue-500 hover:underline"
+        >
+          {text}
+        </a>
+      ),
+      width: 50,
     },
-    render: (tenTour: string) => (
-      <Tooltip placement="topLeft" title={tenTour}>
-        {tenTour}
-      </Tooltip>
-    ),
-  },
-  {
-    title: "Ảnh",
-    dataIndex: "anh",
-    key: "anh",
-    render: (anh: string) => (
-      <img src={anh} alt="Profile" className="w-36 h-36 object-cover" />
-    ),
-  },
-  {
-    title: "Video",
-    dataIndex: "video",
-    key: "video",
-    render: (video: string) => (
-      <iframe
-        width="150"
-        height="150"
-        src={video}
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    ),
-  },
-  {
-    title: "Mô Tả",
-    dataIndex: "moTa",
-    key: "moTa",
-    ellipsis: {
-      showTitle: false,
+    {
+      title: "Tên Tour",
+      dataIndex: "tenTour",
+      key: "tenTour",
+      ellipsis: {
+        showTitle: false,
+      },
+      render: (tenTour: string) => (
+        <Tooltip placement="topLeft" title={tenTour}>
+          {tenTour}
+        </Tooltip>
+      ),
     },
-    render: (moTa: string) => (
-      <Tooltip placement="topLeft" title={moTa}>
-        {moTa}
-      </Tooltip>
-    ),
-  },
-  {
-    title: "",
-    key: "action",
-    render: (_, record: Tour) => (
-      <Space size="middle">
-        <Button
-          icon={<HighlightTwoTone />}
-          onClick={() => showEditModal(record)} // Hiển thị modal chỉnh sửa
-        />
-        <Button
-          icon={<DeleteOutlined />}
-          danger
-          onClick={() => handleDelete(record.id)} // Gọi hàm xóa
-        />
-      </Space>
-    ),
-  },
-];
+    {
+      title: "Ảnh",
+      dataIndex: "anh",
+      key: "anh",
+      render: (anh: string) => (
+        <img src={anh} alt="Profile" className="w-36 h-36 object-cover" />
+      ),
+    },
+    {
+      title: "Video",
+      dataIndex: "video",
+      key: "video",
+      render: (video: string) => (
+        <iframe
+          width="150"
+          height="150"
+          src={video}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      ),
+    },
+    {
+      title: "Mô Tả",
+      dataIndex: "moTa",
+      key: "moTa",
+      ellipsis: {
+        showTitle: false,
+      },
+      render: (moTa: string) => (
+        <Tooltip placement="topLeft" title={moTa}>
+          {moTa}
+        </Tooltip>
+      ),
+    },
+    {
+      title: "",
+      key: "action",
+      render: (_, record: Tour) => (
+        <Space size="middle">
+          <Button
+            icon={<HighlightTwoTone />}
+            onClick={() => showEditModal(record)} // Hiển thị modal chỉnh sửa
+          />
+          <Button
+            icon={<DeleteOutlined />}
+            danger
+            onClick={() => handleDelete(record.id)} // Gọi hàm xóa
+          />
+        </Space>
+      ),
+    },
+  ];
 
 // Dữ liệu mẫu
 const data: Tour[] = [

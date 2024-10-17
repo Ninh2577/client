@@ -1,3 +1,5 @@
+"use client"
+
 import { Poppins } from "next/font/google";
 import SiteHeader from "./(client-components)/(Header)/SiteHeader";
 import ClientCommons from "./ClientCommons";
@@ -7,6 +9,7 @@ import "@/styles/index.scss";
 import "rc-slider/assets/index.css";
 import Footer from "@/components/Footer";
 import FooterNav from "@/components/FooterNav";
+import { usePathname } from "next/navigation";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,14 +24,16 @@ export default function RootLayout({
   children: React.ReactNode;
   params: any;
 }) {
+  const pathname = usePathname()
+  // console.log("day la pagram ", pathname)
   return (
     <html lang="en" className={poppins.className}>
       <body className="bg-white text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200">
-        <ClientCommons />
-        <SiteHeader />
+        {!pathname.startsWith("/admin") && <ClientCommons />}
+        {!pathname.startsWith("/admin") && <SiteHeader />}
         {children}
-        <FooterNav />
-        <Footer />
+        {!pathname.startsWith("/admin") && <FooterNav />}
+        {!pathname.startsWith("/admin") && <Footer />}
       </body>
     </html>
   );
