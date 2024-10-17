@@ -15,20 +15,20 @@ export interface MainNav2Props {
 }
 
 const MainNav2: FC<MainNav2Props> = ({ className = "" }) => {
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // useEffect(() => {
-  //   const user = localStorage.getItem('user');
-  //   if (user) {
-  //     setIsLoggedIn(true);
-  //   }
-  // }, []);
+  useEffect(() => {
+    const user = localStorage.getItem('user');
+    if (user) {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   // Hàm để xử lý khi đăng xuất
-  // const handleLogout = () => {
-  //   localStorage.removeItem('user'); // Xóa thông tin người dùng trong localStorage
-  //   setIsLoggedIn(false); // Cập nhật trạng thái đăng nhập
-  // };
+  const handleLogout = () => {
+    localStorage.removeItem('user'); // Xóa thông tin người dùng trong localStorage
+    setIsLoggedIn(false); // Cập nhật trạng thái đăng nhập
+  };
 
   return (
     <div className={`MainNav2 relative z-10 ${className}`}>
