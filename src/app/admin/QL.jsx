@@ -16,7 +16,7 @@ import KhachHangForm from "./NguoiDung/KhachHang"; // Import form Khách Hàng
 import PhanQuyenForm from "./NguoiDung/PhanQuyen"; // Import form Phân Quyền
 import LoaiTourForm from "./LoaiTour/LoaiTour"; // Import form Loại Tour
 import QuanLyTinTuc from "./TinTuc/QuanLyTinTuc"; //Import form Quản lý tin tức
-import QuanLyBienTheTour from "./BienTheTour/QuanLyBienTheTour"; //Import from Biến thể Tour
+import QuanLyBienTheTour from "./bien-the-tour/QuanLyBienTheTour"; //Import from Biến thể Tour
 import DiaDiem from "./DiaDiem/DiaDiem"; //import from địa điểm
 import LichTrinhTour from "./LichTrinhTour/LichTrinhTour"; //import from LichTrinh tour
 import Tour from "./Tour/Tour"; //import from Tour
